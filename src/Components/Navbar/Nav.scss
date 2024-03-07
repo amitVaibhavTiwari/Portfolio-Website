@@ -1,0 +1,158 @@
+@import "../../saas_styles/mixins.scss";
+@import "../../saas_styles/Variables.scss";
+
+@include themify($themes) {
+  .sidebar {
+    background-color: themed("sidebar-color");
+  }
+  .nav-links {
+    ul {
+      li {
+        &:hover {
+          cursor: pointer;
+          background-color: themed("navlink-hover-color");
+          color: themed("navlink-hover-text");
+        }
+      }
+    }
+  }
+}
+
+// main CSS
+
+nav {
+  height: fit-content;
+  padding: 1rem;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @include tablet_breakpoint {
+    padding: 1rem 3rem;
+  }
+  @include laptop_breakpoint {
+    padding: 1.5rem 8rem;
+  }
+}
+
+.toggle-btn {
+  font-size: 1.5rem;
+  @include after_mobile_breakpoint {
+    display: none;
+  }
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  // for mobile view links will be hidden and will be visible later after mobile
+  display: none;
+
+  @include after_mobile_breakpoint {
+    display: block;
+    margin-left: 4rem;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  }
+  @include tablet_breakpoint {
+    ul {
+      font-size: 1rem;
+      gap: 1.5rem;
+      li {
+        padding: 0.3em;
+        border-radius: 0.2em;
+      }
+    }
+  }
+  @include laptop_breakpoint {
+    ul {
+      font-size: 1.1rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    ul {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.theme {
+  width: fit-content;
+  font-size: 1rem;
+  @include after_mobile_breakpoint {
+    font-size: 1.1rem;
+  }
+  @include tablet_breakpoint {
+    font-size: 1.25rem;
+  }
+  @include laptop_breakpoint {
+    font-size: 1.5rem;
+  }
+  @include laptop_breakpoint-lg {
+    font-size: 1.75rem;
+  }
+}
+
+// sidebar visible only on mobile
+
+.sidebar-container {
+  position: absolute;
+  top: 0;
+  left: -2000px;
+  transition: 0.4s ease-in-out all;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 5;
+  // background-color: red;
+  background-color: transparent;
+  @include after_mobile_breakpoint {
+    display: none;
+    pointer-events: none;
+  }
+}
+
+.show-sidebar-container {
+  left: 0;
+  transition: 0.4s ease-in-out all;
+}
+
+.sidebar {
+  z-index: 2;
+  width: 60vw;
+  min-height: 100vh;
+
+  padding: 2rem 1rem;
+  padding-top: 3rem;
+  ul {
+    font-size: 0.9rem;
+    display: flex;
+    flex-flow: column;
+    gap: 1.6rem;
+    list-style: none;
+    li {
+      width: 100%;
+    }
+  }
+
+  @include after_mobile_breakpoint {
+    display: none;
+    pointer-events: none;
+  }
+}
+
+.sidebar-logo {
+  height: 3rem;
+  margin-bottom: 3rem;
+}

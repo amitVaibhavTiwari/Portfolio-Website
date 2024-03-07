@@ -1,0 +1,41 @@
+@import "./Variables";
+
+// mixins for breakpoints
+@mixin after_mobile_breakpoint {
+  @media (min-width: #{$medium-screen}) {
+    @content;
+  }
+}
+@mixin tablet_breakpoint {
+  @media (min-width: #{$tablet-screen}) {
+    @content;
+  }
+}
+@mixin laptop_breakpoint {
+  @media (min-width: #{$laptop-screen}) {
+    @content;
+  }
+}
+@mixin laptop_breakpoint-md {
+  @media (min-width: #{$laptop-screen-md}) {
+    @content;
+  }
+}
+@mixin laptop_breakpoint-lg {
+  @media (min-width: #{$laptop-screen-lg}) {
+    @content;
+  }
+}
+
+// mixin for theme
+@mixin themify($themes) {
+  @each $name, $values in $themes {
+    .#{$name}-theme {
+      $theme-map: $values !global;
+      @content;
+    }
+  }
+}
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
