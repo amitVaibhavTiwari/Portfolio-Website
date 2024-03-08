@@ -17,10 +17,10 @@
 }
 
 .projects-section {
-  padding: 1rem 1rem;
+  padding: 1.3rem 1rem;
 
   h1 {
-    font-size: 1.7rem;
+    font-size: 1.75rem;
     text-align: center;
     font-weight: 700;
     line-height: 1.8rem;
@@ -33,6 +33,7 @@
 }
 
 .projects-box-container {
+  padding: 0rem 1.5rem;
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -49,18 +50,19 @@
   padding: 1rem;
   border: 0.1em solid;
   border-radius: 2px;
-
+  text-align: center;
   img {
-    height: 12rem;
-    aspect-ratio: 2/1;
+    height: 10rem;
+    aspect-ratio: 1.7/1;
+    display: block;
+    margin: auto;
   }
   h1 {
-    font-size: 1.3rem;
-    text-align: left;
-    margin: 0.5rem 0;
+    font-size: 1rem;
+    margin: 0.3rem 0;
   }
   p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .see-more {
     border: 0.1em solid;
@@ -68,7 +70,7 @@
     border-radius: 2px;
 
     margin-top: 2rem;
-    padding: 0.5rem;
+    padding: 0.4rem;
     width: 100%;
     font-size: 0.85rem;
     font-weight: 600;
@@ -76,11 +78,14 @@
 }
 
 .technologies-used {
+  width: 85%;
+  margin: auto;
   margin-top: 1rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-flow: row wrap;
   gap: 0.5rem;
-  width: 85%;
 
   .tech-box {
     text-align: center;
@@ -88,7 +93,7 @@
     padding: 0.3rem 0.4rem;
     border-radius: 3px;
     color: white;
-    font-size: 0.7rem;
+    font-size: 0.56rem;
   }
 }
 

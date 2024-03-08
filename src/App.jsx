@@ -10,7 +10,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowHellow(false);
-    }, 5500);
+    }, 6500);
   }, []);
 
   // fix hello page width issue
