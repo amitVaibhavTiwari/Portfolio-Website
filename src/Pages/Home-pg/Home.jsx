@@ -3,6 +3,7 @@ import "./Home.scss";
 import Nav from "../../Components/Navbar/Nav";
 import Hero from "../../Components/Hero/Hero";
 import Skills from "../../Components/Skills/Skills";
+import Projects from "../../Components/Projects/Projects";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Nav />
       <Hero />
       <Skills />
+      <Projects />
       <Outlet />
     </div>
   );

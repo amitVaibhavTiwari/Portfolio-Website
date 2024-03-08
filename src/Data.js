@@ -80,3 +80,32 @@ export const skills = [
     img: "/bootstrap.png",
   },
 ];
+
+export const projects = [
+  {
+    id: "1",
+    name: "Bajrang Fitness",
+    img: "/Screenshot 2024-02-17 121439.png",
+    miniDesc:
+      "A gym website made by  React and Tailwind CSS.A gym website made by  React and Tailwind CSS. Primary aim behind making this was to get some hands on experience to the popular css library.",
+    technologies: ["React js", "Tailwind CSS", "Nodejs", "Firebase", "Mongodb"],
+  },
+  {
+    id: "2",
+    img: "/Screenshot 2024-02-17 121439.png",
+
+    name: "Bajrang Fitness",
+    miniDesc:
+      "A gym website made by  React and Tailwind CSS. Primary aim behind making this was to get some hands on experience to the popular css library.",
+    technologies: ["React js", "Tailwind CSS"],
+  },
+  {
+    id: "3",
+    name: "Bajrang Fitness",
+    img: "/Screenshot 2024-02-17 121439.png",
+
+    miniDesc:
+      "A gym website made by  React and Tailwind CSS. Primary aim behind making this was to get some hands on experience to the popular css library.",
+    technologies: ["React js", "Tailwind CSS"],
+  },
+];
