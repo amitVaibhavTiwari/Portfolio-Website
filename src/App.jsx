@@ -13,8 +13,6 @@ const App = () => {
     }, 6500);
   }, []);
 
-  // fix hello page width issue
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -45,7 +43,7 @@ const App = () => {
   } else {
     return (
       <div id="portfolio-pages">
-        <RouterProvider router={router} />;
+        <RouterProvider router={router} />
       </div>
     );
   }
