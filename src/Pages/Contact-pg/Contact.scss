@@ -1,0 +1,63 @@
+.contact-pg {
+  padding: 1rem;
+}
+.contact-box {
+  border: 0.1em solid black;
+  text-align: center;
+  padding: 2rem 1rem;
+  h1 {
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+  h2 {
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+}
+
+.group {
+  border: 0.1em solid black;
+  border-radius: 2px;
+  padding: 1rem;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  span {
+    font-size: 3rem;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.social-links {
+  margin-top: 2.5rem;
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.socials-box-container {
+  margin-top: 1rem;
+  display: grid;
+
+  place-items: center;
+  gap: 1.5rem;
+  span {
+    font-size: 2rem;
+    border: 0.1rem solid black;
+    padding: 1rem 2rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+  }
+  .breaker {
+    display: flex;
+    gap: 1.5rem;
+  }
+}

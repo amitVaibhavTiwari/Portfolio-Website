@@ -34,11 +34,11 @@
     margin: auto;
   }
   h1 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 0.3rem 0;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
   .see-more {
     border: 0.1em solid;
@@ -58,7 +58,7 @@
 
     width: 33%;
     h1 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
     }
     p {
       font-size: 0.9rem;
@@ -69,10 +69,22 @@
     }
   }
 
-  @include customBreakPoint(823) {
+  @include customBreakPoint(810) {
     min-height: 36.5rem;
     p {
       height: 13rem;
+    }
+  }
+  @include customBreakPoint(818) {
+    min-height: 35.5rem;
+    p {
+      height: 12rem;
+    }
+  }
+  @include customBreakPoint(920) {
+    min-height: 34rem;
+    p {
+      height: 10.5rem;
     }
   }
 
@@ -92,18 +104,19 @@
     }
   }
 
-  @include customBreakPoint(1100) {
+  @include customBreakPoint(1040) {
     min-height: 32rem;
     p {
       height: 13.5rem;
     }
   }
-  @include customBreakPoint(1200) {
+  @include customBreakPoint(1100) {
     p {
       height: 12rem;
     }
   }
-  @include customBreakPoint(1220) {
+
+  @include customBreakPoint(1200) {
     p {
       height: 11rem;
     }
@@ -112,6 +125,8 @@
   @include laptop_breakpoint-lg {
     min-height: 30rem;
     padding: 1rem;
+    border: 0.12rem solid;
+
     h1 {
       font-size: 1.3rem;
       margin: 0.6rem 0;

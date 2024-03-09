@@ -87,8 +87,8 @@ export const projects = [
     name: "Auto Connect",
     img: "/Screenshot 2024-02-17 121439.png",
     miniDesc:
-      "A platform to buy and sell used vehicles. Built this full stack web application using React on frontend along with Nodejs and Mongodb on the backend. Implemented user authentication using firebase auth. Also added live messaging feature between seller and buyer.",
-    technologies: ["React js", "Scss", "Nodejs", "Firebase", "Mongodb"],
+      "A platform to buy and sell used vehicles. Built this full stack web application using React on frontend along with Nodejs and Mongodb on the backend. Implemented user authentication using firebase auth. Also added live messaging functionality.",
+    technologies: ["React js", "Scss", "Node js", "Firebase", "Mongodb"],
   },
   {
     id: "2",

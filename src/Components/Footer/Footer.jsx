@@ -26,7 +26,7 @@ const Footer = () => {
           <IoMailSharp />
         </span>
       </div>
-      <h5>No © copyright issues </h5>
+      <h5>No © copyright issues. </h5>
       <h6>Feel free to copy whatever you like.</h6>
     </div>
   );

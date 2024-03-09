@@ -144,6 +144,11 @@ button {
     outline: none;
   }
 }
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
 // some animation for initial page loading
 
 @keyframes wiggle {

@@ -68,11 +68,15 @@
   text-align: center;
   text-decoration: underline;
   margin-bottom: 1rem;
+  &:hover {
+    cursor: pointer;
+  }
 
   @include tablet_breakpoint {
     font-size: 1rem;
   }
   @include laptop_breakpoint {
+    margin-top: 2.5rem;
     font-size: 1.1rem;
   }
   @include laptop_breakpoint-lg {

@@ -112,6 +112,7 @@
     }
   }
   @include laptop_breakpoint-lg {
+    border: 0.12rem solid;
     gap: 0.4rem;
     h4 {
       font-size: 1rem;

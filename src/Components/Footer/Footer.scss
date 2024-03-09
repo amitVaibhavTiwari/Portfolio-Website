@@ -9,11 +9,7 @@
     h1 {
       color: themed("button-bg-color");
     }
-  }
-
-  .social-icons-container {
-    span {
-      border-color: themed("button-bg-color");
+    h3 {
       color: themed("button-bg-color");
     }
   }
@@ -47,12 +43,75 @@
     text-align: left;
     font-size: 0.7rem;
   }
+
+  @include tablet_breakpoint {
+    padding: 1rem 3rem;
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 0.2rem;
+    }
+    h2 {
+      font-size: 0.98rem;
+    }
+    h3 {
+      font-size: 0.9rem;
+    }
+    h5 {
+      font-size: 0.8rem;
+    }
+    h6 {
+      font-size: 0.8rem;
+    }
+  }
+  @include laptop_breakpoint {
+    padding: 1.5rem 8rem;
+    h1 {
+      font-size: 1.7rem;
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: 1.08rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    h5 {
+      font-size: 0.9rem;
+    }
+    h6 {
+      font-size: 0.9rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    h1 {
+      font-size: 1.8rem;
+    }
+    h2 {
+      font-size: 1.18rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    h5 {
+      font-size: 1rem;
+    }
+    h6 {
+      font-size: 1rem;
+    }
+  }
 }
 
 .line {
   height: 0.01rem;
   width: 100%;
   margin-bottom: 1.5rem;
+  @include laptop_breakpoint {
+    margin-bottom: 2rem;
+    height: 0.08rem;
+  }
+  @include laptop_breakpoint-lg {
+    height: 0.09rem;
+  }
 }
 
 .social-icons-container {
@@ -66,5 +125,17 @@
     padding: 0.3rem;
     border-radius: 50%;
     font-size: 1.2rem;
+  }
+  @include laptop_breakpoint {
+    gap: 1rem;
+    span {
+      font-size: 1.4rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    span {
+      font-size: 1.5rem;
+      border: 0.12rem solid;
+    }
   }
 }
