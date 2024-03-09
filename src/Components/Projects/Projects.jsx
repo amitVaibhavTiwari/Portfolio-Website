@@ -1,5 +1,7 @@
 import "./Projects.scss";
 import { projects } from "../../Data";
+import SingleProject from "../Single-project/SingleProject";
+
 const Projects = () => {
   return (
     <div className="projects-section">
@@ -8,27 +10,10 @@ const Projects = () => {
 
       <div className="projects-box-container">
         {projects.map((e) => {
-          return (
-            <div key={e.id} className="project-box">
-              <img src={e.img} alt={e.name} />
-
-              <h1>{e.name}</h1>
-              <p>{e.miniDesc}</p>
-              <div className="technologies-used">
-                {e.technologies.map((e) => {
-                  return (
-                    <button key={e} className="tech-box">
-                      {e}
-                    </button>
-                  );
-                })}
-              </div>
-              <button className="see-more">See more</button>
-            </div>
-          );
+          return <SingleProject key={e.id} {...e} />;
         })}
-        <h4 className="see-all-projects">See all projects</h4>
       </div>
+      <h4 className="see-all-projects">See all projects</h4>
     </div>
   );
 };

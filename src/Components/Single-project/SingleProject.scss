@@ -1,0 +1,160 @@
+@import "../../saas_styles/mixins.scss";
+@import "../../saas_styles/Variables.scss";
+
+@include themify($themes) {
+  .project-box {
+    border-color: themed("box-border-color");
+    background-color: themed("box-color");
+
+    h1 {
+      color: themed("box-main-text-color");
+    }
+    .see-more {
+      color: themed("button-bg-color");
+      border-color: themed("button-bg-color");
+    }
+  }
+  .technologies-used {
+    .tech-box {
+      color: themed("button-text-color");
+      background-color: themed("button-bg-color");
+    }
+  }
+}
+
+.project-box {
+  padding: 1rem;
+  border: 0.1em solid;
+  border-radius: 2px;
+  text-align: center;
+  img {
+    height: 9rem;
+    aspect-ratio: 1.8/1;
+    display: block;
+    margin: auto;
+  }
+  h1 {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .see-more {
+    border: 0.1em solid;
+    background: transparent;
+    border-radius: 2px;
+
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  @include tablet_breakpoint {
+    padding: 0.5rem;
+    min-height: 38rem;
+
+    width: 33%;
+    h1 {
+      font-size: 1.1rem;
+    }
+    p {
+      font-size: 0.9rem;
+      height: 14.5rem;
+    }
+    .see-more {
+      font-size: 0.95rem;
+    }
+  }
+
+  @include customBreakPoint(823) {
+    min-height: 36.5rem;
+    p {
+      height: 13rem;
+    }
+  }
+
+  @include laptop_breakpoint {
+    min-height: 37rem;
+    padding: 1rem 0.6rem;
+    h1 {
+      font-size: 1.2rem;
+      margin: 0.6rem 0;
+    }
+    p {
+      font-size: 1rem;
+      height: 15rem;
+    }
+    .see-more {
+      font-size: 1.05rem;
+    }
+  }
+
+  @include customBreakPoint(1100) {
+    min-height: 32rem;
+    p {
+      height: 13.5rem;
+    }
+  }
+  @include customBreakPoint(1200) {
+    p {
+      height: 12rem;
+    }
+  }
+  @include customBreakPoint(1220) {
+    p {
+      height: 11rem;
+    }
+  }
+
+  @include laptop_breakpoint-lg {
+    min-height: 30rem;
+    padding: 1rem;
+    h1 {
+      font-size: 1.3rem;
+      margin: 0.6rem 0;
+    }
+    p {
+      font-size: 1.1rem;
+      height: 12rem;
+    }
+    .see-more {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+.technologies-used {
+  width: 85%;
+  margin: auto;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+
+  .tech-box {
+    text-align: center;
+    padding: 0.3rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.56rem;
+  }
+  @include tablet_breakpoint {
+    margin-top: 2rem;
+    height: 3.4rem;
+    margin-bottom: 0.5rem;
+    .tech-box {
+      font-size: 0.66rem;
+    }
+  }
+  @include laptop_breakpoint {
+    margin-top: 2.5rem;
+
+    .tech-box {
+      font-size: 0.76rem;
+    }
+  }
+}

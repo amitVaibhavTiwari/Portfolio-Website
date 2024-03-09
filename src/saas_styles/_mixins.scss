@@ -26,6 +26,12 @@
     @content;
   }
 }
+// mixin for adding custom breakpoint
+@mixin customBreakPoint($size) {
+  @media (min-width: $size+"px") {
+    @content;
+  }
+}
 
 // mixin for theme
 @mixin themify($themes) {

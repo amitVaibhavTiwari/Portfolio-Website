@@ -84,11 +84,11 @@ export const skills = [
 export const projects = [
   {
     id: "1",
-    name: "Bajrang Fitness",
+    name: "Auto Connect",
     img: "/Screenshot 2024-02-17 121439.png",
     miniDesc:
-      "A gym website made by  React and Tailwind CSS.A gym website made by  React and Tailwind CSS. Primary aim behind making this was to get some hands on experience to the popular css library.",
-    technologies: ["React js", "Tailwind CSS", "Nodejs", "Firebase", "Mongodb"],
+      "A platform to buy and sell used vehicles. Built this full stack web application using React on frontend along with Nodejs and Mongodb on the backend. Implemented user authentication using firebase auth. Also added live messaging feature between seller and buyer.",
+    technologies: ["React js", "Scss", "Nodejs", "Firebase", "Mongodb"],
   },
   {
     id: "2",
@@ -96,16 +96,16 @@ export const projects = [
 
     name: "Bajrang Fitness",
     miniDesc:
-      "A gym website made by  React and Tailwind CSS. Primary aim behind making this was to get some hands on experience to the popular css library.",
+      "A fully reponsive gym website made using React js and Tailwind CSS. The main aim behind making this was to get some hands on experience with Tailwind CSS. Also added dark mode and some animations to improve the overall user experience.",
     technologies: ["React js", "Tailwind CSS"],
   },
   {
     id: "3",
-    name: "Bajrang Fitness",
+    name: "Al-Eaqarat",
     img: "/Screenshot 2024-02-17 121439.png",
 
     miniDesc:
-      "A gym website made by  React and Tailwind CSS. Primary aim behind making this was to get some hands on experience to the popular css library.",
-    technologies: ["React js", "Tailwind CSS"],
+      "Landing page for a Dubai based real estate website. Made this fully responsive website using React js and Scss. While making this i learnt how to implement multiple themes on a website without using any library.",
+    technologies: ["React js", "Scss"],
   },
 ];
