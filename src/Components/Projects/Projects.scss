@@ -52,7 +52,7 @@
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  gap: 1.5rem;
+  gap: 1.7rem;
 
   @include tablet_breakpoint {
     align-items: start;
@@ -62,7 +62,7 @@
 }
 
 .see-all-projects {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
@@ -76,7 +76,8 @@
     font-size: 1rem;
   }
   @include laptop_breakpoint {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
     font-size: 1.1rem;
   }
   @include laptop_breakpoint-lg {

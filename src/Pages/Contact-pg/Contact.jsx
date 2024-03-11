@@ -11,10 +11,11 @@ const Contact = () => {
     <div>
       <Nav />
       <div className="contact-pg">
+        <h1>
+          Have an idea ? <br></br> Interested in working together ?
+        </h1>
         <div className="contact-box">
-          <h1>Have an idea ? Interested in working together ?</h1>
           <h2>Let’s talk</h2>
-
           <div className="group">
             <span>
               <IoLogoWhatsapp />
