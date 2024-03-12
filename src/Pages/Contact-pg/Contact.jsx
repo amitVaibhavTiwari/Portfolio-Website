@@ -16,17 +16,19 @@ const Contact = () => {
         </h1>
         <div className="contact-box">
           <h2>Let’s talk</h2>
-          <div className="group">
-            <span>
-              <IoLogoWhatsapp />
-            </span>
-            <p>Chat with me</p>
-          </div>
-          <div className="group">
-            <span>
-              <IoMail />
-            </span>
-            <p>Mail me</p>
+          <div className="group-parent">
+            <div className="group">
+              <span>
+                <IoLogoWhatsapp />
+              </span>
+              <p>Chat with me</p>
+            </div>
+            <div className="group">
+              <span>
+                <IoMail />
+              </span>
+              <p>Mail me</p>
+            </div>
           </div>
 
           <div className="social-links">

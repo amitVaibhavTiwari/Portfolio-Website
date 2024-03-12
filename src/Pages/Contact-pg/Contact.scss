@@ -1,3 +1,33 @@
+@import "../../saas_styles/mixins.scss";
+@import "../../saas_styles/Variables.scss";
+
+@include themify($themes) {
+  .social-links {
+    h1 {
+      color: themed("button-bg-color");
+    }
+  }
+  .group {
+    color: themed("button-bg-color");
+    border-color: themed("button-bg-color");
+    background-color: themed("box-color");
+  }
+  .contact-box {
+    background-color: themed("box-color");
+    border-color: themed("box-border-color");
+    h2 {
+      color: themed("button-bg-color");
+    }
+  }
+  .socials-box-container {
+    span {
+      color: themed("button-bg-color");
+      border-color: themed("button-bg-color");
+    }
+  }
+}
+
+// main css
 .contact-pg {
   padding: 1rem;
   h1 {
@@ -7,26 +37,57 @@
     margin-bottom: 2rem;
     margin-top: 0.5rem;
   }
+
+  @include tablet_breakpoint {
+    h1 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+  }
+  @include laptop_breakpoint {
+    h1 {
+      font-size: 2.1rem;
+    }
+    .group-parent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+  }
 }
 .contact-box {
-  border: 0.1em solid black;
+  border: 0.1em solid;
   text-align: center;
   padding: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
   width: 85%;
   margin: auto;
   h2 {
     margin-top: 0.5rem;
     font-size: 1.6rem;
-    font-weight: 800;
+    font-weight: 700;
     text-align: center;
 
     margin-bottom: 1rem;
   }
+  @include tablet_breakpoint {
+    width: 70%;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  @include laptop_breakpoint {
+    h2 {
+      font-size: 1.9rem;
+    }
+  }
 }
 
 .group {
-  border: 0.1rem solid black;
+  border: 0.1rem solid;
   border-radius: 2px;
   padding: 0.7rem 1rem;
 
@@ -35,12 +96,31 @@
   margin: auto;
   margin-bottom: 1.5rem;
   font-size: 0.8rem;
+  &:hover {
+    cursor: pointer;
+  }
   span {
     font-size: 3rem;
     display: block;
     width: fit-content;
     margin: auto;
     margin-bottom: 0.2rem;
+  }
+
+  @include tablet_breakpoint {
+    font-size: 0.9rem;
+    width: 12rem;
+    span {
+      font-size: 3.2rem;
+      margin-bottom: 0.3rem;
+    }
+  }
+  @include laptop_breakpoint {
+    font-size: 1rem;
+    margin: 0;
+    span {
+      font-size: 3.3rem;
+    }
   }
 }
 
@@ -49,25 +129,61 @@
   h1 {
     font-size: 1.6rem;
     font-weight: 700;
+
     text-align: center;
+  }
+  @include tablet_breakpoint {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  @include laptop_breakpoint {
+    h1 {
+      font-size: 1.9rem;
+    }
   }
 }
 
 .socials-box-container {
-  margin-top: 1rem;
+  margin-top: -0.5rem;
   display: grid;
 
   place-items: center;
   gap: 1.5rem;
   span {
     font-size: 2rem;
-    border: 0.1rem solid black;
+    border: 0.1rem solid;
     padding: 1rem 2rem;
     width: fit-content;
     border-radius: 0.5rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .breaker {
     display: flex;
     gap: 1.5rem;
+  }
+  @include tablet_breakpoint {
+    span {
+      font-size: 2.2rem;
+    }
+    .breaker {
+      gap: 1.8rem;
+    }
+  }
+  @include laptop_breakpoint {
+    width: fit-content;
+    margin: auto;
+    margin-top: -01rem;
+    display: flex;
+    span {
+      font-size: 2.3rem;
+      padding: 1.3rem;
+      border-radius: 50%;
+    }
+    .breaker {
+      gap: 1.8rem;
+    }
   }
 }
