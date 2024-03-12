@@ -62,10 +62,11 @@
 }
 
 .see-all-projects {
+  width: fit-content;
+  margin: auto;
   margin-top: 2.5rem;
   font-size: 0.9rem;
   font-weight: 600;
-  text-align: center;
   text-decoration: underline;
   margin-bottom: 1rem;
   &:hover {

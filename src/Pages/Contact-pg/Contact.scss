@@ -55,6 +55,11 @@
       gap: 1.5rem;
     }
   }
+  @include laptop_breakpoint-lg {
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
 }
 .contact-box {
   border: 0.1em solid;
@@ -80,8 +85,15 @@
     }
   }
   @include laptop_breakpoint {
+    border: 0.12rem solid;
+
     h2 {
       font-size: 1.9rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    h2 {
+      font-size: 2rem;
     }
   }
 }
@@ -117,9 +129,18 @@
   }
   @include laptop_breakpoint {
     font-size: 1rem;
+    border: 0.12rem solid;
+
     margin: 0;
     span {
       font-size: 3.3rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    font-size: 1.1rem;
+
+    span {
+      font-size: 3.4rem;
     }
   }
 }
@@ -140,6 +161,11 @@
   @include laptop_breakpoint {
     h1 {
       font-size: 1.9rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    h1 {
+      font-size: 2rem;
     }
   }
 }
@@ -181,9 +207,15 @@
       font-size: 2.3rem;
       padding: 1.3rem;
       border-radius: 50%;
+      border: 0.12rem solid;
     }
     .breaker {
       gap: 1.8rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    span {
+      font-size: 2.4rem;
     }
   }
 }

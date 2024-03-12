@@ -1,0 +1,24 @@
+@import "../../saas_styles/mixins.scss";
+@import "../../saas_styles/Variables.scss";
+
+@include themify($themes) {
+  .about-pg {
+    h1 {
+      color: themed("logo-color");
+    }
+  }
+}
+
+.about-pg {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+  }
+}
+.info-para {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}

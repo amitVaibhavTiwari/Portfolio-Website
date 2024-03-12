@@ -1,0 +1,36 @@
+@import "../../saas_styles/mixins.scss";
+@import "../../saas_styles/Variables.scss";
+
+@include themify($themes) {
+  .projects-heading {
+    color: themed("logo-color");
+  }
+}
+
+.all-projects-pg {
+  padding: 1rem;
+  padding-bottom: 2.5rem;
+  @include tablet_breakpoint {
+    padding: 1rem 1.8rem;
+    padding-bottom: 2.5rem;
+  }
+  @include laptop_breakpoint {
+    padding: 1rem 6.6rem;
+    padding-bottom: 2.5rem;
+  }
+}
+.projects-heading {
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  @include tablet_breakpoint {
+    font-size: 2rem;
+  }
+  @include laptop_breakpoint {
+    font-size: 2.2rem;
+  }
+  @include laptop_breakpoint-lg {
+    font-size: 2.3rem;
+  }
+}

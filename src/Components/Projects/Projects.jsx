@@ -1,8 +1,10 @@
 import "./Projects.scss";
 import { projects } from "../../Data";
 import SingleProject from "../Single-project/SingleProject";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
   return (
     <div className="projects-section">
       <h1>Recent projects</h1>
@@ -13,7 +15,9 @@ const Projects = () => {
           return <SingleProject key={e.id} {...e} />;
         })}
       </div>
-      <h4 className="see-all-projects">See all projects</h4>
+      <h4 onClick={() => navigate("/projects")} className="see-all-projects">
+        See all projects
+      </h4>
     </div>
   );
 };
