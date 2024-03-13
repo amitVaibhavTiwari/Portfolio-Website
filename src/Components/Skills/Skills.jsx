@@ -14,9 +14,11 @@ const Skills = () => {
         {skills.map((e) => {
           return (
             <Fade
-              key={e.id}
+              fraction={0.1}
+              cascade
+              damping={0.2}
               direction="up"
-              delay={e.id * 120}
+              key={e.id}
               triggerOnce={true}
             >
               <div className="skill-card">

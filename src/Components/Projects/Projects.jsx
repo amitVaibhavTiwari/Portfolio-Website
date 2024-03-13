@@ -14,15 +14,17 @@ const Projects = () => {
       <Fade direction="up" delay={100} triggerOnce={true}>
         <h2>Take a look</h2>
       </Fade>
+      <Fade fraction={0.15} cascade damping={0.2} triggerOnce={true}>
+        <div className="projects-box-container">
+          {projects.map((e) => {
+            return <SingleProject key={e.id} {...e} />;
+          })}
+        </div>
 
-      <div className="projects-box-container">
-        {projects.map((e) => {
-          return <SingleProject key={e.id} {...e} />;
-        })}
-      </div>
-      <h4 onClick={() => navigate("/projects")} className="see-all-projects">
-        See all projects
-      </h4>
+        <h4 onClick={() => navigate("/projects")} className="see-all-projects">
+          See all projects
+        </h4>
+      </Fade>
     </div>
   );
 };

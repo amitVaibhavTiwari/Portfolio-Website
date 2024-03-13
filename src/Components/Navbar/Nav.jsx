@@ -6,6 +6,7 @@ import { IoSunnyOutline } from "react-icons/io5";
 import { IoIosMoon } from "react-icons/io";
 import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 
 const Nav = () => {
   const { userPreferredTheme, dispatch } = useGlobalContext();
@@ -35,29 +36,31 @@ const Nav = () => {
         <Logo className="logo" />
         <div className="nav-links">
           <ul>
-            <li>
-              <Link className="link" to="/">
-                Home
-              </Link>
-            </li>
-            <li>
-              {" "}
-              <Link className="link" to="/about">
-                About me
-              </Link>
-            </li>
-            <li>
-              {" "}
-              <Link className="link" to="/contact">
-                Contact me
-              </Link>
-            </li>
-            <li>
-              {" "}
-              <Link className="link" to="/projects">
-                Projects
-              </Link>
-            </li>
+            <Fade fraction={0.1} cascade damping={0.1} triggerOnce={true}>
+              <li>
+                <Link className="link" to="/">
+                  Home
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link className="link" to="/about">
+                  About me
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link className="link" to="/contact">
+                  Contact me
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link className="link" to="/projects">
+                  Projects
+                </Link>
+              </li>
+            </Fade>
           </ul>
         </div>
         <span>
@@ -86,31 +89,39 @@ const Nav = () => {
           <div className="sidebar-logo">
             <Logo />
           </div>
-          <ul>
-            <li>
-              <Link className="link" to="/">
-                Home
-              </Link>
-            </li>
-            <li>
-              {" "}
-              <Link className="link" to="/about">
-                About me
-              </Link>
-            </li>
-            <li>
-              {" "}
-              <Link className="link" to="/contact">
-                Contact me
-              </Link>
-            </li>
-            <li>
-              {" "}
-              <Link className="link" to="/projects">
-                Projects
-              </Link>
-            </li>
-          </ul>
+          <Fade
+            fraction={0.1}
+            triggerOnce={true}
+            direction="right"
+            cascade
+            damping={0.1}
+          >
+            <ul>
+              <li>
+                <Link className="link" to="/">
+                  Home
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link className="link" to="/about">
+                  About me
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link className="link" to="/contact">
+                  Contact me
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link className="link" to="/projects">
+                  Projects
+                </Link>
+              </li>
+            </ul>
+          </Fade>
         </div>
       </div>
     </nav>

@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
+import { Fade } from "react-awesome-reveal";
 import "./SingleProject.scss";
 
-const SingleProject = ({ name, miniDesc, technologies, img }) => {
+const SingleProject = ({ name, miniDesc, technologies, img, id }) => {
   return (
     <div className="project-box">
       <img src={img} alt={name} />

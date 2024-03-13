@@ -10,6 +10,7 @@ const Hero = () => {
         <Fade
           fraction={0.1}
           delay={1500}
+          direction="up"
           cascade
           damping={0.2}
           triggerOnce={true}
