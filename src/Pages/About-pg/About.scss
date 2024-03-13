@@ -12,13 +12,49 @@
 .about-pg {
   text-align: center;
   padding: 1.5rem 1rem;
+  padding-bottom: 3rem;
   h1 {
     font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: 0.2rem;
   }
+  @include tablet_breakpoint {
+    padding: 1rem 3rem;
+    padding-bottom: 3rem;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+  @include laptop_breakpoint {
+    padding: 1rem 8rem;
+    padding-bottom: 3rem;
+
+    h1 {
+      font-size: 2.1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.6rem;
+    }
+  }
 }
 .info-para {
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
+
+  @include tablet_breakpoint {
+    font-size: 1rem;
+  }
+  @include laptop_breakpoint {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  @include laptop_breakpoint-lg {
+    font-size: 1.2rem;
+  }
 }

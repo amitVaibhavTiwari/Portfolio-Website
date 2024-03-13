@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
+import Education from "../../Components/EducationTimeline/Education";
 import { PageChanger } from "../../Components/Page-changer/PageChanger";
 import "./About.scss";
+import { FaGraduationCap } from "react-icons/fa6";
 
 const About = () => {
   return (
@@ -10,7 +12,7 @@ const About = () => {
         <p className="info-para">
           I'm an undergrad student pursuing a Bachelor's degree in Computer
           Science and Engineering. As a full-stack developer, I posses expertise
-          in both frontend and backend dvelopment, bringing projects to life
+          in both frontend and backend development, bringing projects to life
           from design to function.
           <br />
           I'm well-versed in both frontend and backend technologies like React
@@ -24,6 +26,8 @@ const About = () => {
           and am confident in meeting tight deadlines.
         </p>
         <h1>Education</h1>
+
+        <Education />
       </div>
     </PageChanger>
   );

@@ -13,9 +13,8 @@ const Contact = () => {
       <div>
         <Nav />
         <div className="contact-pg">
-          <h1>
-            Have an idea ? <br></br> Interested in working together ?
-          </h1>
+          <h1>Have an idea ?</h1>
+          <h3> Interested in working together ?</h3>
           <div className="contact-box">
             <h2>Let’s talk</h2>
             <div className="group-parent">
