@@ -139,10 +139,11 @@ nav {
     font-size: 0.9rem;
     display: flex;
     flex-flow: column;
-    gap: 1.6rem;
+
     list-style: none;
     li {
       width: 100%;
+      padding: 0.7rem 0;
     }
   }
 

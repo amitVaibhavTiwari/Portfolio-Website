@@ -2,7 +2,7 @@ import { Bounce } from "react-awesome-reveal";
 import "./Logo.scss";
 const Logo = () => {
   return (
-    <section>
+    <section className="noSelect">
       <Bounce triggerOnce={true}>
         <div className="content">
           <h2>Amit</h2>

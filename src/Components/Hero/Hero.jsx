@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="hero-left">
         <Fade
           fraction={0.1}
-          delay={750}
+          delay={800}
           direction="up"
           cascade
           damping={0.25}

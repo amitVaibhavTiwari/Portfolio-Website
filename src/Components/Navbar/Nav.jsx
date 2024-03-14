@@ -5,7 +5,7 @@ import { useGlobalContext } from "../../GlobalContext";
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoIosMoon } from "react-icons/io";
 import Logo from "../Logo/Logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 
 const Nav = () => {
@@ -30,6 +30,8 @@ const Nav = () => {
     }
   };
 
+  const navigate = useNavigate();
+
   return (
     <nav>
       <div className="nav-center">
@@ -37,29 +39,10 @@ const Nav = () => {
         <div className="nav-links">
           <ul>
             <Fade fraction={0.1} cascade damping={0.1} triggerOnce={true}>
-              <li>
-                <Link className="link" to="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                {" "}
-                <Link className="link" to="/about">
-                  About me
-                </Link>
-              </li>
-              <li>
-                {" "}
-                <Link className="link" to="/connect">
-                  Contact me
-                </Link>
-              </li>
-              <li>
-                {" "}
-                <Link className="link" to="/projects">
-                  Projects
-                </Link>
-              </li>
+              <li onClick={() => navigate("/")}>Home</li>
+              <li onClick={() => navigate("/about")}>About me</li>
+              <li onClick={() => navigate("/connect")}>Contact me</li>
+              <li onClick={() => navigate("/projects")}> Projects</li>
             </Fade>
           </ul>
         </div>
@@ -97,29 +80,10 @@ const Nav = () => {
             damping={0.1}
           >
             <ul>
-              <li>
-                <Link className="link" to="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                {" "}
-                <Link className="link" to="/about">
-                  About me
-                </Link>
-              </li>
-              <li>
-                {" "}
-                <Link className="link" to="/connect">
-                  Contact me
-                </Link>
-              </li>
-              <li>
-                {" "}
-                <Link className="link" to="/projects">
-                  Projects
-                </Link>
-              </li>
+              <li onClick={() => navigate("/")}>Home</li>
+              <li onClick={() => navigate("/about")}>About me</li>
+              <li onClick={() => navigate("/connect")}>Contact me</li>
+              <li onClick={() => navigate("/projects")}> Projects</li>
             </ul>
           </Fade>
         </div>

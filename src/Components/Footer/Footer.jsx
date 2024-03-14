@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./Footer.scss";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import { IoMailSharp } from "react-icons/io5";
+import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
 const Footer = () => {
@@ -22,10 +22,10 @@ const Footer = () => {
             <FaLinkedinIn />
           </span>
           <span>
-            <FaGithub />
+            <IoLogoWhatsapp />
           </span>
           <span>
-            <IoMailSharp />
+            <FaGithub />
           </span>
         </div>
         <h5>No © copyright issues. </h5>

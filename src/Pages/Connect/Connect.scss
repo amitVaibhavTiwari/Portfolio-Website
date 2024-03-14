@@ -1,0 +1,263 @@
+@import "../../saas_styles/mixins.scss";
+@import "../../saas_styles/Variables.scss";
+
+@include themify($themes) {
+  .contact-box {
+    background-color: themed("box-color");
+    border-color: themed("box-border-color");
+    h2 {
+      color: themed("button-bg-color");
+    }
+  }
+  .socials-box-container {
+    span {
+      color: themed("button-bg-color");
+      border-color: themed("button-bg-color");
+    }
+  }
+  .group {
+    color: themed("button-bg-color");
+    border-color: themed("button-bg-color");
+    background-color: themed("box-color");
+  }
+  .social-links {
+    h1 {
+      color: themed("button-bg-color");
+    }
+  }
+  .contact-me-pg {
+    h1,
+    h3 {
+      color: themed("button-bg-color");
+    }
+  }
+}
+
+// main-css
+
+.contact-me-pg {
+  width: 100vw;
+  max-width: 480px;
+
+  padding: 1rem 0;
+  padding-bottom: 2.5rem;
+  display: grid;
+  margin: 0 auto;
+  place-items: center;
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+
+    margin-top: 0.5rem;
+    line-height: 1.8rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1.3rem;
+  }
+
+  @include tablet_breakpoint {
+    max-width: 950px;
+    padding-bottom: 4rem;
+    h1 {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+  @include laptop_breakpoint {
+    max-width: 1280px;
+    h1 {
+      font-size: 2.1rem;
+      line-height: 2.1rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    max-width: 1400px;
+    h1 {
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.7rem;
+    }
+  }
+}
+
+.contact-box {
+  border: 0.1rem solid;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  padding-bottom: 2.5rem;
+  width: 82vw;
+  max-width: 394px;
+
+  h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    margin-bottom: 1rem;
+  }
+
+  @include tablet_breakpoint {
+    width: 70vw;
+    max-width: 665px;
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  @include laptop_breakpoint {
+    width: 65vw;
+    max-width: 832px;
+    border: 0.12rem solid;
+
+    h2 {
+      font-size: 1.9rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    width: 60vw;
+    max-width: 850px;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+.group-parent {
+  @include laptop_breakpoint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+.group {
+  border: 0.1rem solid;
+  border-radius: 3px;
+  padding: 0.7rem 1rem;
+
+  width: 10.5rem;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  &:hover {
+    cursor: pointer;
+  }
+  span {
+    font-size: 3rem;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 0.2rem;
+  }
+
+  @include tablet_breakpoint {
+    width: 13rem;
+    font-size: 0.95rem;
+    span {
+      font-size: 3.1rem;
+    }
+  }
+  @include laptop_breakpoint {
+    font-size: 1.05rem;
+    margin: 0;
+    border: 0.12rem solid;
+
+    width: 12rem;
+  }
+  @include laptop_breakpoint-lg {
+    font-size: 1.15rem;
+    margin: 0;
+    width: 13rem;
+    span {
+      font-size: 3.3rem;
+    }
+  }
+}
+
+.social-links {
+  margin-top: 2rem;
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    text-align: center;
+  }
+  @include tablet_breakpoint {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  @include laptop_breakpoint {
+    h1 {
+      font-size: 1.9rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+.socials-box-container {
+  margin-top: 1.35rem;
+  display: grid;
+
+  place-items: center;
+  gap: 1rem 1.5rem;
+  span {
+    font-size: 2rem;
+    border: 0.1rem solid;
+    padding: 1rem 2rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .breaker {
+    display: flex;
+    gap: 1.4rem;
+  }
+
+  @include tablet_breakpoint {
+    span {
+      font-size: 2.2rem;
+    }
+  }
+  @include laptop_breakpoint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    span {
+      border: 0.12rem solid;
+      border-radius: 50%;
+      font-size: 2.3rem;
+      padding: 1.3rem;
+    }
+  }
+  @include laptop_breakpoint-lg {
+    gap: 1.9rem;
+    span {
+      font-size: 2.4rem;
+      padding: 1.4rem;
+    }
+  }
+}

@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 import { Fade } from "react-awesome-reveal";
 import "./SingleProject.scss";
+import { useNavigate } from "react-router-dom";
 
 const SingleProject = ({ name, miniDesc, technologies, img, id }) => {
+  const navigate = useNavigate();
   return (
     <div className="project-box">
       <Fade delay={id * 200} triggerOnce={true}>
@@ -19,7 +21,9 @@ const SingleProject = ({ name, miniDesc, technologies, img, id }) => {
             );
           })}
         </div>
-        <button className="see-more">See more</button>
+        <button onClick={() => navigate(`/project/${id}`)} className="see-more">
+          See more
+        </button>
       </Fade>
     </div>
   );
