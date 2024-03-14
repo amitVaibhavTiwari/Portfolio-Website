@@ -57,6 +57,7 @@
   @include tablet_breakpoint {
     align-items: start;
     flex-flow: row;
+
     gap: 1rem;
   }
 }

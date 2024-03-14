@@ -11,23 +11,22 @@ const Skills = () => {
         <h2>See what i am good at</h2>
       </Fade>
       <div className="skills-box-container">
-        {skills.map((e) => {
-          return (
-            <Fade
-              fraction={0.1}
-              cascade
-              damping={0.2}
-              direction="up"
-              key={e.id}
-              triggerOnce={true}
-            >
-              <div className="skill-card">
+        <Fade
+          fraction={0.1}
+          cascade
+          damping={0.08}
+          direction="up"
+          triggerOnce={true}
+        >
+          {skills.map((e) => {
+            return (
+              <div key={e.id} className="skill-card">
                 <img src={e.img} alt={e.name} />
                 <h4>{e.name}</h4>
               </div>
-            </Fade>
-          );
-        })}
+            );
+          })}
+        </Fade>
       </div>
     </div>
   );

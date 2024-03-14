@@ -50,7 +50,7 @@ const Nav = () => {
               </li>
               <li>
                 {" "}
-                <Link className="link" to="/contact">
+                <Link className="link" to="/connect">
                   Contact me
                 </Link>
               </li>
@@ -110,7 +110,7 @@ const Nav = () => {
               </li>
               <li>
                 {" "}
-                <Link className="link" to="/contact">
+                <Link className="link" to="/connect">
                   Contact me
                 </Link>
               </li>

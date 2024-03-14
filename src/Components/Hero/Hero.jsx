@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./Hero.scss";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -9,10 +9,10 @@ const Hero = () => {
       <div className="hero-left">
         <Fade
           fraction={0.1}
-          delay={1500}
+          delay={750}
           direction="up"
           cascade
-          damping={0.2}
+          damping={0.25}
           triggerOnce={true}
         >
           <h1>Hey there,</h1>
@@ -29,18 +29,18 @@ const Hero = () => {
           </h5>
           <div className="hero-btns-container">
             <button onClick={() => navigate("/about")}>More about me</button>
-            <button onClick={() => navigate("/contact")}>Reach out</button>
+            <button onClick={() => navigate("/connect")}>Reach out</button>
           </div>
         </Fade>
       </div>
       <div className="hero-right">
-        <Fade direction="right" triggerOnce="true">
+        <Zoom triggerOnce="true">
           <div className="img-frame">
-            <Fade direction="right" delay={700} triggerOnce="true">
+            <Zoom delay={400} triggerOnce="true">
               <img src="/photo1709926858.jpeg" />
-            </Fade>
+            </Zoom>
           </div>
-        </Fade>
+        </Zoom>
       </div>
     </div>
   );
