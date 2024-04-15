@@ -14,7 +14,7 @@ const About = () => {
         </Zoom>
         <Fade
           fraction={0.1}
-          delay={500}
+          delay={530}
           cascade
           damping={0.5}
           triggerOnce={true}
@@ -36,7 +36,7 @@ const About = () => {
             thrive under pressure and am confident in meeting tight deadlines.
           </p>
         </Fade>
-        <Fade triggerOnce={true} delay={950}>
+        <Fade triggerOnce={true} delay={980}>
           <h1>Education</h1>
 
           <Education />

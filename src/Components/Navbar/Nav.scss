@@ -72,6 +72,12 @@ nav {
       list-style: none;
       font-size: 0.9rem;
       font-weight: 500;
+      li {
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
     }
   }
   @include tablet_breakpoint {

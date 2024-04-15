@@ -55,10 +55,21 @@
   }
 }
 
+.education-timeline-section {
+  @include tablet_breakpoint {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @include laptop_breakpoint {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .card-content {
   h4 {
     font-size: 1.3rem;
-    font-weight: 800;
+    font-weight: 750;
     line-height: 1.6rem;
   }
   h5 {
@@ -88,6 +99,7 @@
       line-height: 1.8rem;
     }
     h5 {
+      margin-top: 0.7rem;
       font-size: 1.2rem;
     }
     h6 {

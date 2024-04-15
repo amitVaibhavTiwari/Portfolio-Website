@@ -15,12 +15,12 @@ const Connect = () => {
     <PageChanger>
       <Zoom fraction={0.1} cascade damping={0.4} triggerOnce={true}>
         <div className="contact-me-pg">
-          {/* <Zoom triggerOnce={true}> */}
-          <h1>Have an idea ?</h1>
-          {/* </Zoom> */}
-          <Zoom delay={500} triggerOnce={true}>
+          <Fade direction="up" triggerOnce={true}>
+            <h1>Have an idea ?</h1>
+          </Fade>
+          <Fade direction="up" delay={700} triggerOnce={true}>
             <h3> Interested in working together ?</h3>
-          </Zoom>
+          </Fade>
           <Fade
             fraction={0.1}
             cascade
@@ -34,34 +34,28 @@ const Connect = () => {
               </Zoom>
               <div className="group-parent">
                 <Fade direction="up" delay={1400} triggerOnce={true}>
-                  <div
-                    onClick={(e) => {
-                      window.location.href =
-                        "https://api.whatsapp.com/send?phone=9511414759";
-                      e.preventDefault();
-                    }}
+                  <a
+                    href="https://api.whatsapp.com/send?phone=9511414759"
                     className="group"
+                    target="_blank"
                   >
                     <span>
                       <IoLogoWhatsapp />
                     </span>
                     <p>Chat with me</p>
-                  </div>
+                  </a>
                 </Fade>
                 <Fade direction="up" delay={1600} triggerOnce={true}>
-                  <div
-                    onClick={(e) => {
-                      window.location.href =
-                        "mailto:amitvaibhavtiwari@gmail.com";
-                      e.preventDefault();
-                    }}
+                  <a
+                    target="_blank"
+                    href="mailto:amitvaibhavtiwari@gmail.com"
                     className="group"
                   >
                     <span>
                       <IoMail />
                     </span>
                     <p>Mail me</p>
-                  </div>
+                  </a>
                 </Fade>
               </div>
 

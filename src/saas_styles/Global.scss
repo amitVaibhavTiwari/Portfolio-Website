@@ -6,6 +6,8 @@
   body {
     background-color: themed("body-color");
     color: themed("text-color");
+  }
+  #portfolio-pages {
     background-image: radial-gradient(
       circle at 0.25px 0.25px,
       themed("dot-color") 0.25px,
@@ -15,8 +17,8 @@
 
     @include laptop_breakpoint {
       background-image: radial-gradient(
-        circle at 0.5px 0.5px,
-        themed("dot-color") 0.5px,
+        circle at 0.51px 0.51px,
+        themed("dot-color") 0.51px,
         transparent 0
       );
     }

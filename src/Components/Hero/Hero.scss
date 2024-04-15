@@ -177,31 +177,31 @@
   position: relative;
   height: 21rem;
   .img-frame {
-    height: 20rem;
-    width: 17rem;
+    height: 20.3rem;
+    width: 16.8rem;
     position: absolute;
     right: 2rem;
   }
   .avt-img {
     position: absolute;
 
-    height: 20rem;
-    width: 17rem;
+    height: 20.3rem;
+    width: 16.8rem;
     top: 1.5rem;
     right: 8px;
   }
 
   @include customBreakPoint(385) {
-    height: 22rem;
+    height: 22.5rem;
     .img-frame {
       right: 2.5rem;
       width: 18rem;
-      height: 20.8rem;
+      height: 21.5rem;
     }
     .avt-img {
       right: 15px;
       width: 18rem;
-      height: 20.8rem;
+      height: 21.5rem;
     }
   }
   @include customBreakPoint(430) {
