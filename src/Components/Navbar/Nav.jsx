@@ -5,7 +5,7 @@ import { useGlobalContext } from "../../GlobalContext";
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoIosMoon } from "react-icons/io";
 import Logo from "../Logo/Logo";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 
 const Nav = () => {
@@ -36,27 +36,27 @@ const Nav = () => {
     <nav>
       <div className="nav-center">
         <Logo className="logo" />
-        <div className="nav-links">
-          <ul>
-            <Fade fraction={0.1} cascade damping={0.1} triggerOnce={true}>
+        <div className="nav-links-container">
+          <ul className="nav-links">
+            <Fade fraction={0.1} cascade damping={0.3} triggerOnce={true}>
               <li onClick={() => navigate("/")}>Home</li>
               <li onClick={() => navigate("/about")}>About me</li>
               <li onClick={() => navigate("/connect")}>Contact me</li>
               <li onClick={() => navigate("/projects")}> Projects</li>
             </Fade>
           </ul>
+          <span>
+            <div onClick={() => handleThemeChange()} className="theme">
+              {theme === "dark" ? <IoSunnyOutline /> : <IoIosMoon />}
+            </div>
+            <div
+              onClick={() => setShowSidebar(!showSidebar)}
+              className="toggle-btn"
+            >
+              <BsList />
+            </div>
+          </span>
         </div>
-        <span>
-          <div onClick={() => handleThemeChange()} className="theme">
-            {theme === "dark" ? <IoSunnyOutline /> : <IoIosMoon />}
-          </div>
-          <div
-            onClick={() => setShowSidebar(!showSidebar)}
-            className="toggle-btn"
-          >
-            <BsList />
-          </div>
-        </span>
       </div>
 
       {/* below is sidebar visible only on mobile */}

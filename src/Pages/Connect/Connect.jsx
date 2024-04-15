@@ -15,9 +15,9 @@ const Connect = () => {
     <PageChanger>
       <Zoom fraction={0.1} cascade damping={0.4} triggerOnce={true}>
         <div className="contact-me-pg">
-          <Zoom triggerOnce={true}>
-            <h1>Have an idea ?</h1>
-          </Zoom>
+          {/* <Zoom triggerOnce={true}> */}
+          <h1>Have an idea ?</h1>
+          {/* </Zoom> */}
           <Zoom delay={500} triggerOnce={true}>
             <h3> Interested in working together ?</h3>
           </Zoom>
@@ -75,8 +75,7 @@ const Connect = () => {
                       <span>
                         <FaSquareInstagram />
                       </span>
-                      {/* </Fade> */}
-                      {/* <Fade direction="up" delay={2100} triggerOnce={true}> */}
+
                       <span>
                         <FaXTwitter />
                       </span>
@@ -87,8 +86,7 @@ const Connect = () => {
                       <span>
                         <FaLinkedin />
                       </span>
-                      {/* </Fade>
-                    <Fade direction="up" delay={2300} triggerOnce={true}> */}
+
                       <span>
                         <FaGithub />
                       </span>

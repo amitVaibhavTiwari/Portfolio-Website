@@ -84,10 +84,10 @@ export const skills = [
 export const projects = [
   {
     id: "1",
-    name: "Auto Connect",
+    name: "Motorix",
     img: "/Screenshot 2024-02-17 121439.png",
     miniDesc:
-      "A platform to buy and sell used vehicles. Built this full stack web application using React on frontend along with Nodejs and Mongodb on the backend. Implemented user authentication using firebase auth. Also added live messaging functionality.",
+      "A platform where users can buy and sell used vehicles. Built this full stack web application using React on the frontend along with Nodejs and Mongodb on the backend. Implemented user authentication with Firebase auth. Also added the live messaging functionality using Socket.IO .",
     technologies: ["React js", "Scss", "Node js", "Firebase", "Mongodb"],
   },
   {
@@ -105,7 +105,7 @@ export const projects = [
     img: "/Screenshot 2024-02-17 121439.png",
 
     miniDesc:
-      "Landing page for a Dubai based real estate website. Made this fully responsive website using React js and Scss. While making this i learnt how to implement multiple themes on a website without using any library.",
+      "Landing page for a Dubai based real estate website. Made this fully responsive website using React js and Scss. While making this I learnt how to implement multiple themes on a website without using any library.",
     technologies: ["React js", "Scss"],
   },
 ];

@@ -8,10 +8,10 @@ const Projects = () => {
   const navigate = useNavigate();
   return (
     <div className="projects-section">
-      <Fade direction="up" delay={100} triggerOnce={true}>
+      <Fade direction="up" delay={200} triggerOnce={true}>
         <h1>Recent projects</h1>
       </Fade>
-      <Fade direction="up" delay={100} triggerOnce={true}>
+      <Fade direction="up" delay={200} triggerOnce={true}>
         <h2>Take a look</h2>
       </Fade>
 

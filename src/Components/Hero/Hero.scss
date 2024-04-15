@@ -5,21 +5,27 @@
 
 @include themify($themes) {
   .img-frame {
-    background-color: themed("img-frame-color");
+    background-color: themed("color-2");
   }
 
   .hero-btns-container {
     button {
       color: themed("button-text-color");
-      background-color: themed("button-bg-color");
+      background-color: themed("color-2");
     }
   }
 
   .hero-left {
     h2 {
       span {
-        color: themed("logo-color");
+        color: themed("color-2");
       }
+    }
+    .typewriter-parent {
+      color: themed("color-2");
+    }
+    h4 {
+      background-color: themed("body-color");
     }
   }
 }
@@ -34,11 +40,16 @@
 
   @include tablet_breakpoint {
     flex-flow: row;
-    justify-content: center;
-    padding: 1.5rem 3rem;
+    justify-content: space-between;
+    gap: 0;
+    padding: 1.5rem 2rem;
   }
+
   @include laptop_breakpoint {
-    padding: 1rem 8rem;
+    padding: 2rem 4rem;
+  }
+  @include laptop_breakpoint_md {
+    padding: 2rem calc((100% - 1140px) / 2);
   }
 }
 
@@ -62,11 +73,13 @@
       letter-spacing: 2px;
     }
   }
-  h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 0.2rem;
+  .typewriter-parent {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+    font-family: inherit;
   }
+
   h4 {
     font-size: 0.9rem;
     font-weight: 400;
@@ -74,108 +87,87 @@
     width: 80%;
     margin-bottom: 0.3rem;
   }
-  h5 {
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 1.2rem;
-    width: 80%;
-  }
 
   @include tablet_breakpoint {
-    width: 50%;
+    width: 55%;
     h1 {
-      margin-top: 3rem;
+      margin-top: 2.5rem;
       font-size: 1.2rem;
       margin-bottom: 0.2rem;
     }
     h2 {
-      font-size: 1.9rem;
-      line-height: 2.4rem;
+      font-size: 2rem;
+      line-height: 2.5rem;
       span {
-        font-weight: 900;
-
-        font-family: "Lobster Two", sans-serif;
-        font-style: italic;
         font-size: 3.2rem;
         letter-spacing: 2px;
       }
     }
-    h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.3rem;
+    .typewriter-parent {
+      font-size: 1.35rem;
+      margin-bottom: 0.2rem;
+      margin-top: 0.1rem;
     }
+
     h4 {
-      font-size: 1rem;
+      font-size: 1.05rem;
       line-height: 1.5rem;
-      margin-bottom: 0.4rem;
-    }
-    h5 {
-      font-size: 1rem;
-      line-height: 1.5rem;
+      margin-bottom: 0.5rem;
+      width: 90%;
     }
   }
 
   @include laptop_breakpoint {
     h1 {
-      margin-top: 3rem;
-      font-size: 1.5rem;
-      margin-bottom: 0.3rem;
+      margin-top: 3.7rem;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
     }
     h2 {
-      font-size: 2.2rem;
-      line-height: 2.9rem;
+      font-size: 2.15rem;
+      line-height: 3rem;
       span {
-        font-size: 5rem;
+        font-size: 4.3rem;
       }
     }
-    h3 {
-      font-size: 1.6rem;
-      margin-bottom: 0.4rem;
+    .typewriter-parent {
+      font-size: 1.7rem;
+      font-weight: 500;
+      margin-top: 0.3rem;
+      margin-bottom: 0.35rem;
     }
     h4 {
-      font-size: 1.3rem;
+      font-size: 1.22rem;
       line-height: 1.7rem;
       margin-bottom: 1rem;
     }
-    h5 {
-      font-size: 1.3rem;
-      line-height: 1.7rem;
-    }
   }
+
   @include laptop_breakpoint-md {
-    h4 {
-      width: 100%;
-    }
-    h5 {
-      width: 100%;
-    }
+    width: 62%;
   }
 
   @include laptop_breakpoint-lg {
     h1 {
-      margin-top: 3rem;
-      font-size: 1.6rem;
-      margin-bottom: 0.4rem;
+      margin-top: 3.3rem;
+
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
     h2 {
-      font-size: 2.3rem;
+      font-size: 2.25rem;
       line-height: 3.3rem;
       span {
         font-size: 5.3rem;
       }
     }
-    h3 {
-      font-size: 1.7rem;
-      margin-bottom: 0.5rem;
+    .typewriter-parent {
+      font-size: 1.8rem;
     }
     h4 {
-      font-size: 1.4rem;
+      font-size: 1.32rem;
       line-height: 1.8rem;
       margin-bottom: 1.1rem;
-    }
-    h5 {
-      font-size: 1.4rem;
-      line-height: 1.8rem;
     }
   }
 }
@@ -186,55 +178,75 @@
   height: 21rem;
   .img-frame {
     height: 20rem;
-    width: 16rem;
-
+    width: 17rem;
     position: absolute;
     right: 2rem;
+  }
+  .avt-img {
+    position: absolute;
 
-    img {
-      position: absolute;
+    height: 20rem;
+    width: 17rem;
+    top: 1.5rem;
+    right: 8px;
+  }
 
-      height: 20rem;
+  @include customBreakPoint(385) {
+    height: 22rem;
+    .img-frame {
+      right: 2.5rem;
       width: 18rem;
-      top: 1.5rem;
-      left: 1.5rem;
+      height: 20.8rem;
+    }
+    .avt-img {
+      right: 15px;
+      width: 18rem;
+      height: 20.8rem;
+    }
+  }
+  @include customBreakPoint(430) {
+    .img-frame {
+      right: 18%;
+    }
+    .avt-img {
+      right: 12%;
     }
   }
   @include tablet_breakpoint {
     order: 2;
-    width: 50%;
+    width: 45%;
 
     .img-frame {
-      height: 24rem;
-      width: 20rem;
-      right: 3rem;
-      img {
-        height: 24rem;
-        width: 20rem;
-        top: 1.8em;
-        left: 1.8rem;
-      }
+      height: 23rem;
+      width: 19rem;
+      right: 2rem;
+    }
+    .avt-img {
+      height: 23rem;
+      width: 19rem;
+      top: 1.8em;
+      right: 0rem;
     }
   }
   @include laptop_breakpoint {
     .img-frame {
-      height: 26rem;
-      width: 22rem;
-      right: 5rem;
-      img {
-        height: 26rem;
-        width: 22rem;
-        top: 2.2rem;
-        left: 2.2rem;
-      }
+      height: 25rem;
+      width: 21rem;
+      right: 3.3rem;
+    }
+    .avt-img {
+      height: 25rem;
+      width: 21rem;
+      top: 2.2rem;
+      right: 1rem;
     }
   }
   @include laptop_breakpoint-lg {
     .img-frame {
-      height: 27rem;
-      width: 23rem;
+      height: 25.2rem;
+      width: 21.5rem;
       img {
-        height: 27rem;
+        height: 26.5rem;
         width: 23rem;
       }
     }
@@ -248,28 +260,25 @@
   gap: 0.5rem;
 
   button {
-    padding: 0.4em 0.5em;
-    border-radius: 3px;
+    padding: 0.45rem 0.7rem;
+    border-radius: 0.25rem;
     font-size: 0.8rem;
     font-weight: 400;
   }
 
   @include tablet_breakpoint {
-    margin-top: 1.5rem;
+    margin-top: 1.6rem;
     button {
       font-size: 0.9rem;
     }
   }
   @include laptop_breakpoint {
-    margin-top: 2.4rem;
-    button {
-      font-size: 1rem;
-    }
+    margin-top: 2rem;
   }
   @include laptop_breakpoint-lg {
-    margin-top: 2.6rem;
+    margin-top: 2.4rem;
     button {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
     }
   }
 }

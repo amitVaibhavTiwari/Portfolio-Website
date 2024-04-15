@@ -1,43 +1,57 @@
 // breakpoints
-// by default we'll make mobie first then according to breakpoints we'll apply css
+// by default we'll make mobile first then according to breakpoints we'll apply css
 $medium-screen: 480px;
 $tablet-screen: 768px;
 $laptop-screen: 1024px;
-$laptop-screen-md: 1200px;
+$laptop-screen-md: 1280px;
 $laptop-screen-lg: 1400px;
 
 // add all the themes in this themes variable
 $themes: (
   default: (
     body-color: rgb(255, 255, 255),
+    text-color: black,
+    box-color: white,
+    box-border-color: black,
+    color-2: black,
+    sidebar-color: rgb(229, 227, 227),
+    button-text-color: white,
+    dot-color: black,
+    //
+    //
+    //
     normal-text-color: black,
     image-border-color: black,
     logo-color: black,
 
     img-frame-color: black,
 
-    box-color: white,
-    box-border-color: black,
     box-main-text-color: black,
 
     social-border-color: black,
     social-icon-color: black,
 
     button-bg-color: black,
-    button-text-color: white,
 
     button-2-color: black,
 
     name-color: black,
-    sidebar-color: rgb(229, 227, 227),
   ),
   dark: (
     body-color: rgb(0, 0, 0),
+    text-color: rgb(184, 184, 184),
+    box-border-color: #000000,
+    box-color: #1e1e1e,
+    color-2: #ffa200,
+    sidebar-color: rgb(56, 56, 56),
+    button-text-color: rgb(0, 0, 0),
+    dot-color: #ffffffc9,
+    //
+    //
+    //
     normal-text-color: rgb(184, 184, 184),
     image-border-color: black,
     logo-color: #ffa200,
-    box-color: #1e1e1e,
-    box-border-color: #000000,
     box-main-text-color: #ffa200,
 
     img-frame-color: #ffa200,
@@ -46,10 +60,8 @@ $themes: (
     social-icon-color: black,
 
     button-bg-color: #ffa200,
-    button-text-color: rgb(0, 0, 0),
     button-2-color: black,
 
     name-color: black,
-    sidebar-color: rgb(56, 56, 56),
   ),
 );

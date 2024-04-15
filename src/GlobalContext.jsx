@@ -53,6 +53,7 @@ const GlobalContext = ({ children }) => {
       localStorage.setItem("THEME", action.payload.theme);
       return { ...state, userPreferredTheme: action.payload.theme };
     }
+    
   };
 
   const [state, dispatch] = useReducer(reducer, defaultState);

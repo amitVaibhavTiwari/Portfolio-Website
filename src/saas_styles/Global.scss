@@ -5,7 +5,28 @@
 @include themify($themes) {
   body {
     background-color: themed("body-color");
-    color: themed("normal-text-color");
+    color: themed("text-color");
+    background-image: radial-gradient(
+      circle at 0.25px 0.25px,
+      themed("dot-color") 0.25px,
+      transparent 0
+    );
+    background-size: 10px 10px;
+
+    @include laptop_breakpoint {
+      background-image: radial-gradient(
+        circle at 0.5px 0.5px,
+        themed("dot-color") 0.5px,
+        transparent 0
+      );
+    }
+    @include laptop_breakpoint_lg {
+      background-image: radial-gradient(
+        circle at 0.53px 0.53px,
+        themed("dot-color") 0.53px,
+        transparent 0
+      );
+    }
   }
 }
 
@@ -16,19 +37,8 @@
 
 #portfolio-pages {
   width: fit-content;
-  max-width: 480px;
   display: block;
   margin: auto;
-
-  @include tablet_breakpoint {
-    max-width: 950px;
-  }
-  @include laptop_breakpoint {
-    max-width: 1280px;
-  }
-  @include laptop_breakpoint-lg {
-    max-width: 1400px;
-  }
 }
 
 // below is some css rest to reset all defaults

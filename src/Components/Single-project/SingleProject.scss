@@ -24,17 +24,18 @@
 
 .project-box {
   padding: 1rem;
-  border: 0.1em solid;
-  border-radius: 2px;
+  border: 0.1rem solid;
+  border-radius: 0.25rem;
+  width: 100%;
   img {
-    height: 9rem;
+    height: 9.3rem;
     aspect-ratio: 1.8/1;
     display: block;
     margin: auto;
   }
   h1 {
-    font-size: 1.1rem;
-    margin: 0.3rem 0;
+    font-size: 1.2rem;
+    margin: 0.5rem 0rem 0.3rem 0;
     font-weight: 700;
     text-align: center;
   }
@@ -43,12 +44,12 @@
     text-align: center;
   }
   .see-more {
-    border: 0.1em solid;
+    border: 0.1rem solid;
     background: transparent;
     border-radius: 2px;
 
-    margin-top: 2rem;
-    padding: 0.4rem;
+    margin-top: 1.5rem;
+    padding: 0.45rem;
     width: 100%;
     font-size: 0.85rem;
     font-weight: 600;
@@ -155,9 +156,9 @@
 
   .tech-box {
     text-align: center;
-    padding: 0.3rem 0.4rem;
+    padding: 0.4rem 0.5rem;
     border-radius: 3px;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
   }
   @include tablet_breakpoint {
     margin-top: 2rem;
