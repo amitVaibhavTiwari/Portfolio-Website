@@ -7,11 +7,16 @@
     background-color: themed("box-color");
 
     h1 {
-      color: themed("box-main-text-color");
+      color: themed("color-2");
     }
     .see-more {
-      color: themed("button-bg-color");
-      border-color: themed("button-bg-color");
+      color: themed("color-2");
+      border-color: themed("color-2");
+
+      &:hover {
+        background-color: themed("color-2");
+        color: themed("button-text-color");
+      }
     }
   }
   .technologies-used {
@@ -24,7 +29,7 @@
 
 .project-box {
   padding: 1rem;
-  border: 0.1rem solid;
+  border: 0.0001rem solid;
   border-radius: 0.25rem;
   width: 100%;
   img {
@@ -44,19 +49,20 @@
     text-align: center;
   }
   .see-more {
-    border: 0.1rem solid;
+    border: 0.02rem solid;
     background: transparent;
-    border-radius: 2px;
+    border-radius: 0.25rem;
 
     margin-top: 1.5rem;
     padding: 0.45rem;
     width: 100%;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   @include tablet_breakpoint {
-    padding: 0.5rem;
+    padding: 0.7rem 0.5rem;
+    padding-bottom: 1rem;
     min-height: 38rem;
 
     width: 33%;
@@ -65,70 +71,89 @@
     }
     p {
       font-size: 1rem;
-      height: 19.5rem;
+      height: 19.6rem;
     }
     .see-more {
+      margin-top: 1.7rem;
       font-size: 0.95rem;
     }
   }
 
+  @include customBreakPoint(795) {
+    min-height: 39.5rem;
+    p {
+      height: 18rem;
+    }
+  }
   @include customBreakPoint(810) {
-    min-height: 36.5rem;
+    min-height: 37.5rem;
     p {
-      height: 13rem;
+      height: 16rem;
     }
   }
-  @include customBreakPoint(818) {
-    min-height: 35.5rem;
+  @include customBreakPoint(858) {
+    min-height: 37rem;
     p {
-      height: 12rem;
+      height: 15.5rem;
     }
   }
-  @include customBreakPoint(920) {
-    min-height: 34rem;
+  @include customBreakPoint(899) {
+    min-height: 37rem;
     p {
-      height: 10.5rem;
+      height: 13.6rem;
+    }
+  }
+  @include customBreakPoint(953) {
+    min-height: 36rem;
+    p {
+      height: 12.6rem;
     }
   }
 
   @include laptop_breakpoint {
     min-height: 37rem;
-    padding: 1rem 0.6rem;
+    padding: 0.7rem 0.5rem;
+    padding-bottom: 0.8rem;
+    img {
+      height: 10rem;
+      margin-bottom: 0.8rem;
+    }
+
     h1 {
       font-size: 1.2rem;
-      margin: 0.6rem 0;
+      margin: 0.5rem 0;
     }
     p {
-      font-size: 1rem;
-      height: 15rem;
+      font-size: 1.02rem;
+      height: 16rem;
     }
     .see-more {
+      margin-top: 2rem;
       font-size: 1.05rem;
     }
   }
 
-  @include customBreakPoint(1040) {
-    min-height: 32rem;
+  @include customBreakPoint(1027) {
+    min-height: 32.5rem;
     p {
-      height: 13.5rem;
+      height: 14rem;
     }
   }
-  @include customBreakPoint(1100) {
+  @include customBreakPoint(1081) {
     p {
-      height: 12rem;
+      height: 12.7rem;
     }
   }
 
-  @include customBreakPoint(1200) {
+  @include customBreakPoint(1223) {
     p {
-      height: 11rem;
+      height: 11.5rem;
     }
   }
 
   @include laptop_breakpoint-lg {
     min-height: 30rem;
     padding: 1rem;
-    border: 0.12rem solid;
 
     h1 {
       font-size: 1.3rem;
@@ -136,7 +161,7 @@
     }
     p {
       font-size: 1.1rem;
-      height: 12rem;
+      height: 13.7rem;
     }
     .see-more {
       font-size: 1.15rem;

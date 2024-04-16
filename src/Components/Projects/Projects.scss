@@ -26,14 +26,17 @@
     }
   }
   @include laptop_breakpoint {
-    padding: 0rem 6.6rem;
+    padding: 0rem 5rem;
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.18rem;
       line-height: 2.1rem;
     }
     h2 {
       font-size: 1.1rem;
     }
+  }
+  @include laptop_breakpoint_md {
+    padding: 0rem calc((100% - 1120px) / 2);
   }
   @include laptop_breakpoint-lg {
     h1 {
@@ -56,9 +59,13 @@
   gap: 1.7rem;
 
   @include tablet_breakpoint {
+    margin-top: 1.15rem;
     align-items: start;
     flex-flow: row;
     padding: 0;
+    gap: 0.5rem;
+  }
+  @include laptop_breakpoint {
     gap: 1rem;
   }
 }
@@ -77,6 +84,8 @@
 
   @include tablet_breakpoint {
     font-size: 1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
   }
   @include laptop_breakpoint {
     margin-top: 3rem;

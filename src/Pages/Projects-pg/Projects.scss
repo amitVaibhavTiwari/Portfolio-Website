@@ -3,20 +3,20 @@
 
 @include themify($themes) {
   .projects-heading {
-    color: themed("logo-color");
+    color: themed("color-2");
   }
 }
 
 .all-projects-pg {
   padding: 1rem;
-  padding-bottom: 2.5rem;
   @include tablet_breakpoint {
-    padding: 1rem 1.8rem;
-    padding-bottom: 2.5rem;
+    padding: 1rem 2rem;
   }
   @include laptop_breakpoint {
-    padding: 1rem 6.6rem;
-    padding-bottom: 2.5rem;
+    padding: 1rem 4rem;
+  }
+  @include laptop_breakpoint_md {
+    padding: 1rem calc((100% - 1120px) / 2);
   }
 }
 .projects-heading {
@@ -33,4 +33,8 @@
   @include laptop_breakpoint-lg {
     font-size: 2.3rem;
   }
+}
+
+.mb {
+  margin-bottom: 3rem;
 }

@@ -105,7 +105,7 @@ export const projects = [
     img: "/Screenshot 2024-02-17 121439.png",
 
     miniDesc:
-      "Landing page for a Dubai based real estate website. Made this fully responsive website using React js and Scss. While making this I learnt how to implement multiple themes on a website without using any library.",
+      "Landing page for a real estate company. Made this fully responsive website using React js and Scss. The maim behind making this was to learn how to implement multiple themes on a website without using any library.",
     technologies: ["React js", "Scss"],
   },
 ];
