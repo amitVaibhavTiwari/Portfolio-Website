@@ -35,6 +35,13 @@
   }
 }
 
-.mb {
-  margin-bottom: 3rem;
+.projects-pg-footer-container {
+  margin-top: 3rem;
+
+  @include tablet_breakpoint {
+    margin-top: 2rem;
+  }
+  @include laptop_breakpoint {
+    margin-top: 2.5rem;
+  }
 }

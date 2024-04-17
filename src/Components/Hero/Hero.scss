@@ -12,6 +12,22 @@
     button {
       color: themed("button-text-color");
       background-color: themed("color-2");
+      border-color: themed("color-2");
+
+      &:hover {
+        color: themed("color-2");
+        background-color: transparent;
+      }
+    }
+    .btn-2 {
+      color: themed("color-2");
+      background-color: transparent;
+      border-color: themed("color-2");
+
+      &:hover {
+        color: themed("button-text-color");
+        background-color: themed("color-2");
+      }
     }
   }
 
@@ -264,6 +280,7 @@
     border-radius: 0.25rem;
     font-size: 0.8rem;
     font-weight: 400;
+    border: 0.0001rem solid;
   }
 
   @include tablet_breakpoint {

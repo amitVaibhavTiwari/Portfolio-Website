@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Nav.scss";
 import { BsList } from "react-icons/bs";
 import { useGlobalContext } from "../../GlobalContext";
@@ -13,6 +13,18 @@ const Nav = () => {
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [theme, setTheme] = useState(userPreferredTheme);
+
+  useEffect(() => {
+    const body = document.documentElement;
+    if (showSidebar) {
+      body.style =
+        "overflow-y: hidden; position: absolute; width: 100%; top: 0px; ";
+    } else {
+      body.style =
+        "overflow-y: overlay; position: initial; width: auto; top: initial ;";
+    }
+  }, [showSidebar]);
+
   const handleThemeChange = () => {
     if (theme === "dark") {
       dispatch({
@@ -68,7 +80,13 @@ const Nav = () => {
             : "sidebar-container"
         }`}
       >
-        <div className={`${"sidebar"}`}>
+        <div
+          onClick={(e) => {
+            e.stopPropagation();
+            return null;
+          }}
+          className="sidebar"
+        >
           <div className="sidebar-logo">
             <Logo />
           </div>
@@ -80,10 +98,39 @@ const Nav = () => {
             damping={0.1}
           >
             <ul>
-              <li onClick={() => navigate("/")}>Home</li>
-              <li onClick={() => navigate("/about")}>About me</li>
-              <li onClick={() => navigate("/connect")}>Contact me</li>
-              <li onClick={() => navigate("/projects")}> Projects</li>
+              <li
+                onClick={() => {
+                  setShowSidebar(false);
+                  navigate("/");
+                }}
+              >
+                Home
+              </li>
+              <li
+                onClick={() => {
+                  setShowSidebar(false);
+                  navigate("/about");
+                }}
+              >
+                About me
+              </li>
+              <li
+                onClick={() => {
+                  setShowSidebar(false);
+                  navigate("/connect");
+                }}
+              >
+                Contact me
+              </li>
+              <li
+                onClick={() => {
+                  setShowSidebar(false);
+                  navigate("/projects");
+                }}
+              >
+                {" "}
+                Projects
+              </li>
             </ul>
           </Fade>
         </div>

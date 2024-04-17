@@ -43,6 +43,7 @@
   @include laptop_breakpoint_md {
     padding: 1.5rem calc((100% - 1140px) / 2);
   }
+  
   @include laptop_breakpoint-lg {
     h1 {
       font-size: 2.2rem;

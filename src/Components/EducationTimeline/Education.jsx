@@ -22,13 +22,12 @@ const Education = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element card"
-          // date="2021-22"
           icon={<FaGraduationCap />}
         >
           <div className="card-content">
             <h4>Intermediate (Class XII)</h4>
             <h5>2021-22</h5>
-            <h6>Percentage: 85.8</h6>
+            <h6>Percentage: 88.4</h6>
           </div>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -40,7 +39,7 @@ const Education = () => {
             <h4>Highschool (Class X)</h4>
             <h5>2019-20</h5>
 
-            <h6>Percentage: 88.8</h6>
+            <h6>Percentage: 91.2</h6>
           </div>
         </VerticalTimelineElement>
       </VerticalTimeline>

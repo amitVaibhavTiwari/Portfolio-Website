@@ -25,69 +25,69 @@
   h1 {
     text-align: center;
 
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
   h2 {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     width: fit-content;
     margin: 0 auto;
   }
   h3 {
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.83rem;
     font-weight: 700;
     margin-top: 1rem;
   }
   h5 {
     margin-top: 2rem;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     text-align: left;
   }
   h6 {
     text-align: left;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
   }
 
   @include tablet_breakpoint {
     padding: 1rem 2rem;
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.45rem;
       margin-bottom: 0.2rem;
     }
     h2 {
       font-size: 0.95rem;
     }
     h3 {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
     h5 {
-      font-size: 0.8rem;
+      font-size: 0.86rem;
     }
     h6 {
-      font-size: 0.8rem;
+      font-size: 0.86rem;
     }
   }
   @include laptop_breakpoint {
     padding: 1.5rem 4rem;
     h1 {
-      font-size: 1.75rem;
+      font-size: 1.65rem;
       margin-bottom: 0;
     }
     h2 {
-      font-size: 1.03rem;
+      font-size: 1rem;
     }
     h3 {
-      font-size: 1.03rem;
+      font-size: 0.95rem;
     }
     h5 {
       margin-top: 2.5rem;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
     h6 {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
   }
 
@@ -97,19 +97,19 @@
 
   @include laptop_breakpoint-lg {
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.75rem;
     }
     h2 {
       font-size: 1.1rem;
     }
     h3 {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
     h5 {
-      font-size: 0.96rem;
+      font-size: 0.92rem;
     }
     h6 {
-      font-size: 0.96rem;
+      font-size: 0.92rem;
     }
   }
 }
@@ -120,10 +120,7 @@
   margin-bottom: 1.5rem;
   @include laptop_breakpoint {
     margin-bottom: 2.3rem;
-    height: 0.06rem;
-  }
-  @include laptop_breakpoint_lg {
-    height: 0.04rem;
+    height: 0.015rem;
   }
 }
 
@@ -137,12 +134,15 @@
     border: 0.1rem solid;
     padding: 0.3rem;
     border-radius: 50%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
   @include laptop_breakpoint {
     gap: 1rem;
     span {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
   }
   @include laptop_breakpoint-lg {

@@ -30,7 +30,9 @@ const Hero = () => {
           </h4>
           <div className="hero-btns-container">
             <button onClick={() => navigate("/about")}>More about me</button>
-            <button onClick={() => navigate("/connect")}>Reach out</button>
+            <button className="btn-2" onClick={() => navigate("/connect")}>
+              Reach out
+            </button>
           </div>
         </Fade>
       </div>

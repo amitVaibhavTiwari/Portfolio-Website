@@ -156,8 +156,9 @@ nav {
 
     list-style: none;
     li {
-      width: 100%;
+      width: fit-content;
       padding: 0.7rem 0;
+      padding-right: 0.5rem;
     }
   }
 

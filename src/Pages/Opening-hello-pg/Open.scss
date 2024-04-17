@@ -58,11 +58,11 @@ $wordCount: 7;
 
 @include laptop_breakpoint {
   .parent-page {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 @include laptop_breakpoint-lg {
   .parent-page {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }

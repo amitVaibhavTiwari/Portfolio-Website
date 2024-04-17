@@ -11,12 +11,14 @@ const Projects = () => {
         <Fade triggerOnce={true}>
           <h1 className="projects-heading">Projects</h1>
 
-          <div className="projects-box-container mb">
+          <div className="projects-box-container">
             {projects.map((e) => {
               return <SingleProject key={e.id} {...e} />;
             })}
           </div>
         </Fade>
+      </div>
+      <div className="projects-pg-footer-container">
         <Footer />
       </div>
     </PageChanger>

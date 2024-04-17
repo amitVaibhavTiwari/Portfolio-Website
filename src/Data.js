@@ -31,33 +31,33 @@ export const skills = [
   },
   {
     id: "7",
-    name: "Github",
-    img: "/github.png",
-  },
-  {
-    id: "8",
     name: "Redux toolkit",
     img: "/redux.png",
   },
   {
+    id: "8",
+    name: "Postman",
+    img: "/postman-icon.png",
+  },
+  {
     id: "9",
+    name: "Github",
+    img: "/github.png",
+  },
+  {
+    id: "10",
     name: "Firebase",
     img: "/firebase.png",
   },
   {
-    id: "10",
+    id: "11",
     name: "Java",
     img: "/java.png",
   },
   {
-    id: "11",
+    id: "12",
     name: "Python",
     img: "/python.png",
-  },
-  {
-    id: "12",
-    name: "C++",
-    img: "/cpp.png",
   },
   {
     id: "13",

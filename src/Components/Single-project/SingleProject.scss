@@ -16,6 +16,7 @@
       &:hover {
         background-color: themed("color-2");
         color: themed("button-text-color");
+        font-weight: 300;
       }
     }
   }
@@ -52,7 +53,6 @@
     border: 0.02rem solid;
     background: transparent;
     border-radius: 0.25rem;
-
     margin-top: 1.5rem;
     padding: 0.45rem;
     width: 100%;

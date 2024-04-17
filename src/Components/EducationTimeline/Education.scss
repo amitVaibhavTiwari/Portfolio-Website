@@ -17,7 +17,7 @@
   .vertical-timeline {
     &::before {
       background: themed("logo-color") !important;
-      width: 3.5px;
+      width: 3px;
     }
   }
 
@@ -25,7 +25,7 @@
   .vertical-timeline-element-icon {
     color: themed("button-bg-color");
     background-color: themed("button-text-color");
-    box-shadow: 0 0 0 2.5px themed("button-bg-color");
+    box-shadow: 0 0 0 2px themed("button-bg-color");
   }
 
   // jo arrow hota hai wo
@@ -43,7 +43,7 @@
 // main css
 .card {
   .vertical-timeline-element-content {
-    border: 0.2rem solid;
+    border: 0.13rem solid;
     border-radius: 0.3rem;
   }
 }
