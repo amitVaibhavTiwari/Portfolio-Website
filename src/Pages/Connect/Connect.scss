@@ -84,7 +84,7 @@
 }
 
 .contact-box {
-  border: 0.1rem solid;
+  border: 0.00001rem solid;
   text-align: center;
   padding: 1.5rem 1rem;
   padding-bottom: 2.5rem;
@@ -107,7 +107,6 @@
   }
   @include laptop_breakpoint {
     width: 65vw;
-    border: 0.12rem solid;
 
     h2 {
       font-size: 1.9rem;
@@ -133,7 +132,7 @@
   }
 }
 .group {
-  border: 0.1rem solid;
+  border: 0.01rem solid;
   display: block;
   text-decoration: none;
   border-radius: 0.25rem;
@@ -164,7 +163,6 @@
   @include laptop_breakpoint {
     font-size: 1rem;
     margin: 0;
-    border: 0.12rem solid;
     width: 12rem;
   }
   @include laptop_breakpoint-lg {
@@ -209,7 +207,8 @@
   gap: 1rem 1.5rem;
   span {
     font-size: 2.2rem;
-    border: 0.1rem solid;
+    border: 0.01rem solid;
+
     padding: 0.8rem 2rem;
     width: fit-content;
     border-radius: 0.35rem;
@@ -233,7 +232,6 @@
     justify-content: center;
     gap: 1.5rem;
     span {
-      border: 0.12rem solid;
       border-radius: 50%;
       font-size: 2.3rem;
       padding: 1.2rem;

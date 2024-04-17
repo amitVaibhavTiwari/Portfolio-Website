@@ -16,12 +16,12 @@
 
       &:hover {
         color: themed("color-2");
-        background-color: transparent;
+        background-color: themed("body-color");
       }
     }
     .btn-2 {
       color: themed("color-2");
-      background-color: transparent;
+      background-color: themed("body-color");
       border-color: themed("color-2");
 
       &:hover {
