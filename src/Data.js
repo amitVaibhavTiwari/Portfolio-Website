@@ -1,12 +1,12 @@
 export const skills = [
   {
     id: "1",
-    name: "React js",
+    name: "React",
     img: "/react.png",
   },
   {
     id: "2",
-    name: "Node js",
+    name: "Node.js",
     img: "/node.png",
   },
   {
@@ -16,7 +16,7 @@ export const skills = [
   },
   {
     id: "4",
-    name: "Express js",
+    name: "Express.js",
     img: "/express.png",
   },
   {
@@ -85,27 +85,48 @@ export const projects = [
   {
     id: "1",
     name: "Motorix",
-    img: "/Screenshot 2024-02-17 121439.png",
-    miniDesc:
-      "A platform where users can buy and sell used vehicles. Built this full stack web application using React on the frontend along with Nodejs and Mongodb on the backend. Implemented user authentication with Firebase auth. Also added the live messaging functionality using Socket.IO .",
-    technologies: ["React js", "Scss", "Node js", "Firebase", "Mongodb"],
+    img: "/moto.png",
+    technologies: [
+      "React",
+      "SCSS",
+      "Node.js",
+      "Express.js",
+      "Firebase",
+      "Mongodb",
+    ],
+    points: [
+      "A Full stack web application where users can buy and sell used vehicles.",
+      "Built using React and SCSS on the frontend, Node.js and Express.js on the backend along with MongoDB database.",
+      "Account creation, updation, login, logout, OAuth using firebase.",
+      "Live messaging functionality between the users, built using Socket.IO",
+      "Users can create their account to upload new vehicles and interested buyers can message the seller directly.",
+    ],
+    Link: "#",
   },
   {
     id: "2",
-    img: "/Screenshot 2024-02-17 121439.png",
+    img: "/gym.png",
 
     name: "Bajrang Fitness",
-    miniDesc:
-      "A fully reponsive gym website made using React js and Tailwind CSS. The main aim behind making this was to get some hands on experience with Tailwind CSS. Also added dark mode and some animations to improve the overall user experience.",
-    technologies: ["React js", "Tailwind CSS"],
+    link: "https://bajrang-gym.vercel.app/",
+    technologies: ["React", "Tailwind CSS"],
+    points: [
+      "A fully reponsive multi page gym website.",
+      "Built using React and Tailwind CSS.",
+      "Made this website to get some hands on experience with Tailwind CSS.",
+      "Also added dark mode and some animations to improve the overall user experience.",
+    ],
   },
   {
     id: "3",
     name: "Al-Eaqarat",
-    img: "/Screenshot 2024-02-17 121439.png",
-
-    miniDesc:
-      "Landing page for a real estate company. Made this fully responsive website using React js and Scss. The maim behind making this was to learn how to implement multiple themes on a website without using any library.",
-    technologies: ["React js", "Scss"],
+    img: "/al.png",
+    link: "https://al-eaqayat.vercel.app/",
+    technologies: ["React", "Scss"],
+    points: [
+      "Landing page for a real estate property selling company.",
+      "Made this fully responsive website using React and SCSS.",
+      "Implemented multiple themes with SCSS Mixins without using any library.",
+    ],
   },
 ];

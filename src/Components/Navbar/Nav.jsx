@@ -13,6 +13,18 @@ const Nav = () => {
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [theme, setTheme] = useState(userPreferredTheme);
+  const [active, setActive] = useState();
+
+  // this isActive and below useEffect will be useFul for turning navbar white on scrolling
+  useEffect(() => {
+    const isActive = () => {
+      window.scrollY > 20 ? setActive(true) : setActive(false);
+    };
+    window.addEventListener("scroll", isActive);
+    return () => {
+      window.removeEventListener("scroll", isActive);
+    };
+  }, [active]);
 
   useEffect(() => {
     const body = document.documentElement;
@@ -45,7 +57,7 @@ const Nav = () => {
   const navigate = useNavigate();
 
   return (
-    <nav>
+    <nav className={active ? "navbar nav-active" : "navbar"}>
       <div className="nav-center">
         <Logo className="logo" />
         <div className="nav-links-container">

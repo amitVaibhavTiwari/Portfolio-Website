@@ -4,7 +4,6 @@ import Open from "./Pages/Opening-hello-pg/Open";
 import Projects from "./Pages/Projects-pg/Projects";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Connect from "./Pages/Connect/Connect";
-import SingleProject from "./Pages/Single-Project-pg/SingleProject";
 
 const App = () => {
   const [showHellow, setShowHellow] = useState(true);
@@ -36,10 +35,6 @@ const App = () => {
         {
           path: "/projects",
           element: <Projects />,
-        },
-        {
-          path: `/project/:id`,
-          element: <SingleProject />,
         },
       ],
     },
