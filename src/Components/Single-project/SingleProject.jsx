@@ -26,7 +26,7 @@ const SingleProject = ({ name, technologies, img, id, points, link }) => {
           })}
         </div>
         <a href={link} target="_blank">
-          <button className="see-more">View demo</button>
+          <button className="see-more">View Live</button>
         </a>
       </Fade>
     </div>

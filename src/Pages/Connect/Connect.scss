@@ -21,6 +21,9 @@
     h1 {
       color: themed("color-2");
     }
+    .contact-link {
+      color: themed("text-color");
+    }
   }
   .contact-me-pg {
     h1 {
@@ -205,10 +208,9 @@
 
   place-items: center;
   gap: 1rem 1.5rem;
-  span {
+  .contact-link {
     font-size: 2.2rem;
     border: 0.01rem solid;
-
     padding: 0.8rem 2rem;
     width: fit-content;
     border-radius: 0.35rem;
@@ -222,7 +224,7 @@
   }
 
   @include tablet_breakpoint {
-    span {
+    .contact-link {
       font-size: 2.2rem;
     }
   }
@@ -231,7 +233,7 @@
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    span {
+    .contact-link {
       border-radius: 50%;
       font-size: 2.3rem;
       padding: 1.2rem;
@@ -239,7 +241,7 @@
   }
   @include laptop_breakpoint-lg {
     gap: 1.9rem;
-    span {
+    .contact-link {
       font-size: 2.4rem;
       padding: 1.3rem;
     }

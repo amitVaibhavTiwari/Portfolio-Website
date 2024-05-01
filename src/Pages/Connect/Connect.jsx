@@ -2,8 +2,7 @@ import "./Connect.scss";
 
 import { PageChanger } from "../../Components/Page-changer/PageChanger";
 import { Fade, Zoom } from "react-awesome-reveal";
-import Footer from "../../Components/Footer/Footer";
-import { IoLogoWhatsapp } from "react-icons/io";
+
 import { IoMail } from "react-icons/io5";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
@@ -33,7 +32,7 @@ const Connect = () => {
                 <h2>Let’s talk</h2>
               </Zoom>
               <div className="group-parent">
-                <Fade direction="up" delay={1400} triggerOnce={true}>
+                {/* <Fade direction="up" delay={1400} triggerOnce={true}>
                   <a
                     href="https://api.whatsapp.com/send?phone=9511414759"
                     className="group"
@@ -44,7 +43,7 @@ const Connect = () => {
                     </span>
                     <p>Chat with me</p>
                   </a>
-                </Fade>
+                </Fade> */}
                 <Fade direction="up" delay={1600} triggerOnce={true}>
                   <a
                     target="_blank"
@@ -66,24 +65,32 @@ const Connect = () => {
                 <div className="socials-box-container">
                   <Fade direction="up" delay={2000} triggerOnce={true}>
                     <div className="breaker">
-                      <span>
+                      <span className="contact-link">
                         <FaSquareInstagram />
                       </span>
 
-                      <span>
+                      <span className="contact-link">
                         <FaXTwitter />
                       </span>
                     </div>
                   </Fade>
                   <Fade direction="up" delay={2200} triggerOnce={true}>
                     <div className="breaker">
-                      <span>
+                      <a
+                        href="https://www.linkedin.com/in/amit-vaibhav-tiwari-23967b306/"
+                        target="_blank"
+                        className="contact-link"
+                      >
                         <FaLinkedin />
-                      </span>
+                      </a>
 
-                      <span>
+                      <a
+                        className="contact-link"
+                        href="https://github.com/amitVaibhavTiwari"
+                        target="_blank"
+                      >
                         <FaGithub />
-                      </span>
+                      </a>
                     </div>
                   </Fade>
                 </div>

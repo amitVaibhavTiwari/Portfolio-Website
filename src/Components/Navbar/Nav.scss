@@ -4,22 +4,10 @@
 @include themify($themes) {
   .navbar {
     background-color: themed("body-color");
-    background-image: radial-gradient(
-      circle at 0.25px 0.25px,
-      themed("dot-color") 0.25px,
-      transparent 0
-    );
-    background-size: 10px 10px;
-    @include laptop_breakpoint {
-      background-image: radial-gradient(
-        circle at 0.51px 0.51px,
-        themed("dot-color") 0.51px,
-        transparent 0
-      );
-    }
   }
   .nav-active {
-    background-image: unset;
+    backdrop-filter: blur(18px);
+    background: transparent;
   }
   .sidebar {
     background-color: themed("sidebar-color");
@@ -41,7 +29,7 @@
 
 .navbar {
   height: fit-content;
-  padding: 1.1rem;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -52,15 +40,15 @@
   }
 
   @include tablet_breakpoint {
-    padding: 1.1rem 2rem;
+    padding: 1rem 2rem;
   }
   @include laptop_breakpoint {
-    padding: 1.2rem 4rem;
-    padding-top: 1.3rem;
+    padding: 1rem 4rem;
+    padding-top: 1.15rem;
   }
   @include laptop_breakpoint_md {
-    padding: 1.2rem calc((100% - 1140px) / 2);
-    padding-top: 1.3rem;
+    padding: 1rem calc((100% - 1140px) / 2);
+    padding-top: 1.15rem;
   }
 }
 
@@ -168,7 +156,6 @@
   z-index: 2;
   width: 60vw;
   min-height: 100vh;
-
   padding: 2rem 1rem;
   padding-top: 3rem;
   ul {

@@ -105,28 +105,32 @@ export const projects = [
   },
   {
     id: "2",
+    img: "/mmr.png",
+
+    name: "Make My Resume",
+    link: "https://makemyresume.vercel.app/",
+    technologies: ["React", "Tailwind CSS"],
+    points: [
+      "An easy to use no code resume builder, specially made for engineering students and professionals.",
+      "Fully responsive, built using React and Tailwind CSS.",
+      "Fully customizable and easy to use. Just enter those fields you need on your resume and get your resume ready in minutes.",
+      "ATS friendly resume templates.",
+      "Can be downloaded in PDF format.",
+      "Available in both dark and light theme.",
+    ],
+  },
+  {
+    id: "3",
     img: "/gym.png",
 
     name: "Bajrang Fitness",
     link: "https://bajrang-gym.vercel.app/",
     technologies: ["React", "Tailwind CSS"],
     points: [
-      "A fully reponsive multi page gym website.",
+      "A fully reponsive multi page website made for a gym.",
       "Built using React and Tailwind CSS.",
-      "Made this website to get some hands on experience with Tailwind CSS.",
-      "Also added dark mode and some animations to improve the overall user experience.",
-    ],
-  },
-  {
-    id: "3",
-    name: "Al-Eaqarat",
-    img: "/al.png",
-    link: "https://al-eaqayat.vercel.app/",
-    technologies: ["React", "Scss"],
-    points: [
-      "Landing page for a real estate property selling company.",
-      "Made this fully responsive website using React and SCSS.",
-      "Implemented multiple themes with SCSS Mixins without using any library.",
+      "Made this website while learning Tailwind CSS to get some hands on experience with it.",
+      "Also added dark mode and animations to improve the overall user experience.",
     ],
   },
 ];

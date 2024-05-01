@@ -13,24 +13,27 @@
       color: themed("button-text-color");
       background-color: themed("color-2");
       border-color: themed("color-2");
-
-      &:hover {
-        color: themed("color-2");
-        background-color: themed("body-color");
-      }
     }
     .btn-2 {
       color: themed("color-2");
       background-color: themed("body-color");
       border-color: themed("color-2");
-
-      &:hover {
-        color: themed("button-text-color");
-        background-color: themed("color-2");
+    }
+    @include laptop_breakpoint {
+      button {
+        &:hover {
+          color: themed("color-2");
+          background-color: themed("body-color");
+        }
+      }
+      .btn-2 {
+        &:hover {
+          color: themed("button-text-color");
+          background-color: themed("color-2");
+        }
       }
     }
   }
-
   .hero-left {
     h2 {
       span {

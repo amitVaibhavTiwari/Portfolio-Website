@@ -10,10 +10,10 @@
 .all-projects-pg {
   padding: 1rem;
   @include tablet_breakpoint {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
   }
   @include laptop_breakpoint {
-    padding: 1rem 4rem;
+    padding: 1rem 5rem;
   }
   @include laptop_breakpoint_md {
     padding: 1rem calc((100% - 1120px) / 2);
@@ -43,5 +43,26 @@
   }
   @include laptop_breakpoint {
     margin-top: 2.5rem;
+  }
+}
+.all-projects-container {
+  padding: 0rem 0.5rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  gap: 1.7rem;
+
+  @include tablet_breakpoint {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 1.15rem;
+    padding: 0;
+    gap: 0.5rem;
+  }
+  @include laptop_breakpoint {
+    gap: 1rem;
   }
 }

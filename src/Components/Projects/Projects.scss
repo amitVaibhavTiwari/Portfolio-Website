@@ -59,9 +59,11 @@
   gap: 1.7rem;
 
   @include tablet_breakpoint {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 1.15rem;
-    align-items: start;
-    flex-flow: row;
+
     padding: 0;
     gap: 0.5rem;
   }

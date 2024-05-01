@@ -12,11 +12,12 @@
     .see-more {
       color: themed("color-2");
       border-color: themed("color-2");
-
-      &:hover {
-        background-color: themed("color-2");
-        color: themed("button-text-color");
-        font-weight: 300;
+      @include laptop_breakpoint {
+        &:hover {
+          background-color: themed("color-2");
+          color: themed("button-text-color");
+          font-weight: 300;
+        }
       }
     }
   }
@@ -71,8 +72,6 @@
     padding: 0.7rem 0.5rem;
     padding-bottom: 1rem;
     min-height: 38rem;
-
-    width: 33%;
     h1 {
       font-size: 1.15rem;
     }
@@ -82,32 +81,37 @@
       height: 28rem;
     }
     .see-more {
-      margin-top: 1.7rem;
+      margin-top: 4rem;
       font-size: 0.95rem;
     }
   }
 
   @include customBreakPoint(802) {
     ul {
-      height: 27rem;
+      height: 26.5rem;
     }
   }
-  @include customBreakPoint(814) {
+  @include customBreakPoint(807) {
     ul {
       height: 25.5rem;
     }
   }
-  @include customBreakPoint(887) {
+  @include customBreakPoint(838) {
+    .see-more {
+      margin-top: 2rem;
+    }
+  }
+  @include customBreakPoint(883) {
     ul {
       height: 24rem;
     }
   }
-  @include customBreakPoint(898) {
+  @include customBreakPoint(892) {
     ul {
       height: 23rem;
     }
   }
-  @include customBreakPoint(952) {
+  @include customBreakPoint(942) {
     ul {
       height: 21.5rem;
     }
@@ -136,40 +140,35 @@
       }
     }
     .see-more {
-      margin-top: 2rem;
+      margin-top: 4rem;
       font-size: 1.05rem;
     }
   }
 
-  @include customBreakPoint(1035) {
-    ul {
-      height: 28.5rem;
-    }
-  }
-  @include customBreakPoint(1039) {
+  @include customBreakPoint(1031) {
     ul {
       height: 27.5rem;
     }
   }
-
-  @include customBreakPoint(1119) {
-    ul {
-      height: 26rem;
+  @include customBreakPoint(1059) {
+    .see-more {
+      margin-top: 2rem;
     }
   }
-  @include customBreakPoint(1131) {
+
+  @include customBreakPoint(1125) {
     ul {
       height: 24.5rem;
     }
   }
 
-  @include customBreakPoint(1191) {
+  @include customBreakPoint(1180) {
     ul {
       height: 23rem;
     }
   }
 
-  @include customBreakPoint(1280) {
+  @include customBreakPoint(1271) {
     img {
       height: 11rem;
     }

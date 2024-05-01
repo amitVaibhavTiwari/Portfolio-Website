@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./Footer.scss";
-import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
@@ -15,18 +15,23 @@ const Footer = () => {
         </h2>
         <h3>amitvaibhavtiwari@gmail.com</h3>
         <div className="social-icons-container">
-          <span>
+          <span className="footer-link">
             <FaXTwitter />
           </span>
-          <span>
-            <FaLinkedinIn />
-          </span>
-          <span>
-            <IoLogoWhatsapp />
-          </span>
-          <span>
+          <a
+            href="https://www.linkedin.com/in/amit-vaibhav-tiwari-23967b306/"
+            target="_blank"
+            className="footer-link"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            className="footer-link"
+            href="https://github.com/amitVaibhavTiwari"
+            target="_blank"
+          >
             <FaGithub />
-          </span>
+          </a>
         </div>
         <h5>No © copyright issues. </h5>
         <h6>Feel free to copy whatever you like.</h6>

@@ -16,6 +16,9 @@
       color: themed("color-2");
     }
   }
+  .footer-link {
+    color: themed("text-color");
+  }
 }
 
 .footer {
@@ -77,7 +80,7 @@
       margin-bottom: 0;
     }
     h2 {
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
     h3 {
       font-size: 0.95rem;
@@ -100,7 +103,7 @@
       font-size: 1.75rem;
     }
     h2 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
     }
     h3 {
       font-size: 1rem;
@@ -130,7 +133,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  span {
+  .footer-link {
     border: 0.1rem solid;
     padding: 0.3rem;
     border-radius: 50%;
@@ -141,12 +144,12 @@
   }
   @include laptop_breakpoint {
     gap: 1rem;
-    span {
+    .footer-link {
       font-size: 1.4rem;
     }
   }
   @include laptop_breakpoint-lg {
-    span {
+    .footer-link {
       font-size: 1.5rem;
       border: 0.12rem solid;
     }

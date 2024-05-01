@@ -11,7 +11,7 @@ const Projects = () => {
         <Fade triggerOnce={true}>
           <h1 className="projects-heading">Projects</h1>
 
-          <div className="projects-box-container">
+          <div className="all-projects-container">
             {projects.map((e) => {
               return <SingleProject key={e.id} {...e} />;
             })}

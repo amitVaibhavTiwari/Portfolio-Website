@@ -17,7 +17,7 @@ const Education = () => {
             <h4>B.Tech. Computer Science and Engineering</h4>
             <h5>2022-present</h5>
 
-            <h6>Current C.G.P.A: 7.1/10</h6>
+            <h6>Current C.G.P.A: 7.9/10 (Till 2nd sem)</h6>
           </div>
         </VerticalTimelineElement>
         <VerticalTimelineElement
