@@ -1,53 +1,40 @@
-import { IconBrandPython } from '@tabler/icons-react';
-const SkillsSection = () => {
-    const skills = [
-        { id: 1, name: 'React', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 2, name: 'Node.js', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 3, name: 'Python', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 4, name: 'Java', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 5, name: 'Git', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 6, name: 'Docker', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 7, name: 'AWS', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 8, name: 'Next.js', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 9, name: 'Tailwind CSS', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 10, name: 'TypeScript', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 11, name: 'React', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 12, name: 'Node.js', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 13, name: 'Python', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 14, name: 'Java', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 15, name: 'Git', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 16, name: 'Docker', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 17, name: 'AWS', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 18, name: 'Next.js', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 19, name: 'Tailwind CSS', icon: <IconBrandPython className="w-12 h-12" /> },
-        { id: 20, name: 'TypeScript', icon: <IconBrandPython className="w-12 h-12" /> },
-    ];
+const skillsArr = [
+    {
+        key: "Frontend", value: "React, Next.js, Redux Toolkit, Tailwind CSS, SCSS, Material UI, Bootstrap, Figma, HTML5, CSS3"
 
+    }, {
+        key: "Backend", value: "Node.js, Express.js, GraphQL, REST APIs"
+    },
+    {
+        key: "Database", value: "PostgreSQL, MongoDB, MySQL, SQLite",
+    }
+    , {
+        key: "Languages", value: "Javascript, TypeScript, Python, SQL, Java"
+    }
+    , {
+        key: "Tools and Technologies", value: "Git, GitHub, Docker, Postman, Jira, Firebase"
+    }
+]
+
+export default function SkillsSection() {
     return (
-        <section className='mb-28'>
-            <div className="">
-                <h2 className="text-3xl font-bold text-center mb-8">Skills</h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-10">
-                    {skills.map((skill) => (
-                        <div
-                            key={skill.id}
-                            className="flex flex-col items-center justify-center p-4 group -mb-12"
-                        >
-                            {/* Skill Icon */}
-                            <div className="p-4 rounded-lg border-2 border-transparent group-hover:border-black transition-all duration-300 group-hover:scale-110">
-                                {skill.icon}
-                            </div>
+        <section className="text-center">
+            <h2 className="text-black dark:text-white text-[1.66rem] md:text-3xl font-bold  mb-6">What I'm skilled with</h2>
 
-                            {/* Skill Name (Hidden by default, shown on hover) */}
-                            <p className="mt-2 text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                {skill.name}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+            {/* <div className="flex flex-wrap items-baseline"> */}
+            <div className="flex flex-col gap-4">
+                {skillsArr.map((skill) => {
+                    return (<div key={skill.key} className="flex flex-col gap-1">
+                        <h1 className="text-lg font-semibold text-black dark:text-white mr-2 md:text-xl">{skill.key}</h1>
+                        <p className="italic">{skill.value} </p>
+                    </div>
+
+                    );
+                })}
             </div>
+
+
+            {/* </div> */}
         </section>
     );
-};
-
-export default SkillsSection;
+}
