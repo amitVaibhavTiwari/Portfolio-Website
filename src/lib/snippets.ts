@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
+import matter, { language } from "gray-matter";
 
 const snippetsDir = path.join(process.cwd(), "/src/content/snippets");
 
@@ -19,7 +19,7 @@ export function getAllSnippets() {
   });
 }
 
-export function getSnippetBySlug(slug: any) {
+export function getSnippetBySlug(slug: string): Snippet {
   const filePath = path.join(snippetsDir, `${slug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
@@ -30,3 +30,9 @@ export function getSnippetBySlug(slug: any) {
     ...data,
   };
 }
+
+export type Snippet = {
+  slug: string;
+  content?: string;
+  [key: string]: any;
+};

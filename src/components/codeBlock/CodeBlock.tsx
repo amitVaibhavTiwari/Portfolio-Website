@@ -1,12 +1,12 @@
 'use client';
-// @ts-ignore
+// @ts-expect-error
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-// @ts-ignore
+// @ts-expect-error
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { useState } from 'react';
 
 
-const CodeBlock = ({ language, code }: any) => {
+const CodeBlock = ({ language, code }: { language: string, code: string }) => {
     const [isCopied, setIsCopied] = useState<boolean>(false);
 
     const copyToClipboard = () => {

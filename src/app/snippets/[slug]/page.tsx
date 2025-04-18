@@ -1,4 +1,4 @@
-import { getSnippetBySlug } from '@/lib/snippets';
+import { getSnippetBySlug, Snippet } from '@/lib/snippets';
 import CodeBlock from '@/components/codeBlock/CodeBlock';
 
 type Params = {
@@ -11,18 +11,16 @@ export const metadata = {
 
 const page = async ({ params }: { params: Params }) => {
     const { slug } = params;
-    const snippet: any = await getSnippetBySlug(slug);
+    const snippet: Snippet = await getSnippetBySlug(slug);
     return (
         <>
             <div className="min-h-screen">
                 <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold">{snippet.title}</h2>
                 <p className='text-base mt-2 md:mt-1 mb-4'>{snippet.description}</p>
-
-
                 <div className="prose max-w-none">
                     <CodeBlock
                         language={snippet.language.toLowerCase()}
-                        code={snippet.content}
+                        code={snippet?.content || ""}
                     />
                 </div>
             </div>
