@@ -1,41 +1,25 @@
-// app/projects/page.tsx
-
-// import { CheckCircle } from "lucide-react";
-
 const projects = [
+
   {
-    title: "Women's Safety App",
+    title: "Portfolio Template",
     points: [
-      "Emergency alert system for nearby users & police.",
-      "Real-time location sharing and radius-based notifications.",
-      "Built with React Native and Node.js backend."
+      "A simple portfolio website template specially made for developers. (the one you've visited now)",
+      "Built with Next.js, Tailwind CSS, and Framer Motion.",
+      "Includes a details section, projects showcase, resume and a code snippet section.",
     ],
     link: "https://github.com/yourusername/womens-safety-app",
   },
-  {
-    title: "E-Commerce Platform",
-    points: [
-      "Next.js frontend with GraphQL & PostgreSQL backend.",
-      "Product listings, authentication, cart and checkout flow.",
-      "Fully responsive with clean UI and dark mode support."
-    ],
-    link: "https://github.com/yourusername/ecommerce-platform",
-  },
-  {
-    title: "To-Do Reminder App",
-    points: [
-      "React Native app with offline local storage.",
-      "Set reminders and receive native notifications.",
-      "Simple, clean interface for daily productivity."
-    ],
-    link: "https://github.com/yourusername/todo-app",
-  },
 ];
 
-export default function ProjectsPage() {
+export const metadata = {
+  title: "Projects",
+};
+
+
+const page = () => {
   return (
-    <main className="max-w-6xl mx-auto px-6 py-14">
-      <h1 className="text-4xl font-bold text-center mb-12">Projects</h1>
+    <div className="min-h-screen">
+      <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold text-center mb-8">Some things I've been building</h2>
       <div className="grid gap-8 ">
         {projects.map((project, index) => (
           <a
@@ -43,15 +27,14 @@ export default function ProjectsPage() {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 p-6 group"
+            className="rounded-lg  border  border-black dark:border-gray-200 p-6"
           >
-            <h2 className="text-2xl font-semibold mb-4 group-hover:text-indigo-600 transition">
+            <h2 className="text-xl text-black dark:text-white font-semibold mb-4">
               {project.title}
             </h2>
-            <ul className="space-y-2 text-sm text-gray-700">
+            <ul className="space-y-1 list-disc list-inside text-base italic ">
               {project.points.map((point, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  {/* <  className="w-4 h-4 text-indigo-500 mt-1" /> */}
+                <li key={i} >
                   <span>{point}</span>
                 </li>
               ))}
@@ -59,6 +42,10 @@ export default function ProjectsPage() {
           </a>
         ))}
       </div>
-    </main>
-  );
+      <p className="text-sm mt-16 text-center">-------Will add my all the  projects here soon-------</p>
+    </div>
+  )
 }
+
+export default page
+

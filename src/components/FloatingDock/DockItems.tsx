@@ -28,7 +28,7 @@ export const FloatingDockLinks = [
     icon: (
       <IconArticle className="h-full w-full text-neutral-300" />
     ),
-    href: "/blogs",
+    href: "https://medium.com/@amitvaibhavtiwari",
   },
 
   {

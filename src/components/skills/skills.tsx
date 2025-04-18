@@ -21,7 +21,6 @@ export default function SkillsSection() {
         <section className="text-center">
             <h2 className="text-black dark:text-white text-[1.66rem] md:text-3xl font-bold  mb-6">What I'm skilled with</h2>
 
-            {/* <div className="flex flex-wrap items-baseline"> */}
             <div className="flex flex-col gap-4">
                 {skillsArr.map((skill) => {
                     return (<div key={skill.key} className="flex flex-col gap-1">
@@ -32,9 +31,6 @@ export default function SkillsSection() {
                     );
                 })}
             </div>
-
-
-            {/* </div> */}
         </section>
     );
 }

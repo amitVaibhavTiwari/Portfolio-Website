@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Education = () => {
     const education = [
@@ -28,7 +27,7 @@ const Education = () => {
 
     return (
         <section className='mx-auto'>
-            <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold text-center mb-8">What I've Studied</h2>
+            <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold text-center mb-6">What I've Studied</h2>
             <div className="space-y-8 md:space-y-10 lg:space-y-14">
                 {education.map((edu) => (
                     <div key={edu.id} className="flex gap-2 lg:gap-20 flex-col lg:flex-row">

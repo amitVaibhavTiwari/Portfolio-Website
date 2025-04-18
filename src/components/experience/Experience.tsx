@@ -1,45 +1,23 @@
-import React from 'react'
-
 const Experience = () => {
     const experiences = [
         {
             id: 1,
-            company: 'Tech Corp',
-            role: 'Software Engineer',
-            duration: 'Jan 2021 - Present',
+            company: 'Brimo Software Solutions',
+            role: 'Full Stack Developer',
+            duration: 'June 2024 - Present',
             points: [
-                'Developed and maintained web applications using React, Next.js, and Node.js.',
-                'Collaborated with cross-functional teams to deliver high-quality software solutions.',
-                'Optimized applications for performance and scalability.',
+                'Worked with the tech stack of React, Next.js, Node.js, GraphQl, and PostgreSQL.',
+                'Actively contributed to the initial development of a shopify plugin used to retain customers via loyalty rewards.',
+                "Developed an admin dashboard in react and MUI to help clients customize their plugnin according to their buisness needs.",
+                "Worked extensively with both RESTful and GraphQL APIs for both frontend and backend part.",
             ],
         },
-        {
-            id: 2,
-            company: 'Innovate Solutions',
-            role: 'Frontend Developer',
-            duration: 'Jun 2019 - Dec 2020',
-            points: [
-                'Built responsive and user-friendly interfaces for various clients.',
-                'Implemented modern UI/UX designs using Tailwind CSS and Figma.',
-                'Worked on improving website performance and SEO.',
-            ],
-        },
-        {
-            id: 3,
-            company: 'Startup Inc',
-            role: 'Junior Developer',
-            duration: 'Jan 2018 - May 2019',
-            points: [
-                'Assisted in the development of web applications using JavaScript and PHP.',
-                'Learned and applied best practices in version control with Git.',
-                'Contributed to team projects and code reviews.',
-            ],
-        },
+
     ];
 
     return (
         <section className='mx-auto'>
-            <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold text-center mb-8">What I've Been Doing</h2>
+            <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold text-center mb-6">What I've Been Doing</h2>
             <div className="space-y-8 md:space-y-10 lg:space-y-14">
                 {experiences.map((exp) => (
                     <div key={exp.id} className="flex gap-2 lg:gap-20 flex-col lg:flex-row">

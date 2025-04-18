@@ -1,6 +1,5 @@
 "use client"
 import { useTheme } from "next-themes";
-import React from 'react'
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import Logo from "../Logo/Logo";
 
@@ -14,6 +13,7 @@ const Navbar = () => {
             setTheme("dark")
         }
     }
+
 
     return (
         <nav className='flex justify-between items-center py-6 px-4 lg:px-8 sticky top-0 z-10'>

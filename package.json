@@ -11,11 +11,14 @@
   "dependencies": {
     "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
     "motion": "^12.6.2",
     "next": "14.2.26",
     "next-themes": "^0.4.6",
+    "prism-react-renderer": "^2.4.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-syntax-highlighter": "^15.6.1",
     "tailwind-merge": "^3.1.0"
   },
   "devDependencies": {

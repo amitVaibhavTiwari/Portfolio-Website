@@ -1,16 +1,14 @@
-import React from 'react'
-
 const AboutMe = () => {
     return (
         <section className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/3">
+            {/* <div className="md:w-1/3">
                 <div className="bg-black h-96 ">
-                    {/* <Image src='/amit_img_sq.png' alt="Pouya Saadeghi" width={300} height={300} /> */}
+                    <Image src='/amit_img_sq.png' alt="Pouya Saadeghi" width={300} height={300} />
                 </div>
-            </div>
-            {/* Bio Text */}
-            <div className="md:w-2/3 text-base text-center">
-                <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold text-center mb-8">A Little bit about me</h2>
+            </div> */}
+            {/* add md:w-2/3  class to below div when uncommenting above */}
+            <div className=" text-base text-center">
+                <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold text-center mb-4">A Little bit about me</h2>
                 <p className="leading-relaxed mb-4">
                     I'm Amit, a Full Stack Engineer who build things for the web. I have hands-on experience with
                     technologies like React, Next.js, Node.js, Express.js, PostgreSQL, GraphQL,  Docker,  and many more.
