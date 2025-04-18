@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import matter, { language } from "gray-matter";
+import matter from "gray-matter";
 
 const snippetsDir = path.join(process.cwd(), "/src/content/snippets");
 

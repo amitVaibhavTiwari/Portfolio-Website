@@ -1,7 +1,5 @@
 'use client';
-// @ts-expect-error
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-// @ts-expect-error
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { useState } from 'react';
 
