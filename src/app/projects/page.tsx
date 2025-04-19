@@ -7,7 +7,7 @@ const projects = [
       "Built with Next.js, Tailwind CSS, and Framer Motion.",
       "Includes a details section, projects showcase, resume and a code snippet section.",
     ],
-    link: "https://github.com/yourusername/womens-safety-app",
+    link: "https://github.com/amitVaibhavTiwari/Portfolio-Website",
   },
 ];
 
@@ -42,7 +42,7 @@ const page = () => {
           </a>
         ))}
       </div>
-      <p className="text-sm mt-16 text-center">-------Will add my all the  projects here soon-------</p>
+      <p className="text-sm mt-16 text-center">-------Currently revamping this website. Will add my all  projects here soon-------</p>
     </div>
   )
 }

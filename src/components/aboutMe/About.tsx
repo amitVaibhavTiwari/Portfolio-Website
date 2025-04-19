@@ -17,7 +17,7 @@ const AboutMe = () => {
                     I've built and maintained large scale applications and have worked with a wide range of technologies across the stack. I'm also a big fan of automating everyting around me and love to explore new technologies.
                 </p>
                 <p className="leading-relaxed">
-                    When I'm not writing code or hunting down bugs, you'll probably find me playing basketball, scrolling memes, or catching up on anime. I'm a firm believer in lifelong learning and constantly strive to level up my skills and stay ahead in tech.
+                    When I'm not writing code or hunting down bugs, you'll probably find me playing basketball, scrolling memes, or catching up on anime.
                 </p>
             </div>
         </section>

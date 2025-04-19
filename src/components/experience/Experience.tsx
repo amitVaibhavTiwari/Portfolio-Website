@@ -6,10 +6,12 @@ const Experience = () => {
             role: 'Full Stack Developer',
             duration: 'June 2024 - Present',
             points: [
-                'Worked with the tech stack of React, Next.js, Node.js, GraphQl, and PostgreSQL.',
-                'Actively contributed to the initial development of a shopify plugin used to retain customers via loyalty rewards.',
-                "Developed an admin dashboard in react and MUI to help clients customize their plugnin according to their buisness needs.",
-                "Worked extensively with both RESTful and GraphQL APIs for both frontend and backend part.",
+                'Worked with tech stack including React, Next.js, Node.js, GraphQL, and PostgreSQL.',
+                'Maintained and enhanced the frontend of enterprise-grade e-commerce web application using Next.js and GraphQL APIs. Resolved critical bugs, improved load times, and optimized the user experience across the platform.',
+                "Actively contributed to the initial development of Retainley, an advanced Shopify plug-and-play solution designed to improve customer retention through loyalty rewards and engagement programs. The platform is trusted by major D2C brands such as Zouk, Perfora Care, and Soulfower.",
+                "Developed a fully functional admin dashboard using React and Material UI, enabling clients to customize product behavior according to their buisness needs and access various metrics related to orders, revenue, and customer engagement.",
+                "Developed key features on both the frontend and backend parts of Retainley. Created RESTful APIs using Node.js and PostgreSQL for functionalities such as referral system, gamified user interactions (spin wheels, scratch cards), cashback programs, coupon rewards, and birthday, anniversary based offers.",
+                "Created webhooks for various events on shopify related to customers and orders to work in real time with real time customer data."
             ],
         },
 

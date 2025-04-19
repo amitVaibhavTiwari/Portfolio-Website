@@ -40,20 +40,22 @@ const Navbar = () => {
                 </button>
 
                 {isOpen && (
-                    <div className="absolute right-0 mt-2 w-36 bg-white dark:bg-neutral-800 border dark:border-neutral-900 rounded-md shadow-md z-50">
-                        {options.map((option) => (
-                            <div
-                                key={option.value}
-                                onClick={() => {
-                                    setTheme(option.value);
-                                    setIsOpen(false);
-                                }}
-                                className="flex items-center text-sm gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-700 cursor-pointer"
-                            >
-                                {option.icon}
-                                {option.label}
-                            </div>
-                        ))}
+                    <div className="z-40 w-screen h-screen fixed left-0 right-0 top-0" onClick={() => setIsOpen(false)} >
+                        <div className="absolute right-10 md:right-14 mt-12 w-36 bg-white dark:bg-neutral-800 border dark:border-neutral-900 rounded-md shadow-md z-50">
+                            {options.map((option) => (
+                                <div
+                                    key={option.value}
+                                    onClick={() => {
+                                        setTheme(option.value);
+                                        setIsOpen(false);
+                                    }}
+                                    className="flex items-center text-sm gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-700 cursor-pointer"
+                                >
+                                    {option.icon}
+                                    {option.label}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>
