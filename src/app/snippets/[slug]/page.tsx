@@ -1,5 +1,5 @@
 import { getSnippetBySlug, Snippet } from '@/lib/snippets';
-import CodeBlock from '@/components/codeBlock/CodeBlock';
+import CodeBlock from '@/components/CodeBlock/CodeBlock';
 
 type Params = {
     slug: string;
