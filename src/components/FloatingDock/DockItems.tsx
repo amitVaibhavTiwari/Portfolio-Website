@@ -1,7 +1,7 @@
 import {
   IconArticle,
   IconCode,
-  IconDeviceLaptop,
+  // IconDeviceLaptop,
   IconFileCv,
   IconHome,
   IconUser,
