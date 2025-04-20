@@ -31,13 +31,13 @@ export const FloatingDockLinks = [
     href: "https://medium.com/@amitvaibhavtiwari",
   },
 
-  {
-    title: "Projects",
-    icon: (
-      <IconDeviceLaptop className="h-full w-full text-neutral-300" />
-    ),
-    href: "/projects",
-  },
+  // {
+  //   title: "Projects",
+  //   icon: (
+  //     <IconDeviceLaptop className="h-full w-full text-neutral-300" />
+  //   ),
+  //   href: "/projects",
+  // },
 
   {
     title: "Resume",

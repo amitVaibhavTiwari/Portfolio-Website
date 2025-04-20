@@ -41,7 +41,7 @@ const Navbar = () => {
 
                 {isOpen && (
                     <div className="z-40 w-screen h-screen fixed left-0 right-0 top-0" onClick={() => setIsOpen(false)} >
-                        <div className="absolute right-10 md:right-14 mt-12 w-36 bg-white dark:bg-neutral-800 border dark:border-neutral-900 rounded-md shadow-md z-50">
+                        <div className="absolute right-6 md:right-14 mt-12 w-36 bg-white dark:bg-neutral-800 border dark:border-neutral-900 rounded-md shadow-md z-50">
                             {options.map((option) => (
                                 <div
                                     key={option.value}

@@ -1,9 +1,9 @@
 
-import AboutMe from '@/components/aboutMe/About';
-import Certifications from '@/components/certifications/Certifications';
-import Education from '@/components/education/Education';
-import Experience from '@/components/experience/Experience';
-import SkillsSection from '@/components/skills/skills';
+import AboutMe from '@/components/AboutMe/About';
+import Certifications from '@/components/Certifications/Certifications';
+import Education from '@/components/Education/Education';
+import Experience from '@/components/Experience/Experience';
+import SkillsSection from '@/components/Skills/skills';
 
 
 export const metadata = {

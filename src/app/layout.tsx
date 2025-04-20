@@ -5,7 +5,7 @@ import { FloatingDock } from "@/components/FloatingDock/FloatingDock";
 import { FloatingDockLinks } from "@/components/FloatingDock/DockItems";
 import Navbar from "@/components/Navbar/Navbar";
 import ThemeWrapper from "@/components/ThemeWrapper/themeWrapper";
-import GreetingWrapper from "@/components/greetingWrapper/GreetingWrapper";
+import GreetingWrapper from "@/components/GreetingWrapper/GreetingWrapper";
 
 const noto = Noto_Sans({
   subsets: ['latin'],
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${noto.className} antialiased  text-zinc-700 dark:text-neutral-400`}
+        className={`${noto.className} antialiased  text-zinc-700 dark:text-neutral-400 dark:bg-[#151414]`}
       >
         <ThemeWrapper>
           <GreetingWrapper>
