@@ -5,7 +5,6 @@ import Education from '@/components/Education/Education';
 import Experience from '@/components/Experience/Experience';
 import SkillsSection from '@/components/Skills/skills';
 
-
 export const metadata = {
     title: "About Me - Amit Vaibhav Tiwari",
 };

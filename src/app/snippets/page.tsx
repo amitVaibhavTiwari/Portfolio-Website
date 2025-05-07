@@ -1,4 +1,4 @@
-import { getAllSnippets, Snippet } from '@/lib/snippets';
+import { getAllSnippets } from '@/lib/snippets';
 import Link from 'next/link';
 export const metadata = {
     title: "Code Snippets",
@@ -12,7 +12,7 @@ const page = async () => {
             <p className='text-base mt-2 md:mt-1 text-center'>A collection of useful code snippets ready directly to copy-paste to your code.</p>
 
             <div className="mt-6 md:mt-8 grid gap-6 md:grid-cols-2 ">
-                {snippets.map((snippet: Snippet) => (
+                {snippets.map((snippet: any) => (
                     <Link
                         key={snippet.slug}
                         href={`/snippets/${snippet.slug}`}

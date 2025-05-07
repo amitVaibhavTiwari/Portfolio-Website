@@ -15,13 +15,21 @@ const page = async ({ params }: { params: Params }) => {
     return (
         <>
             <div className="min-h-screen">
-                <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold">{snippet.title}</h2>
-                <p className='text-base mt-2 md:mt-1 mb-4'>{snippet.description}</p>
+                <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold">{snippet.metadata.title}</h2>
+                <p className='text-base mt-2 md:mt-1 mb-4'>{snippet.metadata.description}</p>
                 <div className="prose max-w-none">
-                    <CodeBlock
-                        language={snippet.language.toLowerCase()}
-                        code={snippet?.content || ""}
-                    />
+                    {
+                        snippet.snippets.map((dta) => (
+                            <div key={dta.title}>
+                                {dta?.title && <h1>{dta.title}</h1>}
+                                {dta?.description && <p>{dta.description}</p>}
+                                <CodeBlock
+                                    language={snippet.metadata.language.toLowerCase()}
+                                    code={dta.code || ""}
+                                />
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </>

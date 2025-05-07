@@ -62,7 +62,7 @@ const page = () => {
       >
         <div className='flex flex-col gap-1 mx-auto w-fit'>
           <li><a className='hover:underline' target='_blank' href={"https://in.linkedin.com/in/amit-vaibhav-tiwari-23967b306"}>Linkedin</a></li>
-          <li><a target='_blank' className='hover:underline' href={"https://x.com/dev_avt"}>X</a></li>
+          <li><a target='_blank' className='hover:underline' href={"https://x.com/im_avt"}>X</a></li>
           <li><a className='hover:underline' href={"mailto:amitvaibhavtiwari@gmail.com"}>Mail</a></li>
           <li><a className='hover:underline' target="_blank" href={"https://github.com/amitVaibhavTiwari"}>GitHub</a></li>
           <li><a className='hover:underline' target="_blank" href={"https://www.instagram.com/awesome_avt"}>Instagram</a> (I rarely open)</li>
