@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const snippetsDir = path.join(process.cwd(), "/src/content/snippets");
+const snippetsDir = path.join(process.cwd(), "/src/code_snippets/snippets");
 
 export function getAllSnippets() {
   const files = fs.readdirSync(snippetsDir);

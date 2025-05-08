@@ -4,16 +4,21 @@ description: "A collection of some useful git commands."
 language: "javascript"
 ---
 
-## git rebase
+## Git rebase
 
 **Description**: Prevents a function from being called too often.
 
 ```js
 function debounce(func, delay) {
   let timeout;
-  return function () {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, arguments), delay);
-  };
-}
+```
+
+
+## Git rebase 2
+
+**Description**: Prevents a function from being called too often.
+
+```js
+function debounce(func, delay) {
+
 ```
