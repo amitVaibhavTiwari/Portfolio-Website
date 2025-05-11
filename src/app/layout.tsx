@@ -17,6 +17,7 @@ const noto = Noto_Sans({
 export const metadata: Metadata = {
   title: "Amit Vaibhav Tiwari",
   description: "Portfolio Website for Amit Vaibhav Tiwari",
+  keywords: ["Amit Vaibhav Tiwari", "Amit Tiwari", "Lucknow", "Engineer", "Frontend Developer", "Backend Developer", "Amit", "Developer", "Web Developer", "Software Engineer", "Resume"],
 };
 
 export default function RootLayout({
