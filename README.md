@@ -1,5 +1,1 @@
-add these snippets
-
- 
-SQL queries 
-git cheatshet
+A simple portfolio website template which I'm using myself.

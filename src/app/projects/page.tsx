@@ -1,14 +1,20 @@
-const projects = [
+type Project = {
+  title: string;
+  points: string[];
+  link: string;
+}
 
-  {
-    title: "Portfolio Template",
-    points: [
-      "A simple portfolio website template specially made for developers. (the one you've visited now)",
-      "Built with Next.js, Tailwind CSS, and Framer Motion.",
-      "Includes a details section, projects showcase, resume and a code snippet section.",
-    ],
-    link: "https://github.com/amitVaibhavTiwari/Portfolio-Website",
-  },
+const projects: Project[] = [
+
+  // {
+  //   title: "Portfolio Template",
+  //   points: [
+  //     "A simple portfolio website template specially made for developers. (the one you've visited now)",
+  //     "Built with Next.js, Tailwind CSS, and Framer Motion.",
+  //     "Includes a details section, projects showcase, resume and a code snippet section.",
+  //   ],
+  //   link: "https://github.com/amitVaibhavTiwari/Portfolio-Website",
+  // },
 ];
 
 export const metadata = {
@@ -42,7 +48,7 @@ const page = () => {
           </a>
         ))}
       </div>
-      <p className="text-sm mt-16 text-center">-------Currently revamping this website. Will add my all  projects here soon-------</p>
+      <p className="text-sm text-center">-------Currently revamping this website. Will add my all  projects here soon-------</p>
     </div>
   )
 }

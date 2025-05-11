@@ -15,7 +15,7 @@ const page = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <Image width={300} height={300} alt="Amit" className='rounded-full block mx-auto' src='/amit_img_sq.png' />
+        <Image width={320} height={320} alt="Amit" className='rounded-full block mx-auto' src='/amit_img_sq.png' />
       </motion.div>
 
       <motion.h2
