@@ -3,8 +3,8 @@ const Education = () => {
     const education = [
         {
             id: 1,
-            // college: 'DSMNRU Lucknow',
-            college: 'Dr. Shakuntala Misra National Rehabilitation University',
+            college: 'DSMNRU Lucknow',
+            // college: 'Dr. Shakuntala Misra National Rehabilitation University',
             degree: 'B.Tech in Computer Science',
             duration: '2022-2026',
             points: [
