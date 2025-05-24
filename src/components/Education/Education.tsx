@@ -1,33 +1,8 @@
-
+import { education } from "@/portfolio_config";
 const Education = () => {
-    const education = [
-        {
-            id: 1,
-            college: 'DSMNRU Lucknow',
-            // college: 'Dr. Shakuntala Misra National Rehabilitation University',
-            degree: 'B.Tech in Computer Science',
-            duration: '2022-2026',
-            points: [
-                "I was an active member of the college's technology and programming club, TechTranzit, and participated in several events and programming contests.",
-
-            ],
-        },
-        {
-            id: 2,
-            college: 'Pioneer Montessori Inter College',
-            degree: 'Intermediate',
-            duration: '2020-2022',
-            points: [
-                'I completed my schooling at Pioneer Montessori Inter College in Lucknow, with core subjects including Mathematics, Physics, and Computer Science.',
-
-            ],
-        },
-
-    ];
-
     return (
         <section className='mx-auto'>
-            <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold text-center mb-6">What I've Studied</h2>
+            <h2 className="text-black dark:text-white text-[1.7rem] md:text-[2.5rem] font-bold text-center mb-6 md:mb-8">What I've Studied</h2>
             <div className="space-y-8 md:space-y-10 lg:space-y-14">
                 {education.map((edu) => (
                     <div key={edu.id} className="flex gap-2 lg:gap-20 flex-col lg:flex-row">

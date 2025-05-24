@@ -1,18 +1,14 @@
-const Certificates = [
-    {
-        id: 1,
-        title: "Problem Solving - HackerRank",
-        date: "April 2025",
-        link: "https://www.hackerrank.com/certificates/b4f59117a44d",
-    },
-
-]
+import { certificates } from "@/portfolio_config"
 const Certifications = () => {
+    // if someone don't have any certifications
+    if (certificates.length === 0) {
+        return null;
+    }
     return (
         <div>
-            <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold text-center mb-6">Certifications I've got</h2>
+            <h2 className="text-black dark:text-white text-[1.7rem] md:text-[2.5rem] font-bold text-center mb-6 md:mb-8">Certifications I've got</h2>
             <ul className="list-disc space-y-2 text-base pl-6 md:pl-0">
-                {Certificates.map((cert) => (
+                {certificates.map((cert) => (
                     <li key={cert.id}>
                         <div className="flex flex-col md:flex-row justify-between ">
                             <a className="hover:underline font-semibold text-black dark:text-white " href={cert.link} >{cert.title}</a>

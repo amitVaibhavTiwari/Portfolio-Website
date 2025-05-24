@@ -1,5 +1,7 @@
+import { personalInfo } from "@/portfolio_config";
+
 export const metadata = {
-    title: "Resume - Amit Vaibhav Tiwari",
+    title: `Resume - ${personalInfo.name}`,
 };
 
 const page = () => {
