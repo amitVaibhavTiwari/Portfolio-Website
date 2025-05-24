@@ -4,9 +4,10 @@ import Certifications from '@/components/Certifications/Certifications';
 import Education from '@/components/Education/Education';
 import Experience from '@/components/Experience/Experience';
 import SkillsSection from '@/components/Skills/skills';
+import { personalInfo } from '@/portfolio_config';
 
 export const metadata = {
-    title: "About Me - Amit Vaibhav Tiwari",
+    title: `About Me - ${personalInfo.name}`,
 };
 
 const page = () => {

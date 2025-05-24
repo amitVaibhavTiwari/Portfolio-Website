@@ -16,10 +16,10 @@ const page = async () => {
                     <Link
                         key={snippet.slug}
                         href={`/snippets/${snippet.slug}`}
-                        className="border border-black dark:border-gray-200 rounded-md p-5"
+                        className=" bg-white/5 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-5"
                     >
                         <h2 className="text-xl md:text-[1.3rem] font-bold text-black dark:text-white">{snippet.title}</h2>
-                        <p className=" mt-2 italic text-sm">
+                        <p className=" mt-2 italic text-sm lg:text-base">
                             {snippet.description}
                         </p>
                     </Link>

@@ -1,6 +1,8 @@
 'use client'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { personalInfo } from '@/portfolio_config'
 
 const page = () => {
   return (
@@ -15,29 +17,32 @@ const page = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
       >
-        <Image width={320} height={320} alt="Amit" className='rounded-full block mx-auto' src='/amit_img_sq.png' />
+        <Image width={330} height={330} alt={personalInfo.name} className='rounded-full block mx-auto  shadow-black shadow-sm border-[1px] dark:border-none' src={personalInfo.imageUrl} />
       </motion.div>
 
       <motion.h2
-        className='font-extrabold mt-6 text-3xl md:text-[2.35rem] text-black dark:text-white'
+        className='font-bold md:font-extrabold mt-6  text-[1.8rem] md:text-[2.8rem] text-black dark:text-white'
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        Amit Vaibhav Tiwari
+        {personalInfo.name}
       </motion.h2>
 
       <motion.p
-        className='mt-1 md:mt-4 text-base'
+        className='mt-1 md:mt-2 text-base mb-5'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.5 }}
       >
-        A Developer from the city of Nawabs, writing code mainly in Javascript (I mean Typescript) and Python. I've experience building and maintaining large scale projects form scratch contributing across the stack—frontend, backend, and deployment. Worked with technologies like React, Nextjs, Node.js, Express.js, PostgreSQL, GraphQL ,Docker and many more.
+        {personalInfo.shortBio}
       </motion.p>
 
+
+      <Link className='font-semibold underline dark:text-white' href='/about'>Find more about me</Link>
+
       <motion.h1
-        className='mt-8 md:mt-10 font-bold text-xl md:text-[1.56rem] text-center text-zinc-900 dark:text-white'
+        className='mt-8 md:mt-10 font-extrabold text-xl md:text-[1.56rem] text-center text-black dark:text-white'
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.5 }}
@@ -60,12 +65,12 @@ const page = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.5 }}
       >
-        <div className='flex flex-col gap-1 mx-auto w-fit'>
-          <li><a className='hover:underline' target='_blank' href={"https://in.linkedin.com/in/amit-vaibhav-tiwari-23967b306"}>Linkedin</a></li>
-          <li><a target='_blank' className='hover:underline' href={"https://x.com/im_avt"}>X</a></li>
-          <li><a className='hover:underline' href={"mailto:amitvaibhavtiwari@gmail.com"}>Mail</a></li>
-          <li><a className='hover:underline' target="_blank" href={"https://github.com/amitVaibhavTiwari"}>GitHub</a></li>
-          <li><a className='hover:underline' target="_blank" href={"https://www.instagram.com/awesome_avt"}>Instagram</a> (I rarely open)</li>
+        <div className='flex flex-col gap-2 mx-auto w-fit font-normal'>
+          {
+            personalInfo.socials.map((social) => {
+              return <li key={social.id}><a className='hover:underline' target='_blank' href={social.link}>{social.name}</a></li>
+            })
+          }
         </div>
       </motion.ul>
     </motion.div>
