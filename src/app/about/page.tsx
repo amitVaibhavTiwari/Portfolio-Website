@@ -12,7 +12,7 @@ export const metadata = {
 
 const page = () => {
     return (
-        <div className="min-h-screen pt-4">
+        <div className="min-h-screen">
             <main className='flex flex-col gap-16 md:gap-20'>
                 <AboutMe />
                 <SkillsSection />

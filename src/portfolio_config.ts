@@ -1,10 +1,10 @@
 export const personalInfo = {
   name: "Amit Vaibhav Tiwari",
-  logoText: "Amit",
+  logoText: "Amit.",
   imageUrl: "/home_img.jpg",
   //   visible on home page
   shortBio:
-    "A Software Developer from the city of Nawabs, writing code mainly in Javascript (I mean Typescript) and Python. I've experience building and maintaining large scale projects form scratch contributing across the stack—frontend, backend, and deployment. Worked with technologies like React, Nextjs, Node.js, Express.js, PostgreSQL, GraphQL ,Docker and many more.",
+    "Software Developer working primarily with JavaScript/TypeScript and Python specializing in Full-Stack development. I've gained experience in building and maintaining large-scale projects from scratch, contributing across the Frontend, Backend, and Deployment. Proficient in modern technologies such as React, Next.js, Node.js, Express.js, PostgreSQL, GraphQL, Docker, and many more.",
 
   //   visible on about page
   detailedBio: [

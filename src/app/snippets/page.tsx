@@ -8,9 +8,8 @@ const page = async () => {
     const snippets = await getAllSnippets();
     return (
         <div className='min-h-screen'>
-            <h2 className="text-black dark:text-white text-[1.7rem] md:text-3xl font-bold text-center">Code Snippets</h2>
-            <p className='text-base mt-2 md:mt-1 text-center'>A collection of some useful code snippets and commands which I don't like to google every time so i collected them all here.</p>
-
+            <h2 className="text-black dark:text-zinc-300 text-[1.8rem] md:text-[2.6rem] font-extrabold text-center">Code Snippets</h2>
+            <p className='mt-1 md:mt-3 text-center'>A collection of some useful code snippets and commands which I don't like to google every time so i collected them all here.</p>
             <div className="mt-6 md:mt-8 grid gap-6 md:grid-cols-2 ">
                 {snippets.map((snippet: any) => (
                     <Link
@@ -18,8 +17,8 @@ const page = async () => {
                         href={`/snippets/${snippet.slug}`}
                         className=" bg-white/5 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-5"
                     >
-                        <h2 className="text-xl md:text-[1.3rem] font-bold text-black dark:text-white">{snippet.title}</h2>
-                        <p className=" mt-2 italic text-sm lg:text-base">
+                        <h2 className="text-xl md:text-[1.4rem] text-center md:text-left font-bold text-black dark:text-zinc-300">{snippet.title}</h2>
+                        <p className=" mt-2 italic text-base text-center md:text-left">
                             {snippet.description}
                         </p>
                     </Link>

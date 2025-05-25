@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Noto_Sans } from 'next/font/google';
+import { Baloo_Bhai_2 ,} from 'next/font/google';
 import { FloatingDock } from "@/components/FloatingDock/FloatingDock";
 import { FloatingDockLinks } from "@/components/FloatingDock/DockItems";
 import Navbar from "@/components/Navbar/Navbar";
 import ThemeWrapper from "@/components/ThemeWrapper/themeWrapper";
 import { personalInfo } from "@/portfolio_config";
 
-const noto = Noto_Sans({
+const noto = Baloo_Bhai_2({
   subsets: ['latin'],
-  style: ['normal', 'italic'],
+  style: ['normal'],
   display: 'swap',
   variable: '--font-inter',
 });
@@ -32,13 +32,13 @@ export default function RootLayout({
       >
         <ThemeWrapper>
           <Navbar />
-          <div className="px-6 md:px-20 lg:px-0 lg:max-w-4xl mx-auto font-light">
+          <div className="px-6 md:px-20 lg:px-0 lg:max-w-4xl mx-auto text-[1.05rem] md:text-lg">
             {children}
             <FloatingDock
               items={FloatingDockLinks}
             />
           </div>
-          <p className="text-[.55rem] md:text-[.65rem] lg:text-xs mt-12 md:mt-20 mb-1 md:ml-2 text-center md:text-left">No © copyright issues. Feel free to copy whatever you like. Here's the <a href="https://github.com/amitVaibhavTiwari/Portfolio-Website" target="_blank" className="underline font-semibold"> code</a>.</p>
+          <p className="text-[.65rem] md:text-[.75rem] lg:text-xs mt-12 md:mt-20 mb-1 md:ml-2 text-center md:text-left">No © copyright issues. Feel free to copy whatever you like. Here's the <a href="https://github.com/amitVaibhavTiwari/Portfolio-Website" target="_blank" className="underline font-semibold"> code</a>.</p>
         </ThemeWrapper>
       </body>
     </html >

@@ -18,7 +18,7 @@ const CodeBlock = ({ language, code }: { language: string, code: string }) => {
             <SyntaxHighlighter
                 language={language}
                 style={atomDark}
-                customStyle={{ margin: 0, borderRadius: '0.5rem' }}
+                customStyle={{ margin: 0, borderRadius: '0.5rem',fontSize:"1rem" }}
             >
                 {code.trim()}
             </SyntaxHighlighter>

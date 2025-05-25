@@ -6,7 +6,7 @@ import Logo from "../Logo/Logo";
 const Navbar = () => {
     const { theme, setTheme } = useTheme();
     return (
-        <nav className='flex justify-between items-center py-6 px-4 lg:px-8 sticky top-0 z-10'>
+        <nav className='flex justify-between items-center py-1 pb-4 px-4 lg:px-8 sticky top-0 z-10'>
             <Logo />
             {theme === "dark" ? <IconSun size={20} onClick={() => setTheme("light")} /> : <IconMoon size={20} onClick={() => setTheme("dark")} />}
         </nav>

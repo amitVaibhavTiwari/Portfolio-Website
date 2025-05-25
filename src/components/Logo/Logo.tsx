@@ -1,17 +1,19 @@
+import { personalInfo } from '@/portfolio_config';
+import { Coiny } from 'next/font/google';
 
+const dancingScript = Coiny({
+    subsets: ['latin'],
+    weight: ['400'],
+});
 const Logo = () => {
     return (
-        <a href="/" className="select-none relative w-fit ml-[2.9rem] md:ml-[3.9rem] text-black dark:text-white">
-            <div className="relative">
-                <h2 className="absolute top-1/2 text-transparent text-[2.2rem] sm:text-[2.6rem] md:text-[3.2rem]  font-black -translate-x-1/2 -translate-y-1/2  logo-stroke tracking-tight">
-                    Amit
-                </h2>
-                <h2 className="absolute  top-1/2  text-[2.2rem] sm:text-[2.6rem] md:text-[3.2rem]  font-black -translate-x-1/2 -translate-y-1/2  animate-clip-path tracking-tight">
-                    Amit
-                </h2>
-            </div>
+        <a href="/" className="select-none flex items-center space-x-2 group">
+            <h1 className={`${dancingScript.className} text-black dark:text-white text-[2.2rem] md:text-5xl font-bold transition-transform duration-300 group-hover:-rotate-1`}>
+              {personalInfo.logoText}
+            </h1>
+
         </a>
     );
 };
 
-export default Logo
+export default Logo;

@@ -78,7 +78,7 @@ const FloatingDockMobile = ({
             </AnimatePresence>
             <button
                 onClick={() => setOpen(!open)}
-                className="h-[4.5rem] w-[4.5rem] rounded-full fixed right-4 bottom-4 bg-gray-900 dark:bg-zinc-800 dark:border dark:border-gray-700 flex items-center justify-center"
+                className={`h-[4.5rem] w-[4.5rem] rounded-full fixed right-4 bottom-4 bg-gray-900 dark:bg-zinc-800 dark:border dark:border-gray-700 flex items-center justify-center ${open ? 'animate-none' : 'animate-bounce'}`}
             >
                 <IconLayoutNavbarCollapse className="h-7 w-7 text-neutral-200 dark:text-neutral-400" />
             </button>
@@ -178,7 +178,7 @@ function IconContainer({
                             initial={{ opacity: 0, y: 10, x: "-50%" }}
                             animate={{ opacity: 1, y: 0, x: "-50%" }}
                             exit={{ opacity: 0, y: 2, x: "-50%" }}
-                            className="px-2 py-0.5 whitespace-pre rounded-md bg-neutral-800 text-white border dark:bg-gray-950 dark:border-neutral-300 dark:text-white border-gray-200 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
+                            className="px-2 py-0.5 whitespace-pre rounded-md bg-neutral-800 text-white border dark:bg-gray-950 dark:border-neutral-300 dark:text-zinc-300 border-gray-200 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs"
                         >
                             {title}
                         </motion.div>

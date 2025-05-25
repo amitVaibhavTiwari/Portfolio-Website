@@ -9,8 +9,8 @@ const AboutMe = () => {
                 </div>
             </div> */}
             {/* add md:w-2/3  class to below div when uncommenting above */}
-            <div className=" text-base text-center">
-                <h2 className="text-black dark:text-white text-[1.8rem] md:text-[2.6rem] md:mb-8 font-extrabold text-center mb-4">A Little bit about me</h2>
+            <div className="text-center">
+                <h2 className="text-black dark:text-zinc-300 text-[1.8rem] md:text-[2.6rem] md:mb-8 font-extrabold text-center mb-4">A Little bit about me</h2>
                 <div className="flex flex-col gap-4">
                     {
                         personalInfo.detailedBio.map((bio) => {

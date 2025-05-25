@@ -1,27 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.logo-stroke {
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #000000;
-
-    -moz-text-stroke-width: 1.5px;
-    -moz-text-stroke-color: #000000;
-
-    -o-text-stroke-width: 1.5px;
-    -o-text-stroke-color: #000000;
-
-}
-
-.dark .logo-stroke {
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #ffffff;
-
-    -moz-text-stroke-width: 1.5px;
-    -moz-text-stroke-color: #ffffff;
-
-    -o-text-stroke-width: 1.5px;
-    -o-text-stroke-color: #ffffff;
-
-}
