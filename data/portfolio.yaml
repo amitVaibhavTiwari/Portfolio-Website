@@ -1,0 +1,170 @@
+personal:
+  name: Amit Vaibhav Tiwari
+  designation: Software Engineer
+  image: "./home_img.jpg" # Put  image in public folder and point it like ==>  "/profile.jpg"
+  initials: AVT # Used as fallback if no image is provided
+  logo: Amit # Text shown as logo
+  email: amitvaibhavtiwari@gmail.com
+
+# SEO Metadata
+seo:
+  title: Amit Vaibhav Tiwari
+  description: Personal Website of Amit Vaibhav Tiwari
+  keywords:
+    - Amit Vaibhav Tiwari
+    - Amit Tiwari
+    - Lucknow
+    - Engineer
+    - Frontend Developer
+    - Backend Developer
+    - Amit
+    - Developer
+    - Web Developer
+    - Software Engineer
+    - Resume
+  siteUrl: https://www.amitvaibhavtiwari.dev
+  googleVerification: "" # Add your Google Search Console verification code (optional)
+
+  sitemap:
+    changeFrequency:
+      home: monthly
+      about: monthly
+      projects: weekly
+      resume: monthly
+      writing: weekly
+    priority:
+      home: 1.0
+      about: 0.8
+      projects: 0.9
+      resume: 0.8
+      writing: 0.7
+
+  # Robots.txt configuration
+  robots:
+    allowAll: true
+    crawlDelay: 10
+
+  # Page-specific metadata for SEO
+  pages:
+    home:
+      title: Amit Vaibhav Tiwari - Software Engineer Portfolio
+      description: Welcome to my portfolio. I'm a software engineer passionate about building elegant solutions.
+
+    about:
+      title: About - Amit Vaibhav Tiwari
+      description: Learn more about my journey, skills, and what drives me as a software engineer.
+
+    projects:
+      title: Projects - Amit Vaibhav Tiwari
+      description: Explore my portfolio of web applications, open-source contributions, and technical projects.
+
+    resume:
+      title: Resume - Amit Vaibhav Tiwari
+      description: View my professional experience, education, skills, and technical expertise.
+
+    writing:
+      title: Writing - Amit Vaibhav Tiwari
+      description: Read my technical articles and blog posts about web development and software engineering.
+
+social:
+  github: https://github.com/amitvaibhavtiwari
+  linkedin: https://in.linkedin.com/in/amit-vaibhav-tiwari-23967b306
+  twitter: https://x.com/im_avt
+  instagram: https://instagram.com/amitvaibhavtiwari
+
+# Home Page
+home:
+  bio:
+    - "I’m a Software Engineer at Kuvaka Tech. I mainly work with JavaScript/TypeScript and Python, and I’m currently exploring Go through personal projects."
+
+    - "I also have experience with cloud practices on Azure and GCP, particularly around deployments, infrastructure, and CI/CD pipelines."
+
+# About Page
+about:
+  title: A little bit about me
+  intro:
+    - "I'm a passionate developer with a deep love for creating elegant and efficient solutions. My journey in tech started X years ago, and since then, I've been dedicated to continuous learning and improvement."
+    - "I specialize in full-stack development, with expertise in modern web technologies including React, TypeScript, Node.js, and cloud platforms. I believe in writing clean, maintainable code and building products that users love."
+
+  beyondCode:
+    title: Beyond Code
+    content: "When I'm not coding, you can find me writing technical articles, contributing to open-source projects, or exploring new technologies. I'm also passionate about mentoring junior developers and sharing knowledge with the community."
+
+  connect:
+    title: Let's Connect
+    content: "Feel free to reach out for collaborations or just a friendly hello."
+
+# Projects
+projects:
+  - title: Project One
+    description: A comprehensive web application built with React and TypeScript. Features include real-time updates, user authentication, and a responsive design.
+    demoUrl: https://example.com
+    githubUrl: https://github.com/yourusername/project-one
+
+  - title: Project Two
+    description: An open-source library that simplifies complex workflows. Used by thousands of developers worldwide.
+    demoUrl: https://example.com
+    githubUrl: https://github.com/yourusername/project-two
+
+  - title: Project Three
+    description: Mobile-first e-commerce platform with advanced filtering, payment integration, and admin dashboard.
+    demoUrl: https://example.com
+    githubUrl: https://github.com/yourusername/project-three
+
+# Resume
+resume:
+  projectsToShow: 2 # Number of projects to display on resume page (currently I've commented out projects from mine)
+  experience:
+    - period: Sept 2025 - Present
+      type: Remote (Bangalore, Karnataka)
+      title: SDE-1 at Kuvaka Tech
+      responsibilities:
+        - Led development of microservices architecture using Node.js and TypeScript
+        - Implemented CI/CD pipelines reducing deployment time by 60%
+        - Mentored junior developers and conducted code reviews
+        - Built scalable REST APIs serving 1M+ requests daily
+
+    - period: May 2024 - Aug 2025
+      type: Hybrid (Lucknow, Uttar Pradesh)
+      title: Full Stack Developer at Brimo Software Solutions
+      responsibilities:
+        - Developed and maintained React-based web applications
+        - Designed and implemented PostgreSQL database schemas
+        - Integrated third party APIs including Stripe, SendGrid, and AWS
+        - Improved application performance by 40% through optimization
+
+  education:
+    - period: Sep 2022 - April 2026
+      degree: B. Tech. in Computer Science and Engineering at DSMNRU University
+      location: Lucknow, Uttar Pradesh
+
+  skills:
+    - category: Languages
+      items: JavaScript, TypeScript, Python, Golang, SQL
+
+    - category: Frontend
+      items: React, Next.js, Tailwind CSS, Material UI, Zustand, Redux, HTML, CSS, SCSS
+
+    - category: Backend
+      items: Django, DRF, Node.js, Express, PostgreSQL, MongoDB, Redis, REST APIs, GraphQL APIs
+
+    - category: Tools & Platforms
+      items: Git, GitHub, Docker, Azure, GCP,
+
+    - category: Other
+      items: Agile/Scrum, System Design, Performance Optimization, Technical Writing
+
+  contact:
+    location: Lucknow, Uttar Pradesh, India
+
+# Writing/Blogs
+writing:
+  - title: Technical Writing & Tutorials
+    description: I write about development practices, AI, engineering workflows, career development, frontend and backend architecture, DevOps and deployments.
+    platform: Medium
+    url: https://medium.com/@yourusername
+
+  - title: Code Snippets
+    description: A growing collection of practical code snippets and useful solutions, organized for easy reuse and shared to help fellow developers find better solutions faster.
+    platform: GitHub Gists
+    url: https://gist.github.com/amitvaibhavtiwari
