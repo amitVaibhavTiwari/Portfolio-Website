@@ -1,0 +1,18 @@
+<svg width="40" height="46" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <polygon
+    points="20,2 38,12 38,34 20,44 2,34 2,12"
+    stroke="#4ade80"
+    stroke-width="2"
+    fill="none"
+    stroke-linejoin="round"
+  />
+  <text
+    x="20"
+    y="29"
+    text-anchor="middle"
+    fill="#4ade80"
+    font-size="18"
+    font-weight="700"
+    font-family="ui-sans-serif, system-ui, sans-serif"
+  >A</text>
+</svg>
