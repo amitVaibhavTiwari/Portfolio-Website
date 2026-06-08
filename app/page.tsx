@@ -102,13 +102,13 @@ export default function Home() {
         <div className="max-w-2xl mx-auto">
           <div className="mb-6">
             <img
-              src="./home_img.jpg"
+              src="./home_img.webp"
               alt="Amit Vaibhav Tiwari"
               className="h-44 w-44 rounded-full object-cover"
               loading="eager"
             />
           </div>
-          <h1 className="text-xl md:text-3xl font-extrabold tracking-tight mb-1">
+          <h1 className="text-xl md:text-3xl font-extrabold md:font-bold tracking-tight mb-1">
             Amit Vaibhav Tiwari
           </h1>
           <p className="text-sm md:text-base font-semibold text-green-700 dark:text-green-400 mb-4">
@@ -150,17 +150,19 @@ export default function Home() {
                 Experience
               </h2>
               <div className="space-y-8">
-                <div className="border-l-2 border-border/30 dark:border-zinc-700 pl-6 hover:border-border/70 dark:hover:border-zinc-500 transition-colors">
-                  <p className="text-xs font-light italic text-cyan-600 dark:text-cyan-400">
-                    Sept 2025 - Present
+                <div>
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-0.5 md:gap-4 mb-1">
+                    <h3 className="font-bold text-sm md:text-base text-pink-800 dark:text-pink-400">
+                      SDE-1 — Kuvaka Tech
+                    </h3>
+                    <span className="text-xs font-light italic text-cyan-800 dark:text-cyan-400 shrink-0">
+                      Sept 2025 – Present
+                    </span>
+                  </div>
+                  <p className="italic text-xs text-yellow-600 dark:text-yellow-400 mb-3">
+                    Remote · Bangalore, Karnataka
                   </p>
-                  <p className="font-medium mb-3 text-yellow-600 dark:text-yellow-400">
-                    Remote (Bangalore, Karnataka)
-                  </p>
-                  <h3 className="font-semibold mb-3 text-pink-800 dark:text-pink-600">
-                    SDE-1 at Kuvaka Tech
-                  </h3>
-                  <ul className="space-y-1 text-foreground/80 list-disc list-inside">
+                  <ul className="space-y-1 text-foreground/80 list-disc list-inside pl-4">
                     <li>
                       Led development of microservices architecture using
                       Node.js and TypeScript
@@ -175,17 +177,19 @@ export default function Home() {
                     <li>Built scalable REST APIs serving 1M+ requests daily</li>
                   </ul>
                 </div>
-                <div className="border-l-2 border-border/30 dark:border-zinc-700 pl-6 hover:border-border/70 dark:hover:border-zinc-500 transition-colors">
-                  <p className="text-xs font-light italic text-cyan-600 dark:text-cyan-400">
-                    May 2024 - Aug 2025
+                <div>
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-0.5 md:gap-4 mb-1">
+                    <h3 className="font-bold text-sm md:text-base text-pink-800 dark:text-pink-400">
+                      Full Stack Developer — Brimo Software Solutions
+                    </h3>
+                    <span className="text-xs font-light italic text-cyan-800 dark:text-cyan-400 shrink-0">
+                      May 2024 – Aug 2025
+                    </span>
+                  </div>
+                  <p className="italic text-xs text-yellow-600 dark:text-yellow-400 mb-3">
+                    Hybrid · Lucknow, Uttar Pradesh
                   </p>
-                  <p className="font-medium mb-3 text-yellow-600 dark:text-yellow-400">
-                    Hybrid (Lucknow, Uttar Pradesh)
-                  </p>
-                  <h3 className="font-semibold mb-3 text-pink-800 dark:text-pink-600">
-                    Full Stack Developer at Brimo Software Solutions
-                  </h3>
-                  <ul className="space-y-1 text-foreground/80 list-disc list-inside">
+                  <ul className="space-y-1 text-foreground/80 list-disc list-inside pl-4">
                     <li>
                       Developed and maintained React-based web applications
                     </li>
@@ -211,7 +215,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 pl-6">
                 <div>
-                  <h3 className="font-semibold mb-2 text-cyan-600 dark:text-cyan-400">
+                  <h3 className="font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
                     Languages
                   </h3>
                   <p className="text-foreground/70 leading-relaxed">
@@ -219,7 +223,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2 text-cyan-600 dark:text-cyan-400">
+                  <h3 className="font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
                     Frontend
                   </h3>
                   <p className="text-foreground/70 leading-relaxed">
@@ -228,7 +232,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2 text-cyan-600 dark:text-cyan-400">
+                  <h3 className="font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
                     Backend
                   </h3>
                   <p className="text-foreground/70 leading-relaxed">
@@ -237,7 +241,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2 text-cyan-600 dark:text-cyan-400">
+                  <h3 className="font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
                     Tools &amp; Platforms
                   </h3>
                   <p className="text-foreground/70 leading-relaxed">
@@ -245,7 +249,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2 text-cyan-600 dark:text-cyan-400">
+                  <h3 className="font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
                     Other
                   </h3>
                   <p className="text-foreground/70 leading-relaxed">
@@ -260,15 +264,15 @@ export default function Home() {
               <h2 className="text-base lg:text-xl font-bold mb-6 text-green-700 dark:text-green-400">
                 Projects
               </h2>
-              <div className="space-y-6">
+              <div className="space-y-6 pl-6">
                 <a
                   href="https://example.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-start justify-between gap-4 border border-border/40 dark:border-zinc-700 rounded-lg p-5 hover:border-border/80 dark:hover:border-zinc-500 hover:bg-muted/30 transition-all"
+                  className="group flex items-start justify-between gap-4 py-3 border-b border-border/20 dark:border-zinc-800 hover:bg-muted/20 transition-all"
                 >
                   <div>
-                    <h3 className="font-semibold mb-1 group-hover:underline underline-offset-4 transition-colors text-pink-800 dark:text-pink-600">
+                    <h3 className="font-semibold mb-1 group-hover:underline underline-offset-4 transition-colors text-pink-800 dark:text-pink-400">
                       Project One
                     </h3>
                     <p className="text-foreground/60 leading-relaxed">
@@ -293,10 +297,10 @@ export default function Home() {
                   href="https://example.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-start justify-between gap-4 border border-border/40 dark:border-zinc-700 rounded-lg p-5 hover:border-border/80 dark:hover:border-zinc-500 hover:bg-muted/30 transition-all"
+                  className="group flex items-start justify-between gap-4 py-3 border-b border-border/20 dark:border-zinc-800 hover:bg-muted/20 transition-all"
                 >
                   <div>
-                    <h3 className="font-semibold mb-1 group-hover:underline underline-offset-4 transition-colors text-pink-800 dark:text-pink-600">
+                    <h3 className="font-semibold mb-1 group-hover:underline underline-offset-4 transition-colors text-pink-800 dark:text-pink-400">
                       Project Two
                     </h3>
                     <p className="text-foreground/60 leading-relaxed">
@@ -323,27 +327,30 @@ export default function Home() {
               <h2 className="text-base lg:text-xl font-bold mb-6 text-green-700 dark:text-green-400">
                 Education
               </h2>
-              <div className="space-y-8">
+              <div className="space-y-8 pl-6">
                 <div>
-                  <p className="text-xs italic mb-2 text-cyan-600 dark:text-cyan-400">
-                    Sep 2022 - April 2026
-                  </p>
-                  <h3 className="font-semibold">
-                    B. Tech. in Computer Science and Engineering at DSMNRU
-                    University
-                  </h3>
-                  <p className="text-muted-foreground">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-0.5 md:gap-4 mb-1">
+                    <h3 className="font-bold text-sm md:text-base text-foreground">
+                      B. Tech. in Computer Science and Engineering — DSMNRU University
+                    </h3>
+                    <span className="text-xs font-light italic text-cyan-800 dark:text-cyan-400 shrink-0">
+                      Sep 2022 – Apr 2026
+                    </span>
+                  </div>
+                  <p className="italic text-xs text-yellow-600 dark:text-yellow-400">
                     Lucknow, Uttar Pradesh
                   </p>
                 </div>
                 <div>
-                  <p className="text-xs italic mb-2 text-cyan-600 dark:text-cyan-400">
-                    2021 - 2022
-                  </p>
-                  <h3 className="font-semibold">
-                    Intermediate at Pioneer Montessori Inter College
-                  </h3>
-                  <p className="text-muted-foreground">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-0.5 md:gap-4 mb-1">
+                    <h3 className="font-bold text-sm md:text-base text-foreground">
+                      Intermediate — Pioneer Montessori Inter College
+                    </h3>
+                    <span className="text-xs font-light italic text-cyan-800 dark:text-cyan-400 shrink-0">
+                      2021 – 2022
+                    </span>
+                  </div>
+                  <p className="italic text-xs text-yellow-600 dark:text-yellow-400">
                     Lucknow, Uttar Pradesh
                   </p>
                 </div>
@@ -354,7 +361,7 @@ export default function Home() {
               <h2 className="text-base lg:text-xl font-bold mb-6 text-green-700 dark:text-green-400">
                 Writing
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-4 pl-6">
                 <a
                   href="https://gist.github.com/amitvaibhavtiwari"
                   target="_blank"
@@ -435,7 +442,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mb-1 mt-16 mr-2 text-[10px] text-zinc-500 dark:text-zinc-600 text-right leading-relaxed">
+      <div className="mb-1 mt-16 mr-2 text-[8px] md:text-[10px] text-zinc-600 dark:text-zinc-400 text-right leading-relaxed">
         No copyright issues. Feel free to modify it and make yours.{" "}
         <a
           href="https://github.com/amitvaibhavtiwari/portfolio-website"

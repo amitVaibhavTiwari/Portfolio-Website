@@ -32,7 +32,6 @@ const LINES: Line[] = [
   },
   { text: "", type: "blank", delay: 200 },
 
-  // Runtime init
   {
     text: "Initializing runtime environment...",
     tag: "SYS",
@@ -70,7 +69,6 @@ const LINES: Line[] = [
   },
   { text: "", type: "blank", delay: 920 },
 
-  // Network + TLS
   {
     text: "A record → 76.76.21.21  TTL:60s  DNSSEC: valid...",
     tag: "DNS",
@@ -94,7 +92,6 @@ const LINES: Line[] = [
   },
   { text: "", type: "blank", delay: 1420 },
 
-  // App boot
   {
     text: "Bundle verified — 6 chunks  84.2 kB gzip  0 collisions...",
     tag: "APP",
@@ -118,7 +115,6 @@ const LINES: Line[] = [
   },
   { text: "", type: "blank", delay: 1920 },
 
-  // Connection info
   { text: "Connection info:", type: "info", delay: 2040 },
   { text: "  Remote IP   : {IP}", type: "kv", delay: 2200 },
   { text: "  Node        : edge-sin1.cdn.global", type: "kv", delay: 2320 },
@@ -146,7 +142,7 @@ const LINES: Line[] = [
 ];
 
 const LAST_DELAY = 3340;
-const BAR_BLOCKS = 38;
+const BAR_BLOCKS = 28;
 const BAR_START = LAST_DELAY + 280; // 3620ms — bar begins
 const BAR_INTERVAL = 46; // ms per block → 38 * 46 ≈ 1750ms to fill
 const BAR_END = BAR_START + BAR_BLOCKS * BAR_INTERVAL; // ~5370ms
@@ -207,7 +203,7 @@ export function TerminalBoot() {
       }}
     >
       <div
-        className="w-full max-w-[560px] px-8"
+        className="w-full max-w-[560px] px-4 md:px-8"
         style={{
           fontFamily:
             '"Cascadia Code", "Fira Mono", "IBM Plex Mono", Menlo, Consolas, monospace',
@@ -230,7 +226,7 @@ export function TerminalBoot() {
 
           if (line.type === "divider") {
             return (
-              <div key={i} className="text-zinc-700 mb-0.5">
+              <div key={i} className="text-zinc-600 mb-0.5" aria-hidden="true">
                 {text}
               </div>
             );
@@ -243,11 +239,11 @@ export function TerminalBoot() {
                 className="flex items-baseline justify-between mb-0.5"
               >
                 <div className="flex items-baseline gap-2 min-w-0">
-                  <span className="text-zinc-600 shrink-0">[</span>
+                  <span className="text-zinc-400 shrink-0" aria-hidden="true">[</span>
                   <span className="text-cyan-500 font-semibold shrink-0 w-[28px] text-center">
                     {line.tag}
                   </span>
-                  <span className="text-zinc-600 shrink-0">]</span>
+                  <span className="text-zinc-400 shrink-0" aria-hidden="true">]</span>
                   <span className="text-zinc-400 truncate">{text}</span>
                 </div>
                 <span className="text-green-400 font-semibold ml-4 shrink-0 text-[11px]">
@@ -271,7 +267,7 @@ export function TerminalBoot() {
             const val = text.slice(colonIdx + 1);
             return (
               <div key={i} className="mb-0.5">
-                <span className="text-zinc-600">{key}:</span>
+                <span className="text-zinc-400">{key}:</span>
                 <span className="text-yellow-400">{val}</span>
               </div>
             );
@@ -299,21 +295,21 @@ export function TerminalBoot() {
         {/* Block progress bar — appears after all lines */}
         {allLinesShown && barProgress > 0 && (
           <div className="mt-2">
-            <div className="flex items-center gap-0">
-              <span className="text-zinc-600 shrink-0">[</span>
-              <span className="text-green-400" style={{ letterSpacing: "0px" }}>
+            <div className="flex items-center gap-0 flex-wrap">
+              <span className="text-zinc-400 shrink-0" aria-hidden="true">[</span>
+              <span className="text-green-400" aria-hidden="true" style={{ letterSpacing: "0px" }}>
                 {filled}
               </span>
-              <span className="text-zinc-800" style={{ letterSpacing: "0px" }}>
+              <span className="text-zinc-600" aria-hidden="true" style={{ letterSpacing: "0px" }}>
                 {empty}
               </span>
-              <span className="text-zinc-600 shrink-0">]</span>
+              <span className="text-zinc-400 shrink-0" aria-hidden="true">]</span>
               <span className="text-cyan-400 ml-2 w-9 shrink-0 text-[11px]">
                 {pct}%
               </span>
               {barDone && (
                 <span
-                  className="text-green-400 font-bold text-[11px] tracking-widest ml-1"
+                  className="text-green-400 font-bold text-[11px] tracking-widest ml-1 shrink-0"
                   style={{ animation: "fadeIn 0.3s ease-in" }}
                 >
                   BOOT SUCCESSFUL
