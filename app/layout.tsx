@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navigation } from "@/components/Navigation";
-import { TerminalBoot } from "@/components/TerminalBoot";
+import { TerminalBootWrapper } from "@/components/TerminalBootWrapper";
+import { PageContent } from "@/components/PageContent";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -16,7 +17,6 @@ export const metadata: Metadata = {
   keywords: [
     "Amit Vaibhav Tiwari",
     "Amit Tiwari",
-    "Lucknow",
     "Engineer",
     "Frontend Developer",
     "Backend Developer",
@@ -24,6 +24,8 @@ export const metadata: Metadata = {
     "Developer",
     "Web Developer",
     "Software Engineer",
+    "AI",
+    "AI Engineer",
     "Resume",
   ],
   authors: [{ name: "Amit Vaibhav Tiwari" }],
@@ -83,11 +85,13 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased relative`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <TerminalBoot />
-          <div className="relative z-10 min-h-screen bg-background">
-            <Navigation />
-            {children}
-          </div>
+          <TerminalBootWrapper />
+          <PageContent>
+            <div className="relative z-10 min-h-screen bg-background">
+              <Navigation />
+              {children}
+            </div>
+          </PageContent>
         </ThemeProvider>
       </body>
     </html>

@@ -146,7 +146,7 @@ const BAR_BLOCKS = 28;
 const BAR_START = LAST_DELAY + 280; // 3620ms — bar begins
 const BAR_INTERVAL = 46; // ms per block → 38 * 46 ≈ 1750ms to fill
 const BAR_END = BAR_START + BAR_BLOCKS * BAR_INTERVAL; // ~5370ms
-const FADE_START = BAR_END + 550; // ~5920ms
+const FADE_START = BAR_END + 1100; // 1100ms pause at BOOT SUCCESSFUL before fading
 const FADE_MS = 500;
 
 export function TerminalBoot() {
@@ -180,7 +180,10 @@ export function TerminalBoot() {
       }, BAR_INTERVAL);
     }, BAR_START);
 
-    setTimeout(() => setFading(true), FADE_START);
+    setTimeout(() => {
+      setFading(true);
+      window.dispatchEvent(new CustomEvent("terminalBootDone"));
+    }, FADE_START);
     setTimeout(() => setGone(true), FADE_START + FADE_MS);
 
     return () => clearTimeout(barTimer);
@@ -203,11 +206,10 @@ export function TerminalBoot() {
       }}
     >
       <div
-        className="w-full max-w-[560px] px-4 md:px-8"
+        className="w-full max-w-[560px] px-4 md:px-8 text-[10px] md:text-[12.5px]"
         style={{
           fontFamily:
             '"Cascadia Code", "Fira Mono", "IBM Plex Mono", Menlo, Consolas, monospace',
-          fontSize: "12.5px",
           lineHeight: "1.65",
         }}
       >
@@ -240,7 +242,7 @@ export function TerminalBoot() {
               >
                 <div className="flex items-baseline gap-2 min-w-0">
                   <span className="text-zinc-400 shrink-0" aria-hidden="true">[</span>
-                  <span className="text-cyan-500 font-semibold shrink-0 w-[28px] text-center">
+                  <span className="text-cyan-500 font-semibold shrink-0 w-7 text-center">
                     {line.tag}
                   </span>
                   <span className="text-zinc-400 shrink-0" aria-hidden="true">]</span>
