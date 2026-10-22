@@ -6,7 +6,7 @@ import { TerminalBootWrapper } from "@/components/TerminalBootWrapper";
 import { PageContent } from "@/components/PageContent";
 import { SplashCursorWrapper } from "@/components/SplashCursorWrapper";
 import { SmoothScroll } from "@/components/SmoothScroll";
-import { Geist, Geist_Mono, JetBrains_Mono, Dancing_Script } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono, Dancing_Script, Playpen_Sans } from "next/font/google";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -26,6 +26,11 @@ const jetbrainsMono = JetBrains_Mono({
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
   variable: "--font-dancing-script",
+});
+
+const playpenSans = Playpen_Sans({
+  subsets: ["latin"],
+  variable: "--font-playpen-sans",
 });
 
 export const metadata: Metadata = {
@@ -104,7 +109,7 @@ export default function RootLayout({
         </noscript>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${dancingScript.variable} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${dancingScript.variable} ${playpenSans.variable} antialiased relative`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SmoothScroll />

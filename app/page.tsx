@@ -85,7 +85,7 @@ const experience = [
 ];
 
 const skillGroups = [
-  { label: "Languages", items: "JavaScript, TypeScript, Python, Golang" },
+  { label: "Programming Languages", items: "JavaScript, TypeScript, Python, Golang" },
   {
     label: "Frontend",
     items:
@@ -129,10 +129,10 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="dark:bg-[#262626]">
+      <main className="dark:bg-[#1c1c1c]">
         {/* Hero */}
         <section
-          className="pt-2 md:-mt-3 pb-2 md:py-14 md:pb-10"
+          className="pt-2 md:-mt-3 pb-2 md:py-14 md:pb-5"
           aria-labelledby="hero-heading"
         >
           <Reveal
@@ -192,18 +192,18 @@ export default function Home() {
             delay={250}
             className="max-w-3xl mx-auto px-4 space-y-4 font-muted text-sm text-muted-foreground leading-relaxed"
           >
-            <p>
+            <p className="scroll-blur">
               I&apos;m a Software Engineer at Kuvaka Tech, working on full-stack
               engineering and AI-powered solutions, with a focus on Agentic AI
               and real-world healthcare applications.
             </p>
-            <p>
+            <p className="scroll-blur">
               I mainly work with JavaScript/TypeScript and Python, and have
               experience with cloud deployments, infrastructure, and CI/CD
               across GCP and Azure. I&apos;m also exploring Go through personal
               projects to further expand my tech stack.
             </p>
-            <p>
+            <p className="scroll-blur">
               Outside of work, I enjoy vibe coding random ideas, messing around
               with new AI tools, and watching anime.
             </p>
@@ -219,25 +219,26 @@ export default function Home() {
             <Reveal>
               <h2
                 id="work-experience-heading"
-                className="text-[17px] md:text-2xl font-bold mb-6 md:mb-12 text-primary tracking-wider"
+                className="text-[17px] md:text-[1.5rem] font-bold mb-6 md:mb-12 text-primary tracking-wider"
               >
                 WORK EXPERIENCE
               </h2>
             </Reveal>
             <TimelineTrack>
               {experience.map((job, i) => (
-                <div
+                <Reveal
                   key={job.title + job.company}
+                  delay={i * 100}
                   className="relative flex items-start mb-12 last:mb-0"
                 >
-                  <div className="absolute left-4 w-4 h-4 bg-primary rounded-full border-4 border-background z-10" />
-                  <Reveal delay={i * 100} className="ml-14 md:ml-16 flex-1">
+                  <div className="absolute left-4 top-1 w-4 h-4 bg-primary rounded-full border-4 border-background dark:border-[#1c1c1c] z-10" />
+                  <div className="ml-14 md:ml-16 flex-1">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-3">
                       <div>
                         <h3 className="text-xl font-bold text-primary leading-snug">
                           {job.title}
                         </h3>
-                        <div className="text-meta text-sm font-mono mt-0.5">
+                        <div className="text-meta text-sm font-muted mt-0.5">
                           {job.company}
                         </div>
                       </div>
@@ -245,7 +246,7 @@ export default function Home() {
                         <div className="text-muted-foreground text-sm font-mono italic">
                           {job.period}
                         </div>
-                        <div className="text-meta text-xs font-mono mt-0.5 italic">
+                        <div className="text-meta text-xs font-muted mt-0.5 italic">
                           {job.location}
                         </div>
                       </div>
@@ -254,15 +255,15 @@ export default function Home() {
                       {job.description.map((point) => (
                         <li
                           key={point}
-                          className="flex gap-2 text-muted-foreground leading-relaxed font-muted text-sm"
+                          className="scroll-blur flex gap-2 text-muted-foreground leading-relaxed font-muted text-sm"
                         >
-                          <span className="text-meta shrink-0">–</span>
+                          <span className="text-meta shrink-0">•</span>
                           <span>{point}</span>
                         </li>
                       ))}
                     </ul>
-                  </Reveal>
-                </div>
+                  </div>
+                </Reveal>
               ))}
             </TimelineTrack>
           </div>
@@ -277,18 +278,18 @@ export default function Home() {
             <Reveal>
               <h2
                 id="skills-heading"
-                className="pl-2 sm:pl-0 text-[17px] md:text-3xl font-bold mb-5 md:mb-10 text-primary tracking-wider"
+                className="pl-2 sm:pl-0 text-[17px] md:text-2xl font-bold mb-5 md:mb-10 text-primary tracking-wider"
               >
                 SKILLS
               </h2>
             </Reveal>
-            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 pl-6 sm:pl-0">
+            <div className="grid sm:grid-cols-1 pl-6  md:pl-8 gap-x-10 gap-y-6 sm:pl-0">
               {skillGroups.map((group, i) => (
                 <Reveal key={group.label} delay={(i % 2) * 100}>
                   <h3 className="font-bold text-primary mb-1.5">
                     {group.label}
                   </h3>
-                  <p className="font-muted text-sm text-muted-foreground leading-relaxed">
+                  <p className="scroll-blur font-muted text-sm text-muted-foreground leading-relaxed">
                     {group.items}
                   </p>
                 </Reveal>
@@ -335,7 +336,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="py-8 dark:bg-[#262626]">
+      <footer className="py-8 dark:bg-[#1c1c1c]">
         <div className="max-w-3xl mx-auto px-4 text-[10px] text-muted-foreground/70 text-center md:text-right leading-relaxed">
           No copyright issues. Feel free to modify it and make yours.{" "}
           <a

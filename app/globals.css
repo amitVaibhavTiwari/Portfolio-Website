@@ -32,7 +32,7 @@
   --font-mono: var(--font-geist-sans), system-ui, sans-serif;
   --font-body: var(--font-geist-sans), system-ui, sans-serif;
   --font-signature: var(--font-dancing-script), cursive;
-  --font-muted: cursive;
+  --font-muted: var(--font-playpen-sans), sans-serif;
 
   --text-xs: 0.8125rem;
   --text-xs--line-height: 1.5;
@@ -130,6 +130,30 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  .scroll-blur {
+    opacity: 1;
+    will-change: filter, opacity;
+  }
+
+  @supports (animation-timeline: view()) {
+    .scroll-blur {
+      animation: scroll-blur-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+  }
+
+  @keyframes scroll-blur-in {
+    from {
+      opacity: 0.2;
+      filter: blur(6px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -137,6 +161,12 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .scroll-blur {
+    animation: none !important;
+    opacity: 1;
+    filter: none;
   }
 }
 

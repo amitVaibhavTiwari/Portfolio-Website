@@ -8,7 +8,7 @@ export function Navigation() {
     <nav
       role="navigation"
       aria-label="Main navigation"
-      className="py-4 pt-2 md:pt-4 dark:bg-[#262626]"
+      className="py-4 pt-2 md:pt-4 dark:bg-[#1c1c1c]"
     >
       <div className="mx-auto px-4 py-2 max-w-3xl">
         <div className="flex justify-between items-center">

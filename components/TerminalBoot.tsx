@@ -40,108 +40,73 @@ const LINES: Line[] = [
     delay: 300,
   },
   {
-    text: "Heap alloc: 64MB base / 512MB ceiling — zones mapped...",
-    tag: "MEM",
+    text: "V8 v12.4.254.20 — Turbofan JIT armed, Maglev tier ready...",
+    tag: "V8 ",
     suffix: "[  OK  ]",
     type: "step",
     delay: 420,
   },
   {
-    text: "V8 v12.4.254.20 — Turbofan JIT armed, Maglev tier ready...",
-    tag: "V8 ",
+    text: "Loading personal profile & portfolio data...",
+    tag: "SYS",
     suffix: "[  OK  ]",
     type: "step",
     delay: 540,
   },
   {
-    text: "GC: scavenge + mark-sweep-compact, 8ms budget enforced...",
-    tag: "GC ",
+    text: "Securing your connection, end-to-end...",
+    tag: "SEC",
     suffix: "[  OK  ]",
     type: "step",
     delay: 660,
   },
-  {
-    text: ".env.production sealed — 12 vars injected, 0 leaked...",
-    tag: "ENV",
-    suffix: "[  OK  ]",
-    type: "step",
-    delay: 800,
-  },
-  { text: "", type: "blank", delay: 920 },
-
-  {
-    text: "A record → 76.76.21.21  TTL:60s  DNSSEC: valid...",
-    tag: "DNS",
-    suffix: "[  OK  ]",
-    type: "step",
-    delay: 1040,
-  },
-  {
-    text: "TLS 1.3  ECDHE-RSA-AES-256-GCM-SHA384  0-RTT: off...",
-    tag: "TLS",
-    suffix: "[  OK  ]",
-    type: "step",
-    delay: 1180,
-  },
-  {
-    text: "Edge-sin1 selected — AS16509  RTT: 14ms  cache: HIT...",
-    tag: "CDN",
-    suffix: "[  OK  ]",
-    type: "step",
-    delay: 1320,
-  },
-  { text: "", type: "blank", delay: 1420 },
+  { text: "", type: "blank", delay: 760 },
 
   {
     text: "Bundle verified — 6 chunks  84.2 kB gzip  0 collisions...",
     tag: "APP",
     suffix: "[  OK  ]",
     type: "step",
-    delay: 1540,
-  },
-  {
-    text: "Hydration diffed — 0 mismatches  CLS: 0.00  LCP: 0.91s...",
-    tag: "HYD",
-    suffix: "[  OK  ]",
-    type: "step",
-    delay: 1680,
+    delay: 880,
   },
   {
     text: "CSP enforced  SRI verified  HSTS: max-age=31536000...",
     tag: "SEC",
     suffix: "[  OK  ]",
     type: "step",
-    delay: 1820,
+    delay: 1000,
   },
-  { text: "", type: "blank", delay: 1920 },
+  {
+    text: "Optimizing visuals for your device...",
+    tag: "GFX",
+    suffix: "[  OK  ]",
+    type: "step",
+    delay: 1120,
+  },
+  { text: "", type: "blank", delay: 1220 },
 
-  { text: "Connection info:", type: "info", delay: 2040 },
-  { text: "  Remote IP   : {IP}", type: "kv", delay: 2200 },
-  { text: "  Node        : edge-sin1.cdn.global", type: "kv", delay: 2320 },
+  { text: "Connection info:", type: "info", delay: 1340 },
+  { text: "  Remote IP   : {IP}", type: "kv", delay: 1480 },
+  { text: "  Location    : {LOC}", type: "kv", delay: 1600 },
+  { text: "  ISP         : {ISP}", type: "kv", delay: 1720 },
   {
     text: "  Protocol    : HTTPS / HTTP2   Port : 443",
     type: "kv",
-    delay: 2440,
+    delay: 1840,
   },
-  {
-    text: "  Cipher      : ECDHE-RSA-AES256-GCM-SHA384",
-    type: "kv",
-    delay: 2560,
-  },
-  { text: "  Latency     : <18ms  (edge cached)", type: "kv", delay: 2680 },
-  { text: "  Uptime      : 99.98%  (last 90 days)", type: "kv", delay: 2800 },
-  { text: "", type: "blank", delay: 2900 },
+  { text: "  Latency     : <18ms  (edge cached)", type: "kv", delay: 1960 },
+  { text: "", type: "blank", delay: 2060 },
 
   {
     text: "All systems operational. Launching interface...",
     type: "ready",
-    delay: 3060,
+    delay: 2220,
   },
-  { text: "", type: "blank", delay: 3180 },
-  { text: "amit@amitvaibhavtiwari.dev ~ % start", type: "prompt", delay: 3340 },
+  { text: "", type: "blank", delay: 2340 },
+  { text: "amit@amitvaibhavtiwari.dev ~ % start", type: "prompt", delay: 2500 },
 ];
 
-const LAST_DELAY = 3340;
+const LAST_DELAY = 2500;
 const BAR_BLOCKS = 28;
 const BAR_START = LAST_DELAY + 280; // 3620ms — bar begins
 const BAR_INTERVAL = 46; // ms per block → 38 * 46 ≈ 1750ms to fill
@@ -156,15 +121,29 @@ export function TerminalBoot() {
   const [fading, setFading] = useState(false);
   const [gone, setGone] = useState(false);
   const [ip, setIp] = useState("resolving...");
+  const [loc, setLoc] = useState("resolving...");
+  const [isp, setIsp] = useState("resolving...");
 
   useEffect(() => {
-    fetch("https://api.ipify.org?format=json")
+    fetch("https://ipapi.co/json/")
       .then((r) => r.json())
-      .then((d) => setIp(d.ip))
-      .catch(() => setIp("127.0.0.1"));
+      .then((d) => {
+        setIp(d.ip ?? "127.0.0.1");
+        const place = [d.city, d.region, d.country_name]
+          .filter(Boolean)
+          .join(", ");
+        setLoc(place || "unknown");
+        setIsp(d.org || "unknown");
+      })
+      .catch(() => {
+        setIp("127.0.0.1");
+        setLoc("unknown");
+        setIsp("unknown");
+      });
 
     LINES.forEach((_, i) => {
-      setTimeout(() => setShown(i + 1), LINES[i].delay);
+      const jitter = Math.floor(Math.random() * 30) - 15;
+      setTimeout(() => setShown(i + 1), Math.max(0, LINES[i].delay + jitter));
     });
 
     // Block progress bar
@@ -206,6 +185,15 @@ export function TerminalBoot() {
       }}
     >
       <div
+        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(0deg, #fff 0px, transparent 1px, transparent 2px, #fff 3px)",
+          mixBlendMode: "overlay",
+        }}
+        aria-hidden="true"
+      />
+      <div
         className="w-full max-w-[560px] px-4 md:px-8 text-[10px] md:text-[12.5px]"
         style={{
           fontFamily:
@@ -214,7 +202,10 @@ export function TerminalBoot() {
         }}
       >
         {LINES.slice(0, shown).map((line, i) => {
-          const text = line.text.replace("{IP}", ip);
+          const text = line.text
+            .replace("{IP}", ip)
+            .replace("{LOC}", loc)
+            .replace("{ISP}", isp);
 
           if (line.type === "blank") return <div key={i} className="h-2" />;
 
