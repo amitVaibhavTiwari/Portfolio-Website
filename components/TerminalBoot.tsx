@@ -198,7 +198,7 @@ export function TerminalBoot() {
 
   return (
     <div
-      className="fixed inset-0 z-[100] bg-[#0a0a0a] flex items-center justify-center"
+      className="terminal-boot fixed inset-0 z-[100] bg-[#0a0a0a] flex items-center justify-center"
       style={{
         opacity: fading ? 0 : 1,
         transition: `opacity ${FADE_MS}ms ease-out`,

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { Reveal } from "@/components/Reveal";
+import { TimelineTrack } from "@/components/TimelineTrack";
 
 export const metadata: Metadata = {
   title: "Amit Vaibhav Tiwari - Software Engineer",
-  description:
-    "Welcome to my Personal Website. I'm a software engineer passionate about building elegant solutions.",
+  description: "Personal Website of Amit Vaibhav Tiwari.",
   keywords: [
     "Amit Vaibhav Tiwari",
     "Software Engineer",
@@ -29,49 +30,79 @@ export const metadata: Metadata = {
 
 const socialLinks = [
   {
-    href: "https://github.com/amitvaibhavtiwari",
-    label: "GitHub",
+    href: "mailto:amitvaibhavtiwari@gmail.com",
+    label: "Email",
     icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
-      </svg>
+      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
     ),
   },
   {
-    href: "https://in.linkedin.com/in/amit-vaibhav-tiwari-23967b306",
+    href: "https://in.linkedin.com/in/amitvaibhavtiwari",
     label: "LinkedIn",
     icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-      </svg>
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+    ),
+  },
+  {
+    href: "https://github.com/amitvaibhavtiwari",
+    label: "GitHub",
+    icon: (
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
     ),
   },
   {
     href: "https://x.com/im_avt",
-    label: "X / Twitter",
+    label: "X",
     icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-      </svg>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
     ),
   },
+];
+
+const experience = [
   {
-    href: "https://instagram.com/amitvaibhavtiwari",
-    label: "Instagram",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
-      </svg>
-    ),
+    title: "SDE-1",
+    company: "Kuvaka Tech",
+    location: "Bangalore, Karnataka · Remote",
+    period: "Sept 2025 – Present",
+    description: [
+      "Contributing to the 0-to-1 development of Kuvaka's Agentic AI vertical, building AI-powered solutions and healthcare agents",
+      "Collaborating with engineering pods to deliver end-to-end client solutions across frontend and backend systems",
+      "Developed and presented product demos to government officials and international clients",
+    ],
   },
   {
-    href: "mailto:amitvaibhavtiwari@gmail.com",
-    label: "Email",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
-      </svg>
-    ),
+    title: "Associate Developer",
+    company: "Brimo Software Solutions",
+    location: "Lucknow, Uttar Pradesh · Hybrid",
+    period: "May 2024 – Aug 2025",
+    description: [
+      "Migrated legacy React applications to Next.js, improving performance and Core Web Vitals",
+      "Built Django-based GraphQL APIs on Saleor to power e-commerce storefronts",
+      "Contributed to the initial development of a plug-and-play Shopify app for loyalty and referral programs",
+    ],
+  },
+];
+
+const skillGroups = [
+  { label: "Languages", items: "JavaScript, TypeScript, Python, Golang" },
+  {
+    label: "Frontend",
+    items:
+      "React, Next.js, Tailwind CSS, Material UI, Zustand, Redux, HTML, CSS, SCSS",
+  },
+  {
+    label: "Backend",
+    items: "Django, DRF, Node.js, Express, REST APIs, GraphQL APIs, SQL",
+  },
+  {
+    label: "Databases",
+    items: "PostgreSQL, MongoDB, Redis, Timescale DB",
+  },
+  { label: "Tools & Platforms", items: "Git, GitHub, Docker, Azure, GCP" },
+  {
+    label: "Other",
+    items: "Agile/Scrum, System Design, Technical Writing",
   },
 ];
 
@@ -85,7 +116,7 @@ export default function Home() {
     url: "https://www.amitvaibhavtiwari.dev",
     sameAs: [
       "https://github.com/amitvaibhavtiwari",
-      "https://in.linkedin.com/in/amit-vaibhav-tiwari-23967b306",
+      "https://in.linkedin.com/in/amitvaibhavtiwari",
       "https://x.com/im_avt",
       "https://instagram.com/amitvaibhavtiwari",
     ],
@@ -98,361 +129,225 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="container mx-auto px-6 py-8">
-        <div className="max-w-2xl mx-auto">
-          <div className="mb-6">
-            <img
-              src="./home_img.webp"
-              alt="Amit Vaibhav Tiwari"
-              className="h-44 w-44 rounded-full object-cover"
-              loading="eager"
-            />
-          </div>
-          <h1 className="text-xl md:text-3xl font-extrabold md:font-bold tracking-tight mb-1">
-            Amit Vaibhav Tiwari
-          </h1>
-          <p className="text-sm md:text-base font-semibold text-green-700 dark:text-green-400 mb-4">
-            Software Engineer
-          </p>
-          <div className="flex gap-2 mb-4 md:mb-8">
-            {socialLinks.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target={s.href.startsWith("mailto") ? undefined : "_blank"}
-                rel={
-                  s.href.startsWith("mailto")
-                    ? undefined
-                    : "noopener noreferrer"
-                }
-                aria-label={s.label}
-                className="p-2 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
-              >
-                {s.icon}
-              </a>
-            ))}
-          </div>
-          <div className="space-y-5 text-xs md:text-sm text-foreground/80 leading-relaxed">
-            <p>
-              I'm a Software Engineer at Kuvaka Tech. I mainly work with
-              JavaScript/TypeScript and Python, and I'm currently exploring Go
-              through personal projects.
-            </p>
-            <p>
-              I also have experience with cloud practices on Azure and GCP,
-              particularly around deployments, infrastructure, and CI/CD
-              pipelines.
-            </p>
-          </div>
-          <div className="mt-10 md:mt-16 space-y-12 text-xs md:text-sm max-w-2xl">
-            <section>
-              <h2 className="text-base lg:text-xl font-bold mb-6 text-green-700 dark:text-green-400">
-                Experience
-              </h2>
-              <div className="space-y-8">
-                <div>
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-0.5 md:gap-4 mb-1">
-                    <h3 className="font-bold text-sm md:text-base text-pink-800 dark:text-pink-400">
-                      SDE-1 — Kuvaka Tech
-                    </h3>
-                    <span className="text-xs font-light italic text-cyan-800 dark:text-cyan-400 shrink-0">
-                      Sept 2025 – Present
-                    </span>
-                  </div>
-                  <p className="italic text-xs text-yellow-600 dark:text-yellow-400 mb-3">
-                    Remote · Bangalore, Karnataka
-                  </p>
-                  <ul className="space-y-1 text-foreground/80 list-disc list-inside pl-4">
-                    <li>
-                      Led development of microservices architecture using
-                      Node.js and TypeScript
-                    </li>
-                    <li>
-                      Implemented CI/CD pipelines reducing deployment time by
-                      60%
-                    </li>
-                    <li>
-                      Mentored junior developers and conducted code reviews
-                    </li>
-                    <li>Built scalable REST APIs serving 1M+ requests daily</li>
-                  </ul>
-                </div>
-                <div>
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-0.5 md:gap-4 mb-1">
-                    <h3 className="font-bold text-sm md:text-base text-pink-800 dark:text-pink-400">
-                      Full Stack Developer — Brimo Software Solutions
-                    </h3>
-                    <span className="text-xs font-light italic text-cyan-800 dark:text-cyan-400 shrink-0">
-                      May 2024 – Aug 2025
-                    </span>
-                  </div>
-                  <p className="italic text-xs text-yellow-600 dark:text-yellow-400 mb-3">
-                    Hybrid · Lucknow, Uttar Pradesh
-                  </p>
-                  <ul className="space-y-1 text-foreground/80 list-disc list-inside pl-4">
-                    <li>
-                      Developed and maintained React-based web applications
-                    </li>
-                    <li>
-                      Designed and implemented PostgreSQL database schemas
-                    </li>
-                    <li>
-                      Integrated third party APIs including Stripe, SendGrid,
-                      and AWS
-                    </li>
-                    <li>
-                      Improved application performance by 40% through
-                      optimization
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-base lg:text-xl font-bold mb-6 text-green-700 dark:text-green-400">
-                Skills and Tech Stack
-              </h2>
-              <div className="space-y-4 pl-6">
-                <div>
-                  <h3 className="font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
-                    Languages
-                  </h3>
-                  <p className="text-foreground/70 leading-relaxed">
-                    JavaScript, TypeScript, Python, Golang, SQL
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
-                    Frontend
-                  </h3>
-                  <p className="text-foreground/70 leading-relaxed">
-                    React, Next.js, Tailwind CSS, Material UI, Zustand, Redux,
-                    HTML, CSS, SCSS
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
-                    Backend
-                  </h3>
-                  <p className="text-foreground/70 leading-relaxed">
-                    Django, DRF, Node.js, Express, PostgreSQL, MongoDB, Redis,
-                    REST APIs, GraphQL APIs
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
-                    Tools &amp; Platforms
-                  </h3>
-                  <p className="text-foreground/70 leading-relaxed">
-                    Git, GitHub, Docker, Azure, GCP
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2 text-cyan-800 dark:text-cyan-400">
-                    Other
-                  </h3>
-                  <p className="text-foreground/70 leading-relaxed">
-                    Agile/Scrum, System Design, Performance Optimization,
-                    Technical Writing
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-base lg:text-xl font-bold mb-6 text-green-700 dark:text-green-400">
-                Projects
-              </h2>
-              <div className="space-y-6 pl-6">
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-start justify-between gap-4 py-3 border-b border-border/20 dark:border-zinc-800 hover:bg-muted/20 transition-all"
-                >
-                  <div>
-                    <h3 className="font-semibold mb-1 group-hover:underline underline-offset-4 transition-colors text-pink-800 dark:text-pink-400">
-                      Project One
-                    </h3>
-                    <p className="text-foreground/60 leading-relaxed">
-                      A comprehensive web application built with React and
-                      TypeScript. Features include real-time updates, user
-                      authentication, and a responsive design.
-                    </p>
-                  </div>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-4 h-4 shrink-0 mt-0.5 text-muted-foreground group-hover:text-foreground transition-colors"
-                  >
-                    <path d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </a>
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-start justify-between gap-4 py-3 border-b border-border/20 dark:border-zinc-800 hover:bg-muted/20 transition-all"
-                >
-                  <div>
-                    <h3 className="font-semibold mb-1 group-hover:underline underline-offset-4 transition-colors text-pink-800 dark:text-pink-400">
-                      Project Two
-                    </h3>
-                    <p className="text-foreground/60 leading-relaxed">
-                      An open-source library that simplifies complex workflows.
-                      Used by thousands of developers worldwide.
-                    </p>
-                  </div>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-4 h-4 shrink-0 mt-0.5 text-muted-foreground group-hover:text-foreground transition-colors"
-                  >
-                    <path d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </a>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-base lg:text-xl font-bold mb-6 text-green-700 dark:text-green-400">
-                Education
-              </h2>
-              <div className="space-y-8 pl-6">
-                <div>
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-0.5 md:gap-4 mb-1">
-                    <h3 className="font-bold text-sm md:text-base text-foreground">
-                      B. Tech. in Computer Science and Engineering — DSMNRU University
-                    </h3>
-                    <span className="text-xs font-light italic text-cyan-800 dark:text-cyan-400 shrink-0">
-                      Sep 2022 – Apr 2026
-                    </span>
-                  </div>
-                  <p className="italic text-xs text-yellow-600 dark:text-yellow-400">
-                    Lucknow, Uttar Pradesh
-                  </p>
-                </div>
-                <div>
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-0.5 md:gap-4 mb-1">
-                    <h3 className="font-bold text-sm md:text-base text-foreground">
-                      Intermediate — Pioneer Montessori Inter College
-                    </h3>
-                    <span className="text-xs font-light italic text-cyan-800 dark:text-cyan-400 shrink-0">
-                      2021 – 2022
-                    </span>
-                  </div>
-                  <p className="italic text-xs text-yellow-600 dark:text-yellow-400">
-                    Lucknow, Uttar Pradesh
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-base lg:text-xl font-bold mb-6 text-green-700 dark:text-green-400">
-                Writing
-              </h2>
-              <div className="space-y-4 pl-6">
-                <a
-                  href="https://gist.github.com/amitvaibhavtiwari"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-between rounded-lg px-3 py-3 -mx-3 hover:bg-muted/40 transition-colors border-b border-border/20 dark:border-zinc-700 last:border-0"
-                >
-                  <span className="text-foreground/80 group-hover:text-foreground transition-colors">
-                    Code Snippets
-                  </span>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors"
-                  >
-                    <path d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </a>
-                <a
-                  href="https://medium.com/@yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-between rounded-lg px-3 py-3 -mx-3 hover:bg-muted/40 transition-colors border-b border-border/20 dark:border-zinc-700 last:border-0"
-                >
-                  <span className="text-foreground/80 group-hover:text-foreground transition-colors">
-                    Blogs
-                  </span>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors"
-                  >
-                    <path d="M7 17L17 7M17 7H7M17 7v10" />
-                  </svg>
-                </a>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-base lg:text-xl font-bold mb-6 text-green-700 dark:text-green-400">
-                Resume
-              </h2>
-              <div className="pl-6">
-                <p className="text-foreground/70 leading-relaxed mb-4">
-                  Download my resume in PDF format for the most up-to-date
-                  information about me.
-                </p>
-                <a
-                  href="https://drive.google.com/your-resume-link-here"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-border/40 dark:border-zinc-700 rounded-lg px-5 py-2.5 text-sm font-medium hover:bg-muted/40 hover:border-border/80 dark:hover:border-zinc-500 transition-all"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-4 h-4"
-                  >
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  Download Resume
-                </a>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-      <div className="mb-1 mt-16 mr-2 text-[8px] md:text-[10px] text-zinc-600 dark:text-zinc-400 text-right leading-relaxed">
-        No copyright issues. Feel free to modify it and make yours.{" "}
-        <a
-          href="https://github.com/amitvaibhavtiwari/portfolio-website"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-zinc-400 dark:hover:text-zinc-400 transition-colors"
+      <main className="dark:bg-[#262626]">
+        {/* Hero */}
+        <section
+          className="pt-2 md:-mt-3 pb-2 md:py-14 md:pb-10"
+          aria-labelledby="hero-heading"
         >
-          Here's the code
-        </a>
-      </div>
+          <Reveal
+            trigger="load"
+            className="max-w-3xl mx-auto flex flex-col items-center gap-4 px-4 pt-2 pb-4 md:p-4 text-center"
+          >
+            <div className="w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden shrink-0">
+              <img
+                src="./home_img.webp"
+                alt="Amit Vaibhav Tiwari"
+                className="w-full h-full object-cover"
+                loading="eager"
+                width={224}
+                height={224}
+              />
+            </div>
+            <h1
+              id="hero-heading"
+              className="text-2xl md:text-4xl font-bold text-foreground leading-tight"
+            >
+              Amit Vaibhav Tiwari
+            </h1>
+            <div className="flex -mt-2 md:-mt-1 flex-wrap gap-3 justify-center">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target={s.href.startsWith("mailto") ? undefined : "_blank"}
+                  rel={
+                    s.href.startsWith("mailto")
+                      ? undefined
+                      : "noopener noreferrer"
+                  }
+                  className="flex items-center text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <span className="flex items-center justify-center w-7 h-7 rounded-full border border-border">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-3.5 h-3.5"
+                      aria-hidden="true"
+                    >
+                      {s.icon}
+                    </svg>
+                  </span>
+                  <span>{s.label}</span>
+                </a>
+              ))}
+            </div>
+          </Reveal>
+        </section>
+
+        {/* Intro */}
+        <section className="pb-6 md:pb-8">
+          <Reveal
+            trigger="load"
+            delay={250}
+            className="max-w-3xl mx-auto px-4 space-y-4 font-muted text-sm text-muted-foreground leading-relaxed"
+          >
+            <p>
+              I&apos;m a Software Engineer at Kuvaka Tech, working on full-stack
+              engineering and AI-powered solutions, with a focus on Agentic AI
+              and real-world healthcare applications.
+            </p>
+            <p>
+              I mainly work with JavaScript/TypeScript and Python, and have
+              experience with cloud deployments, infrastructure, and CI/CD
+              across GCP and Azure. I&apos;m also exploring Go through personal
+              projects to further expand my tech stack.
+            </p>
+            <p>
+              Outside of work, I enjoy vibe coding random ideas, messing around
+              with new AI tools, and watching anime.
+            </p>
+          </Reveal>
+        </section>
+
+        {/* Work Experience */}
+        <section
+          className="pt-2 pb-12 md:py-16"
+          aria-labelledby="work-experience-heading"
+        >
+          <div className="max-w-3xl mx-auto p-4">
+            <Reveal>
+              <h2
+                id="work-experience-heading"
+                className="text-[17px] md:text-2xl font-bold mb-6 md:mb-12 text-primary tracking-wider"
+              >
+                WORK EXPERIENCE
+              </h2>
+            </Reveal>
+            <TimelineTrack>
+              {experience.map((job, i) => (
+                <div
+                  key={job.title + job.company}
+                  className="relative flex items-start mb-12 last:mb-0"
+                >
+                  <div className="absolute left-4 w-4 h-4 bg-primary rounded-full border-4 border-background z-10" />
+                  <Reveal delay={i * 100} className="ml-14 md:ml-16 flex-1">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-3">
+                      <div>
+                        <h3 className="text-xl font-bold text-primary leading-snug">
+                          {job.title}
+                        </h3>
+                        <div className="text-meta text-sm font-mono mt-0.5">
+                          {job.company}
+                        </div>
+                      </div>
+                      <div className="sm:text-right shrink-0">
+                        <div className="text-muted-foreground text-sm font-mono italic">
+                          {job.period}
+                        </div>
+                        <div className="text-meta text-xs font-mono mt-0.5 italic">
+                          {job.location}
+                        </div>
+                      </div>
+                    </div>
+                    <ul className="space-y-1.5">
+                      {job.description.map((point) => (
+                        <li
+                          key={point}
+                          className="flex gap-2 text-muted-foreground leading-relaxed font-muted text-sm"
+                        >
+                          <span className="text-meta shrink-0">–</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </Reveal>
+                </div>
+              ))}
+            </TimelineTrack>
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section
+          className="pt-2 pb-12 md:py-16"
+          aria-labelledby="skills-heading"
+        >
+          <div className="max-w-3xl mx-auto p-4">
+            <Reveal>
+              <h2
+                id="skills-heading"
+                className="pl-2 sm:pl-0 text-[17px] md:text-3xl font-bold mb-5 md:mb-10 text-primary tracking-wider"
+              >
+                SKILLS
+              </h2>
+            </Reveal>
+            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6 pl-6 sm:pl-0">
+              {skillGroups.map((group, i) => (
+                <Reveal key={group.label} delay={(i % 2) * 100}>
+                  <h3 className="font-bold text-primary mb-1.5">
+                    {group.label}
+                  </h3>
+                  <p className="font-muted text-sm text-muted-foreground leading-relaxed">
+                    {group.items}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Get in touch */}
+        <section className="pt-2 pb-16 md:py-16">
+          <Reveal className="max-w-3xl mx-auto px-4 text-center">
+            <p className="font-sans lg:font-semibold text-sm leading-relaxed mb-6 text-muted-foreground">
+              Feel free to reach out for collaborations or just a friendly
+              hello! <span className="text-base">😃</span>
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target={s.href.startsWith("mailto") ? undefined : "_blank"}
+                  rel={
+                    s.href.startsWith("mailto")
+                      ? undefined
+                      : "noopener noreferrer"
+                  }
+                  className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <span className="flex items-center justify-center w-7 h-7 rounded-full border border-border">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-3.5 h-3.5"
+                      aria-hidden="true"
+                    >
+                      {s.icon}
+                    </svg>
+                  </span>
+                  <span>{s.label}</span>
+                </a>
+              ))}
+            </div>
+          </Reveal>
+        </section>
+      </main>
+
+      <footer className="py-8 dark:bg-[#262626]">
+        <div className="max-w-3xl mx-auto px-4 text-[10px] text-muted-foreground/70 text-center md:text-right leading-relaxed">
+          No copyright issues. Feel free to modify it and make yours.{" "}
+          <a
+            href="https://github.com/amitvaibhavtiwari/portfolio-website"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-foreground transition-colors"
+          >
+            Here&apos;s the code
+          </a>
+        </div>
+      </footer>
     </>
   );
 }

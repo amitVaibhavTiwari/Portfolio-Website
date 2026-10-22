@@ -4,11 +4,28 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navigation } from "@/components/Navigation";
 import { TerminalBootWrapper } from "@/components/TerminalBootWrapper";
 import { PageContent } from "@/components/PageContent";
-import { Inter } from "next/font/google";
+import { SplashCursorWrapper } from "@/components/SplashCursorWrapper";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import { Geist, Geist_Mono, JetBrains_Mono, Dancing_Script } from "next/font/google";
 
-const inter = Inter({
+const geistSans = Geist({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-geist-sans",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-dancing-script",
 });
 
 export const metadata: Metadata = {
@@ -82,10 +99,17 @@ export default function RootLayout({
           content="#ffffff"
           media="(prefers-color-scheme: light)"
         />
+        <noscript>
+          <style>{`.reveal{opacity:1!important;transform:none!important;}`}</style>
+        </noscript>
       </head>
-      <body className={`${inter.variable} antialiased relative`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${dancingScript.variable} antialiased relative`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SmoothScroll />
           <TerminalBootWrapper />
+          <SplashCursorWrapper />
           <PageContent>
             <div className="relative z-10 min-h-screen bg-background">
               <Navigation />

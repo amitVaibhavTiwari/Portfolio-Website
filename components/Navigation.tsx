@@ -2,19 +2,22 @@
 
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
-import { HexLogo } from "./HexLogo";
 
 export function Navigation() {
   return (
-    <nav role="navigation" aria-label="Main navigation">
-      <div className="container mx-auto px-4 md:px-6 py-3">
-        <div className="flex items-center justify-between">
+    <nav
+      role="navigation"
+      aria-label="Main navigation"
+      className="py-4 pt-2 md:pt-4 dark:bg-[#262626]"
+    >
+      <div className="mx-auto px-4 py-2 max-w-3xl">
+        <div className="flex justify-between items-center">
           <Link
             href="/"
-            className="hover:opacity-70 transition-opacity"
+            className="font-signature text-[19px] md:text-4xl text-foreground hover:opacity-80 transition-opacity"
             aria-label="Home"
           >
-            <HexLogo />
+            Amit Vaibhav Tiwari
           </Link>
           <ThemeToggle />
         </div>
