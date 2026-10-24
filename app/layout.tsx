@@ -34,8 +34,12 @@ const playpenSans = Playpen_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.amitvaibhavtiwari.dev"),
   title: "Amit Vaibhav Tiwari",
   description: "Personal Website of Amit Vaibhav Tiwari",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Amit Vaibhav Tiwari",
     "Amit Tiwari",
@@ -86,14 +90,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
           href="/favicon-32.png"
         />
-        <link rel="apple-touch-icon" href="/icon-192.png" />
         <meta
           name="theme-color"
           content="#000000"

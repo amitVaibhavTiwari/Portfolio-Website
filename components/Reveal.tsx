@@ -17,12 +17,26 @@ export function Reveal({
 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    let cancelled = false;
+    const markReady = () => {
+      if (!cancelled) setReady(true);
+    };
+    window.addEventListener("terminalBootDone", markReady);
+    return () => {
+      cancelled = true;
+      window.removeEventListener("terminalBootDone", markReady);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!ready) return;
+
     if (trigger === "load") {
-      const reveal = () => setVisible(true);
-      window.addEventListener("terminalBootDone", reveal);
-      return () => window.removeEventListener("terminalBootDone", reveal);
+      setVisible(true);
+      return;
     }
 
     const node = ref.current;
@@ -40,12 +54,12 @@ export function Reveal({
           observer.unobserve(node);
         }
       },
-      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
+      { threshold: 0, rootMargin: "0px 0px 0px 0px" },
     );
 
     observer.observe(node);
     return () => observer.disconnect();
-  }, [trigger]);
+  }, [trigger, ready]);
 
   return (
     <div

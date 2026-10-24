@@ -85,7 +85,10 @@ const experience = [
 ];
 
 const skillGroups = [
-  { label: "Programming Languages", items: "JavaScript, TypeScript, Python, Golang" },
+  {
+    label: "Programming Languages",
+    items: "JavaScript, TypeScript, Python, Golang",
+  },
   {
     label: "Frontend",
     items:
@@ -93,7 +96,8 @@ const skillGroups = [
   },
   {
     label: "Backend",
-    items: "Django, DRF, Node.js, Express, REST APIs, GraphQL APIs, SQL",
+    items:
+      "Django, DRF, FastAPI, Node.js, Express, REST APIs, GraphQL APIs, SQL",
   },
   {
     label: "Databases",
@@ -130,16 +134,16 @@ export default function Home() {
       />
 
       <main className="dark:bg-[#1c1c1c]">
-        {/* Hero */}
+        {/* Hero mobile*/}
         <section
-          className="pt-2 md:-mt-3 pb-2 md:py-14 md:pb-5"
-          aria-labelledby="hero-heading"
+          className="md:hidden pt-2 pb-2"
+          aria-labelledby="hero-heading-mobile"
         >
           <Reveal
             trigger="load"
-            className="max-w-3xl mx-auto flex flex-col items-center gap-4 px-4 pt-2 pb-4 md:p-4 text-center"
+            className="max-w-3xl mx-auto flex flex-col items-center gap-4 px-4 pt-2 pb-4 text-center"
           >
-            <div className="w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden shrink-0">
+            <div className="w-32 h-32 rounded-full overflow-hidden shrink-0 border-4 border-border">
               <img
                 src="./home_img.webp"
                 alt="Amit Vaibhav Tiwari"
@@ -150,12 +154,12 @@ export default function Home() {
               />
             </div>
             <h1
-              id="hero-heading"
-              className="text-2xl md:text-4xl font-bold text-foreground leading-tight"
+              id="hero-heading-mobile"
+              className="text-2xl font-bold text-foreground leading-tight"
             >
               Amit Vaibhav Tiwari
             </h1>
-            <div className="flex -mt-2 md:-mt-1 flex-wrap gap-3 justify-center">
+            <div className="flex -mt-2 flex-wrap gap-3 justify-center">
               {socialLinks.map((s) => (
                 <a
                   key={s.label}
@@ -166,7 +170,7 @@ export default function Home() {
                       ? undefined
                       : "noopener noreferrer"
                   }
-                  className="flex items-center text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <span className="flex items-center justify-center w-7 h-7 rounded-full border border-border">
                     <svg
@@ -185,18 +189,97 @@ export default function Home() {
           </Reveal>
         </section>
 
-        {/* Intro */}
-        <section className="pb-6 md:pb-8">
+        {/* Intro — mobile*/}
+        <section className="md:hidden pb-6">
           <Reveal
             trigger="load"
             delay={250}
             className="max-w-3xl mx-auto px-4 space-y-4 font-muted text-sm text-muted-foreground leading-relaxed"
           >
             <p className="scroll-blur">
-              I&apos;m a Software Engineer at Kuvaka Tech, working on full-stack
-              engineering and AI-powered solutions, with a focus on Agentic AI
-              and real-world healthcare applications.
+              I&apos;m a Software Engineer at Kuvaka Tech, where I work on
+              full-stack development and AI-powered solutions, with a focus on
+              Agentic AI and real-world healthcare applications.
             </p>
+            <p className="scroll-blur">
+              I mainly work with JavaScript/TypeScript and Python, and have
+              experience with cloud deployments, infrastructure, and CI/CD
+              across GCP and Azure. I&apos;m also exploring Go through personal
+              projects to further expand my tech stack.
+            </p>
+            <p className="scroll-blur">
+              Outside of work, I enjoy vibe coding random ideas, messing around
+              with new AI tools, and watching anime.
+            </p>
+          </Reveal>
+        </section>
+
+        {/* Hero + Intro — tablet/desktop */}
+        <section
+          className="hidden md:block pt-16 pb-8"
+          aria-labelledby="hero-heading-desktop"
+        >
+          <Reveal trigger="load" className="max-w-3xl mx-auto px-4">
+            <div className="flex items-start justify-between gap-10">
+              <div className="flex-1">
+                <div className="flex flex-wrap gap-3 mb-4">
+                  {socialLinks.map((s) => (
+                    <a
+                      key={s.label}
+                      href={s.href}
+                      target={
+                        s.href.startsWith("mailto") ? undefined : "_blank"
+                      }
+                      rel={
+                        s.href.startsWith("mailto")
+                          ? undefined
+                          : "noopener noreferrer"
+                      }
+                      aria-label={s.label}
+                      className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <span className="flex items-center justify-center w-7 h-7 rounded-full border border-border">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          className="w-3.5 h-3.5"
+                          aria-hidden="true"
+                        >
+                          {s.icon}
+                        </svg>
+                      </span>
+                    </a>
+                  ))}
+                </div>
+                <h1
+                  id="hero-heading-desktop"
+                  className="text-3xl font-bold text-foreground leading-tight mb-4"
+                >
+                  👋 Hi, I&apos;m <span className="text-5xl">Amit</span>
+                </h1>
+                <p className="scroll-blur font-muted text-sm text-muted-foreground leading-relaxed">
+                  I&apos;m a Software Engineer at Kuvaka Tech, where I work on
+                  full-stack development and AI-powered solutions, with a focus
+                  on Agentic AI and real-world healthcare applications.
+                </p>
+              </div>
+              <div className="w-40 h-40 rounded-full overflow-hidden shrink-0 border-4 border-border">
+                <img
+                  src="./home_img.webp"
+                  alt="Amit Vaibhav Tiwari"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                  width={224}
+                  height={224}
+                />
+              </div>
+            </div>
+          </Reveal>
+          <Reveal
+            trigger="load"
+            delay={250}
+            className="max-w-3xl mx-auto px-4 mt-6 space-y-4 font-muted text-sm text-muted-foreground leading-relaxed"
+          >
             <p className="scroll-blur">
               I mainly work with JavaScript/TypeScript and Python, and have
               experience with cloud deployments, infrastructure, and CI/CD
@@ -216,7 +299,7 @@ export default function Home() {
           aria-labelledby="work-experience-heading"
         >
           <div className="max-w-3xl mx-auto p-4">
-            <Reveal>
+            <Reveal delay={500}>
               <h2
                 id="work-experience-heading"
                 className="text-[17px] md:text-[1.5rem] font-bold mb-6 md:mb-12 text-primary tracking-wider"
@@ -228,7 +311,7 @@ export default function Home() {
               {experience.map((job, i) => (
                 <Reveal
                   key={job.title + job.company}
-                  delay={i * 100}
+                  delay={500 + i * 100}
                   className="relative flex items-start mb-12 last:mb-0"
                 >
                   <div className="absolute left-4 top-1 w-4 h-4 bg-primary rounded-full border-4 border-background dark:border-[#1c1c1c] z-10" />
@@ -316,7 +399,7 @@ export default function Home() {
                       ? undefined
                       : "noopener noreferrer"
                   }
-                  className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <span className="flex items-center justify-center w-7 h-7 rounded-full border border-border">
                     <svg
